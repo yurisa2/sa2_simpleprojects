@@ -84,7 +84,8 @@ $page_layouts["events_view"] = $layout;
 
 
 
-
+	
+	
 $pageMode = ViewPage::readViewModeFromRequest();
 
 $xt = new Xtempl();

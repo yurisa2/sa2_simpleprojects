@@ -537,12 +537,16 @@ $tableCaptions["English"]["users"] = "Users";
 $tableCaptions["English"]["admin_members"] = "Admin Members";
 $tableCaptions["English"]["admin_users"] = "Add/Edit users";
 $tableCaptions["English"][""] = "";
+$tableCaptions["English"]["events_stakeholders"] = "Events Stakeholders";
 $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
 $tableCaptions[""]["projects"] = "Projects";
 $tableCaptions[""]["tasks"] = "Tasks";
 $tableCaptions[""]["stakerholders"] = "Stakerholders";
 $tableCaptions[""]["events"] = "Events";
+$tableCaptions[""]["projects_stakeholders"] = "Projects Stakeholders";
+$tableCaptions[""]["tasks_stakeholders"] = "Tasks Stakeholders";
+$tableCaptions[""]["events_stakeholders"] = "Events Stakeholders";
 
 
 $globalEvents = new class_GlobalEvents;

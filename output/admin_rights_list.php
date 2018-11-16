@@ -84,6 +84,17 @@ $mask="";
 			
 $pageMask[$table] = $mask;
 $tables[$table] = array("users", " " . "Users");
+$table = "events_stakeholders";
+$mask="";
+	$mask .= "A";
+	$mask .= "E";
+	$mask .= "D";
+	$mask .= "S";
+$mask .= "P";
+$mask .= "I";
+
+$pageMask[$table] = $mask;
+$tables[$table] = array("events_stakeholders", " " . "Events Stakeholders");
 
 
 

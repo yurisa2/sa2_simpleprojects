@@ -49,6 +49,7 @@ class tDAL
 {
 	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__audit;
 	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__events;
+	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__events_stakeholders;
 	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__projects;
 	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__projects_stakeholders;
 	var $tblsa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__stakerholders;
@@ -67,6 +68,7 @@ class tDAL
 			return;
 		$this->lstTables[] = array("name" => "audit", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__audit", "altvarname" => "audit", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");
 		$this->lstTables[] = array("name" => "events", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__events", "altvarname" => "events", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");
+		$this->lstTables[] = array("name" => "events_stakeholders", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__events_stakeholders", "altvarname" => "events_stakeholders", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");
 		$this->lstTables[] = array("name" => "projects", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__projects", "altvarname" => "projects", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");
 		$this->lstTables[] = array("name" => "projects_stakeholders", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__projects_stakeholders", "altvarname" => "projects_stakeholders", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");
 		$this->lstTables[] = array("name" => "stakerholders", "varname" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__stakerholders", "altvarname" => "stakerholders", "connId" => "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br", "schema" => "", "connName" => "sa2_simple_erv at sa2_simple_erv.mysql.dbaas.com.br");

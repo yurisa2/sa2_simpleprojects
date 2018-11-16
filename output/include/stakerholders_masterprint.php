@@ -52,6 +52,16 @@ function DisplayMasterTableInfoForPrint_stakerholders($params)
 		$showKeys.= " ".GetFieldLabel("stakerholders","stakeholder_id").": ".$keyValue;
 		$xt->assign('showKeys', $showKeys);	
 	}
+
+	if( $detailtable == "events_stakeholders" )
+	{
+		$keysAssoc["stakeholder_id"] = $keys[1-1];
+				$where.= RunnerPage::_getFieldSQLDecrypt("stakeholder_id", $connection , $settings , $cipherer) . "=" . $cipherer->MakeDBValue("stakeholder_id", $keys[1-1], "", true);
+		
+				$keyValue = $viewControls->showDBValue("stakeholder_id", $keysAssoc);
+		$showKeys.= " ".GetFieldLabel("stakerholders","stakeholder_id").": ".$keyValue;
+		$xt->assign('showKeys', $showKeys);	
+	}
 	
 	if( !$where )
 		return;

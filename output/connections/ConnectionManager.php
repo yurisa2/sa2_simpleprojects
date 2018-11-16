@@ -286,6 +286,7 @@ class ConnectionManager
 		$connectionsIds["users"] = "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br";
 		$connectionsIds["admin_members"] = "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br";
 		$connectionsIds["admin_users"] = "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br";
+		$connectionsIds["events_stakeholders"] = "sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br";
 		$this->_tablesConnectionIds = $connectionsIds;
 	}
 	

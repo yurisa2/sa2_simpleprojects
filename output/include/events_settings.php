@@ -1064,6 +1064,41 @@ $page_titles["events"] = &$pageTitlesevents;
 // -----------------start  prepare master-details data arrays ------------------------------//
 // tables which are detail tables for current table (master)
 $detailsTablesData["events"] = array();
+//	events_stakeholders
+	
+	
+
+		$dIndex = 0;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="events_stakeholders";
+		$detailsParam["dOriginalTable"] = "events_stakeholders";
+		$detailsParam["proceedLink"] = true;
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "events_stakeholders";
+	$detailsParam["dCaptionTable"] = GetTableCaption("events_stakeholders");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+/*			$detailsParam["dispChildCount"] = 0;
+	*/
+	$detailsParam["dispChildCount"] = "1";
+	
+		$detailsParam["hideChild"] = false;
+			$detailsParam["previewOnList"] = "1";
+	$detailsParam["previewOnAdd"] = 0;
+	$detailsParam["previewOnEdit"] = 0;
+	$detailsParam["previewOnView"] = 0;
+		
+	$detailsTablesData["events"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["events"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["events"][$dIndex]["masterKeys"][]="event_id";
+
+				$detailsTablesData["events"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["events"][$dIndex]["detailKeys"][]="event_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["events"] = array();

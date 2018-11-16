@@ -22,6 +22,7 @@ $nonAdminTablesArr[] = "tasks";
 $nonAdminTablesArr[] = "tasks_stakeholders";
 $nonAdminTablesArr[] = "events";
 $nonAdminTablesArr[] = "users";
+$nonAdminTablesArr[] = "events_stakeholders";
 
 $ug_connection = $cman->getForUserGroups();
 

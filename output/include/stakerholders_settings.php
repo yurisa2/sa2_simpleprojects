@@ -980,6 +980,41 @@ $detailsTablesData["stakerholders"] = array();
 				$detailsTablesData["stakerholders"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["stakerholders"][$dIndex]["detailKeys"][]="stakeholder_id";
+//	events_stakeholders
+	
+	
+
+		$dIndex = 2;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="events_stakeholders";
+		$detailsParam["dOriginalTable"] = "events_stakeholders";
+		$detailsParam["proceedLink"] = true;
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "events_stakeholders";
+	$detailsParam["dCaptionTable"] = GetTableCaption("events_stakeholders");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+/*			$detailsParam["dispChildCount"] = 0;
+	*/
+	$detailsParam["dispChildCount"] = "0";
+	
+		$detailsParam["hideChild"] = false;
+			$detailsParam["previewOnList"] = "1";
+	$detailsParam["previewOnAdd"] = 0;
+	$detailsParam["previewOnEdit"] = 0;
+	$detailsParam["previewOnView"] = 0;
+		
+	$detailsTablesData["stakerholders"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["stakerholders"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["stakerholders"][$dIndex]["masterKeys"][]="stakeholder_id";
+
+				$detailsTablesData["stakerholders"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["stakerholders"][$dIndex]["detailKeys"][]="stakeholder_id";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["stakerholders"] = array();

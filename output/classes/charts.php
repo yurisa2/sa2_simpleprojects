@@ -480,6 +480,8 @@ class Chart
 			return true;
 		if("users" == $this->chrt_array['tables'][0])
 			return true;
+		if("events_stakeholders" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 	

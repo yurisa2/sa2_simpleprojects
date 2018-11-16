@@ -277,7 +277,8 @@ $page_layouts["events_list"] = $layout;
 // add master layouts 
 
 
-
+	
+	
 // parse control parameters
 $pageMode = EditPage::readEditModeFromRequest();
 

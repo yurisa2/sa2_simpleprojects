@@ -269,6 +269,7 @@ $page_layouts["stakerholders_list"] = $layout;
 
 	
 		
+		
 	
 // parse control parameters
 $pageMode = EditPage::readEditModeFromRequest();

@@ -448,11 +448,37 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tasks";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+	
+	
+		
+	$edata["LinkField"] = "task_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "task_subject";
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+	
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -468,17 +494,14 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -573,11 +596,37 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "stakerholders";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+	
+	
+		
+	$edata["LinkField"] = "stakeholder_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "stakeholder_name";
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+	
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -593,17 +642,14 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	

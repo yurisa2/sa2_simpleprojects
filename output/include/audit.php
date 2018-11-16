@@ -394,6 +394,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="events_stakeholders")
+		{
+			return false;
+		}
 	}
 	
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -785,6 +789,10 @@ class AuditTrailFile
 		if($table=="admin_users")
 		{
 			return true;
+		}
+		if($table=="events_stakeholders")
+		{
+			return false;
 		}
 	}
 }

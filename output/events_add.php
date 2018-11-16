@@ -268,7 +268,8 @@ $page_layouts["events_list"] = $layout;
 // end add master layouts 
 
 
-
+	
+	
 $pageMode = AddPage::readAddModeFromRequest();
 
 $xt = new Xtempl();

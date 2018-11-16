@@ -176,5 +176,29 @@ function getMenuNodes_welcome_page($menuNodesObject)
 
 
 	$menuNodesObject->menuNodes["welcome_page"][] = $menuNode;
+	$menuNode = array();
+	$menuNode["id"] = "8";
+	$menuNode["name"] = "";
+	$menuNode["href"] = "mypage.htm";
+	$menuNode["type"] = "Leaf";
+	$menuNode["table"] = "events_stakeholders";
+	$menuNode["style"] = "";
+	$menuNode["params"] = "";
+	$menuNode["parent"] = "1";
+	$menuNode["nameType"] = "Text";
+	$menuNode["linkType"] = "Internal";
+	$menuNode["pageType"] = "List";//
+	$menuNode["openType"] = "None";
+	
+	$menuNode["icon"] = "";
+	$menuNode["iconType"] = "0";
+
+			$menuNode["color"] = "#"."778899";
+	
+	$menuNode["title"] = "Events Stakeholders";
+
+
+
+	$menuNodesObject->menuNodes["welcome_page"][] = $menuNode;
 }
 ?>

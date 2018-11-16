@@ -2547,6 +2547,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "admin_members" ] = "admin_members";
 	$projectEntities[ "admin_users" ] = array( "url" => "admin_users", "type" => 1 );
 	$projectEntitiesReverse[ "admin_users" ] = "admin_users";
+	$projectEntities[ "events_stakeholders" ] = array( "url" => "events_stakeholders", "type" => 0 );
+	$projectEntitiesReverse[ "events_stakeholders" ] = "events_stakeholders";
 }
 
 //	return table short name

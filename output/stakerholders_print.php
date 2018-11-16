@@ -155,6 +155,53 @@ $page_layouts["tasks_stakeholders_print"] = $layout;
 
 
 
+		
+
+
+$layout = new TLayout("print_bootstrap", "OfficeOffice", "MobileOffice");
+$layout->version = 3;
+	$layout->bootstrapTheme = "yeti";
+$layout->blocks["center"] = array();
+$layout->containers["pageheader"] = array();
+$layout->container_properties["pageheader"] = array(  "print" => "repeat"  );
+$layout->containers["pageheader"][] = array("name"=>"printheader",
+	"block"=>"printheader", "substyle"=>1  );
+
+$layout->containers["pageheader"][] = array("name"=>"page_of_print",
+	"block"=>"page_number", "substyle"=>1  );
+
+$layout->skins["pageheader"] = "";
+
+$layout->blocks["center"][] = "pageheader";
+$layout->containers["grid"] = array();
+$layout->container_properties["grid"] = array(  );
+$layout->containers["grid"][] = array("name"=>"printgrid",
+	"block"=>"grid_block", "substyle"=>1  );
+
+$layout->skins["grid"] = "";
+
+$layout->blocks["center"][] = "grid";
+$layout->blocks["top"] = array();
+$layout->containers["pdf"] = array();
+$layout->container_properties["pdf"] = array(  "print" => "none"  );
+$layout->containers["pdf"][] = array("name"=>"printbuttons",
+	"block"=>"printbuttons", "substyle"=>1  );
+
+$layout->skins["pdf"] = "";
+
+$layout->blocks["top"][] = "pdf";
+$layout->containers["master"] = array();
+$layout->container_properties["master"] = array(  );
+$layout->containers["master"][] = array("name"=>"masterinfo",
+	"block"=>"mastertable_block", "substyle"=>1  );
+
+$layout->skins["master"] = "";
+
+$layout->blocks["top"][] = "master";
+$page_layouts["events_stakeholders_print"] = $layout;
+
+
+
 
 
 $xt = new Xtempl();

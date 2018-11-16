@@ -260,6 +260,7 @@ $page_layouts["stakerholders_list"] = $layout;
 
 	
 		
+		
 	
 $pageMode = AddPage::readAddModeFromRequest();
 

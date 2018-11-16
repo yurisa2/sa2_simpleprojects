@@ -289,6 +289,8 @@ function checkTableName($shortTName, $type=false)
 		return true;
 	if ("admin_users" == $shortTName && ($type===false || ($type!==false && $type == 1)))
 		return true;
+	if ("events_stakeholders" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
 	return false;
 }
 
@@ -387,6 +389,11 @@ function GetTablesList($pdfMode = false)
 	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
 	{
 		$arr[]="admin_users";
+	}
+	$strPerm = GetUserPermissions("events_stakeholders");
+	if(strpos($strPerm, "P")!==false || ($pdfMode && strpos($strPerm, "S")!==false))
+	{
+		$arr[]="events_stakeholders";
 	}
 	return $arr;
 }
@@ -1103,6 +1110,8 @@ function guestHasPermissions()
 	if(array_key_exists("admin_members",$_SESSION["UserRights"]["Guest"]))
 		return true;
 	if(array_key_exists("admin_users",$_SESSION["UserRights"]["Guest"]))
+		return true;
+	if(array_key_exists("events_stakeholders",$_SESSION["UserRights"]["Guest"]))
 		return true;
 	return false;
 }

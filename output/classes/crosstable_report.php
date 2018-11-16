@@ -1288,6 +1288,8 @@ class CrossTableReport
 			$isDB = true;
 		if("users" == $this->xml_array['tables'][0])
 			$isDB = true;
+		if("events_stakeholders" == $this->xml_array['tables'][0])
+			$isDB = true;
 		return $isDB;
 	}
 	

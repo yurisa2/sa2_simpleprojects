@@ -389,6 +389,15 @@
 								</label>
 							</div>
 					{END print_details_tasks_stakeholders}
+					{BEGIN print_details_events_stakeholders}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsevents_stakeholders{$id}">
+									<input type="checkbox" value="events_stakeholders" id="printDetailsevents_stakeholders{$id}" checked>
+									Events Stakeholders
+								</label>
+							</div>
+					{END print_details_events_stakeholders}
 				</div>
 			</div>
 		{END print_details}
@@ -681,7 +690,7 @@
 		
 							
 				
-								<a {$dtables_link_attrs}  title="Show details">
+											<a {$dtables_link_attrs}  title="Show details">
 				<span class="badge projects_stakeholders_badge" {$projects_stakeholders_childnumber_attr}>
 					<span class="glyphicon glyphicon-th-list"></span> 
 					<span class="{$projects_stakeholders_cntspan_class}" >{$projects_stakeholders_childnumber}</span>

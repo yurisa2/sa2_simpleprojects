@@ -86,6 +86,7 @@ $page_layouts["stakerholders_view"] = $layout;
 
 	
 		
+		
 	
 $pageMode = ViewPage::readViewModeFromRequest();
 

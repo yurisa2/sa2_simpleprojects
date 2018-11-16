@@ -389,7 +389,29 @@
 		</li>
 		<li class="divider" role="separator"></li>
 
-		
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_events_stakeholders}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsevents_stakeholders{$id}">
+									<input type="checkbox" value="events_stakeholders" id="printDetailsevents_stakeholders{$id}" checked>
+									Events Stakeholders
+								</label>
+							</div>
+					{END print_details_events_stakeholders}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
 				<li>	
 			<div class="rnr-printdetails">
 				<label for="printPerPage{$id}">
@@ -575,7 +597,10 @@
 									</th>
 									{END checkbox_column}
 
-																		
+																		{BEGIN events_dtable_column}
+									<th >&nbsp;</th>
+									{END events_dtable_column}
+									
 									{BEGIN event_project_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$event_project_class}">
 									{BEGIN event_project_fieldheader}
@@ -682,7 +707,24 @@
 	</td>
 	{END checkbox_column}
 
+		{BEGIN events_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
 	
+			{BEGIN dtables_link}
+		
+							
+				
+					<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge events_stakeholders_badge" {$events_stakeholders_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$events_stakeholders_cntspan_class}" >{$events_stakeholders_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
+	</td>
+	{END events_dtable_column}
+
 
 	{BEGIN event_project_fieldcolumn}
 	<td class="bs-gridcell {$event_project_class}" {$event_project_style} data-field=event_project>

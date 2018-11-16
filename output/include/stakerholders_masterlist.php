@@ -42,6 +42,15 @@ function DisplayMasterTableInfo_stakerholders($params)
 		$xt->assign('showKeys', $showKeys);
 	}
 
+	if($detailtable == "events_stakeholders")
+	{
+		$keysAssoc["stakeholder_id"] = $keys[1-1];
+				
+				$keyValue = $viewControls->showDBValue("stakeholder_id", $keysAssoc);
+		$showKeys.= " ".GetFieldLabel("stakerholders","stakeholder_id").": ".$keyValue;
+		$xt->assign('showKeys', $showKeys);
+	}
+
 	if( !$data || !count($data) )
 		return;
 	
