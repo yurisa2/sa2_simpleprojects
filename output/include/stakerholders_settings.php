@@ -480,7 +480,8 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -503,7 +504,8 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -575,7 +577,7 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Email Hyperlink");
 
 	
 	
@@ -588,8 +590,7 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
@@ -603,7 +604,8 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -626,7 +628,8 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -821,11 +824,13 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 
 	
 	
 	
+								$vdata["ShowIcon"] = true;
+		
 	
 	
 	
@@ -834,15 +839,13 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 
 	
 	
@@ -861,11 +864,8 @@ $tdatastakerholders[".printFields"][] = "stakeholder_attach";
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation

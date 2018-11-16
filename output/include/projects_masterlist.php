@@ -125,7 +125,7 @@ function DisplayMasterTableInfo_projects($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("project_end_dat_class", $class); // add class for field header as field value
-	$xt->assign("project_attachments_mastervalue", $viewControls->showDBValue("project_attachments", $data, $keylink));
+	$xt->assign("project_attachments_mastervalue", "<span class='rnr-field-file'>".$viewControls->showDBValue("project_attachments", $data, $keylink)."</span>");
 	$format = $settings->getViewFormat("project_attachments");
 	$class = " rnr-field-text";
 	if($format == FORMAT_FILE) 

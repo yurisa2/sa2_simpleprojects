@@ -61,6 +61,30 @@
 
 
 <div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN event_project_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_event_project} bs-viewform-group" data-fieldname="event_project">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_event_project}">
+			{$label events event_project}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$event_project_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END event_project_fieldblock}
+	{BEGIN event_add_date_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_event_add_date} bs-viewform-group" data-fieldname="event_add_date">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_event_add_date}">
+			{$label events event_add_date}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$event_add_date_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END event_add_date_fieldblock}
 	{BEGIN event_subject_fieldblock}
 <div class="container">
 	<div class="{$fielddispclass_event_subject} bs-viewform-group" data-fieldname="event_subject">
@@ -97,30 +121,6 @@
 	</div>
 </div>
 {END event_attachments_fieldblock}
-	{BEGIN event_add_date_fieldblock}
-<div class="container">
-	<div class="{$fielddispclass_event_add_date} bs-viewform-group" data-fieldname="event_add_date">
-		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_event_add_date}">
-			{$label events event_add_date}
-		</label>
-		<div class="col-md-6 bs-horizontal-value" >
-			{$event_add_date_value}&nbsp;
-		</div>
-	</div>
-</div>
-{END event_add_date_fieldblock}
-	{BEGIN event_project_fieldblock}
-<div class="container">
-	<div class="{$fielddispclass_event_project} bs-viewform-group" data-fieldname="event_project">
-		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_event_project}">
-			{$label events event_project}
-		</label>
-		<div class="col-md-6 bs-horizontal-value" >
-			{$event_project_value}&nbsp;
-		</div>
-	</div>
-</div>
-{END event_project_fieldblock}
 </div>
 
 

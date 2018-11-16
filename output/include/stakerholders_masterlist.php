@@ -90,7 +90,7 @@ function DisplayMasterTableInfo_stakerholders($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("stakeholder_obs_class", $class); // add class for field header as field value
-	$xt->assign("stakeholder_attach_mastervalue", $viewControls->showDBValue("stakeholder_attach", $data, $keylink));
+	$xt->assign("stakeholder_attach_mastervalue", "<span class='rnr-field-file'>".$viewControls->showDBValue("stakeholder_attach", $data, $keylink)."</span>");
 	$format = $settings->getViewFormat("stakeholder_attach");
 	$class = " rnr-field-text";
 	if($format == FORMAT_FILE) 

@@ -541,6 +541,8 @@ $tableCaptions[""] = array();
 $tableCaptions[""][""] = "";
 $tableCaptions[""]["projects"] = "Projects";
 $tableCaptions[""]["tasks"] = "Tasks";
+$tableCaptions[""]["stakerholders"] = "Stakerholders";
+$tableCaptions[""]["events"] = "Events";
 
 
 $globalEvents = new class_GlobalEvents;
@@ -583,7 +585,7 @@ $scriptname = getFileNameFromURL();
 
 $isGroupSecurity = true;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 

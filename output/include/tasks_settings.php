@@ -147,13 +147,13 @@ $tdatatasks[".allSearchFields"] = array();
 $tdatatasks[".filterFields"] = array();
 $tdatatasks[".requiredSearchFields"] = array();
 
-$tdatatasks[".allSearchFields"][] = "task_subject";
+$tdatatasks[".allSearchFields"][] = "task_project";
+	$tdatatasks[".allSearchFields"][] = "task_modify_date";
+	$tdatatasks[".allSearchFields"][] = "task_subject";
 	$tdatatasks[".allSearchFields"][] = "task_body";
 	$tdatatasks[".allSearchFields"][] = "task_attachments";
 	$tdatatasks[".allSearchFields"][] = "task_start_date";
 	$tdatatasks[".allSearchFields"][] = "task_end_date";
-	$tdatatasks[".allSearchFields"][] = "task_modify_date";
-	$tdatatasks[".allSearchFields"][] = "task_project";
 	$tdatatasks[".allSearchFields"][] = "task_obs";
 	
 
@@ -171,13 +171,13 @@ $tdatatasks[".googleLikeFields"][] = "task_obs";
 
 $tdatatasks[".advSearchFields"] = array();
 $tdatatasks[".advSearchFields"][] = "task_id";
+$tdatatasks[".advSearchFields"][] = "task_project";
+$tdatatasks[".advSearchFields"][] = "task_modify_date";
 $tdatatasks[".advSearchFields"][] = "task_subject";
 $tdatatasks[".advSearchFields"][] = "task_body";
 $tdatatasks[".advSearchFields"][] = "task_attachments";
 $tdatatasks[".advSearchFields"][] = "task_start_date";
 $tdatatasks[".advSearchFields"][] = "task_end_date";
-$tdatatasks[".advSearchFields"][] = "task_modify_date";
-$tdatatasks[".advSearchFields"][] = "task_project";
 $tdatatasks[".advSearchFields"][] = "task_obs";
 
 $tdatatasks[".tableType"] = "list";
@@ -265,74 +265,70 @@ $tableKeystasks[] = "task_id";
 $tdatatasks[".Keys"] = $tableKeystasks;
 
 $tdatatasks[".listFields"] = array();
+$tdatatasks[".listFields"][] = "task_project";
+$tdatatasks[".listFields"][] = "task_modify_date";
 $tdatatasks[".listFields"][] = "task_subject";
 $tdatatasks[".listFields"][] = "task_body";
 $tdatatasks[".listFields"][] = "task_attachments";
 $tdatatasks[".listFields"][] = "task_start_date";
 $tdatatasks[".listFields"][] = "task_end_date";
-$tdatatasks[".listFields"][] = "task_modify_date";
-$tdatatasks[".listFields"][] = "task_project";
 $tdatatasks[".listFields"][] = "task_obs";
 
 $tdatatasks[".hideMobileList"] = array();
 
 
 $tdatatasks[".viewFields"] = array();
+$tdatatasks[".viewFields"][] = "task_project";
+$tdatatasks[".viewFields"][] = "task_modify_date";
 $tdatatasks[".viewFields"][] = "task_subject";
 $tdatatasks[".viewFields"][] = "task_body";
 $tdatatasks[".viewFields"][] = "task_attachments";
 $tdatatasks[".viewFields"][] = "task_start_date";
 $tdatatasks[".viewFields"][] = "task_end_date";
-$tdatatasks[".viewFields"][] = "task_modify_date";
-$tdatatasks[".viewFields"][] = "task_project";
 $tdatatasks[".viewFields"][] = "task_obs";
 
 $tdatatasks[".addFields"] = array();
+$tdatatasks[".addFields"][] = "task_project";
+$tdatatasks[".addFields"][] = "task_modify_date";
 $tdatatasks[".addFields"][] = "task_subject";
 $tdatatasks[".addFields"][] = "task_body";
 $tdatatasks[".addFields"][] = "task_attachments";
 $tdatatasks[".addFields"][] = "task_start_date";
 $tdatatasks[".addFields"][] = "task_end_date";
-$tdatatasks[".addFields"][] = "task_modify_date";
-$tdatatasks[".addFields"][] = "task_project";
 $tdatatasks[".addFields"][] = "task_obs";
 
 $tdatatasks[".masterListFields"] = array();
+$tdatatasks[".masterListFields"][] = "task_project";
+$tdatatasks[".masterListFields"][] = "task_modify_date";
 $tdatatasks[".masterListFields"][] = "task_subject";
 $tdatatasks[".masterListFields"][] = "task_body";
 $tdatatasks[".masterListFields"][] = "task_attachments";
 $tdatatasks[".masterListFields"][] = "task_start_date";
 $tdatatasks[".masterListFields"][] = "task_end_date";
-$tdatatasks[".masterListFields"][] = "task_modify_date";
-$tdatatasks[".masterListFields"][] = "task_project";
 $tdatatasks[".masterListFields"][] = "task_obs";
 
 $tdatatasks[".inlineAddFields"] = array();
-$tdatatasks[".inlineAddFields"][] = "task_project";
-$tdatatasks[".inlineAddFields"][] = "task_obs";
 
 $tdatatasks[".editFields"] = array();
+$tdatatasks[".editFields"][] = "task_project";
+$tdatatasks[".editFields"][] = "task_modify_date";
 $tdatatasks[".editFields"][] = "task_subject";
 $tdatatasks[".editFields"][] = "task_body";
 $tdatatasks[".editFields"][] = "task_attachments";
 $tdatatasks[".editFields"][] = "task_start_date";
 $tdatatasks[".editFields"][] = "task_end_date";
-$tdatatasks[".editFields"][] = "task_modify_date";
-$tdatatasks[".editFields"][] = "task_project";
 $tdatatasks[".editFields"][] = "task_obs";
 
 $tdatatasks[".inlineEditFields"] = array();
-$tdatatasks[".inlineEditFields"][] = "task_project";
-$tdatatasks[".inlineEditFields"][] = "task_obs";
 
 $tdatatasks[".exportFields"] = array();
+$tdatatasks[".exportFields"][] = "task_project";
+$tdatatasks[".exportFields"][] = "task_modify_date";
 $tdatatasks[".exportFields"][] = "task_subject";
 $tdatatasks[".exportFields"][] = "task_body";
 $tdatatasks[".exportFields"][] = "task_attachments";
 $tdatatasks[".exportFields"][] = "task_start_date";
 $tdatatasks[".exportFields"][] = "task_end_date";
-$tdatatasks[".exportFields"][] = "task_modify_date";
-$tdatatasks[".exportFields"][] = "task_project";
 $tdatatasks[".exportFields"][] = "task_obs";
 
 $tdatatasks[".importFields"] = array();
@@ -346,13 +342,13 @@ $tdatatasks[".importFields"][] = "task_project";
 $tdatatasks[".importFields"][] = "task_obs";
 
 $tdatatasks[".printFields"] = array();
+$tdatatasks[".printFields"][] = "task_project";
+$tdatatasks[".printFields"][] = "task_modify_date";
 $tdatatasks[".printFields"][] = "task_subject";
 $tdatatasks[".printFields"][] = "task_body";
 $tdatatasks[".printFields"][] = "task_attachments";
 $tdatatasks[".printFields"][] = "task_start_date";
 $tdatatasks[".printFields"][] = "task_end_date";
-$tdatatasks[".printFields"][] = "task_modify_date";
-$tdatatasks[".printFields"][] = "task_project";
 $tdatatasks[".printFields"][] = "task_obs";
 
 //	task_id
@@ -748,7 +744,8 @@ $tdatatasks[".printFields"][] = "task_obs";
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "task_attachments";
 
-	
+		$fdata["DeleteAssociatedFile"] = true;
+
 	
 				$fdata["FieldPermissions"] = true;
 
@@ -757,11 +754,13 @@ $tdatatasks[".printFields"][] = "task_obs";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 
 	
 	
 	
+								$vdata["ShowIcon"] = true;
+		
 	
 	
 	
@@ -770,15 +769,13 @@ $tdatatasks[".printFields"][] = "task_obs";
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text area");
+	$edata = array("EditFormat" => "Document upload");
 
 	
 	
@@ -791,14 +788,12 @@ $tdatatasks[".printFields"][] = "task_obs";
 	
 			$edata["acceptFileTypes"] = ".+$";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
-
+	
 	
 	
 		$edata["controlWidth"] = 200;
@@ -1146,10 +1141,9 @@ $tdatatasks[".printFields"][] = "task_obs";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Readonly");
 
-		$edata["ShowTime"] = true;
-
+	
 	
 
 
@@ -1164,10 +1158,7 @@ $tdatatasks[".printFields"][] = "task_obs";
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
-
+	
 	
 	
 	
@@ -1223,12 +1214,10 @@ $tdatatasks[".printFields"][] = "task_obs";
 
 		$fdata["bAddPage"] = true;
 
-		$fdata["bInlineAdd"] = true;
-
+	
 		$fdata["bEditPage"] = true;
 
-		$fdata["bInlineEdit"] = true;
-
+	
 		$fdata["bViewPage"] = true;
 
 		$fdata["bAdvancedSearch"] = true;
@@ -1272,11 +1261,37 @@ $tdatatasks[".printFields"][] = "task_obs";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "projects";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+	
+	
+		
+	$edata["LinkField"] = "project_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "project_name";
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+	
+// End Lookup Settings
 
 
 		$edata["IsRequired"] = true;
@@ -1292,17 +1307,14 @@ $tdatatasks[".printFields"][] = "task_obs";
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 						$edata["validateAs"]["basicValidate"][] = "IsRequired";
 		
 	
@@ -1350,12 +1362,10 @@ $tdatatasks[".printFields"][] = "task_obs";
 
 		$fdata["bAddPage"] = true;
 
-		$fdata["bInlineAdd"] = true;
-
+	
 		$fdata["bEditPage"] = true;
 
-		$fdata["bInlineEdit"] = true;
-
+	
 		$fdata["bViewPage"] = true;
 
 		$fdata["bAdvancedSearch"] = true;

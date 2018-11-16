@@ -576,6 +576,32 @@
 									{END checkbox_column}
 
 																		
+									{BEGIN event_project_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$event_project_class}">
+									{BEGIN event_project_fieldheader}
+																				<span {$event_project_orderlinkattrs}>
+											{$label events event_project}
+										</span>
+									{END event_project_fieldheader}
+									</th>
+									{END event_project_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN event_add_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$event_add_date_class}">
+									{BEGIN event_add_date_fieldheader}
+																				<span {$event_add_date_orderlinkattrs}>
+											{$label events event_add_date}
+										</span>
+									{END event_add_date_fieldheader}
+									</th>
+									{END event_add_date_fieldheadercolumn}
+									
+									
+									
+									
 									{BEGIN event_subject_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$event_subject_class}">
 									{BEGIN event_subject_fieldheader}
@@ -611,32 +637,6 @@
 									{END event_attachments_fieldheader}
 									</th>
 									{END event_attachments_fieldheadercolumn}
-									
-									
-									
-									
-									{BEGIN event_add_date_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$event_add_date_class}">
-									{BEGIN event_add_date_fieldheader}
-																				<span {$event_add_date_orderlinkattrs}>
-											{$label events event_add_date}
-										</span>
-									{END event_add_date_fieldheader}
-									</th>
-									{END event_add_date_fieldheadercolumn}
-									
-									
-									
-									
-									{BEGIN event_project_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$event_project_class}">
-									{BEGIN event_project_fieldheader}
-																				<span {$event_project_orderlinkattrs}>
-											{$label events event_project}
-										</span>
-									{END event_project_fieldheader}
-									</th>
-									{END event_project_fieldheadercolumn}
 									
 									
 									
@@ -684,6 +684,20 @@
 
 	
 
+	{BEGIN event_project_fieldcolumn}
+	<td class="bs-gridcell {$event_project_class}" {$event_project_style} data-field=event_project>
+		{$event_project_value}
+	</td>
+{END event_project_fieldcolumn}
+
+
+	{BEGIN event_add_date_fieldcolumn}
+	<td class="bs-gridcell {$event_add_date_class}" {$event_add_date_style} data-field=event_add_date>
+		{$event_add_date_value}
+	</td>
+{END event_add_date_fieldcolumn}
+
+
 	{BEGIN event_subject_fieldcolumn}
 	<td class="bs-gridcell {$event_subject_class}" {$event_subject_style} data-field=event_subject>
 		{$event_subject_value}
@@ -703,20 +717,6 @@
 		{$event_attachments_value}
 	</td>
 {END event_attachments_fieldcolumn}
-
-
-	{BEGIN event_add_date_fieldcolumn}
-	<td class="bs-gridcell {$event_add_date_class}" {$event_add_date_style} data-field=event_add_date>
-		{$event_add_date_value}
-	</td>
-{END event_add_date_fieldcolumn}
-
-
-	{BEGIN event_project_fieldcolumn}
-	<td class="bs-gridcell {$event_project_class}" {$event_project_style} data-field=event_project>
-		{$event_project_value}
-	</td>
-{END event_project_fieldcolumn}
 
 	<!--<td class="rnr-edge" {$recordattrs}>&nbsp;</td>-->
 	{BEGIN endrecord_block}

@@ -72,6 +72,31 @@
 		</div>
 	</div>
 </div>
+	{BEGIN event_project_fieldblock}		
+	<div class="container {$fielddispclass_event_project}" data-fieldname="event_project">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_event_project}">
+						{$label events event_project}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$event_project_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_event_project}
+			</div>
+			<div class="col-md-4" >
+				{$event_project_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$event_project_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END event_project_fieldblock}
 	{BEGIN event_id_fieldblock}		
 	<div class="container {$fielddispclass_event_id}" data-fieldname="event_id">
 		<div class="form-group">
@@ -97,6 +122,31 @@
 		</div>
 	</div>
 {END event_id_fieldblock}
+	{BEGIN event_add_date_fieldblock}		
+	<div class="container {$fielddispclass_event_add_date}" data-fieldname="event_add_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_event_add_date}">
+						{$label events event_add_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$event_add_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_event_add_date}
+			</div>
+			<div class="col-md-4" >
+				{$event_add_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$event_add_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END event_add_date_fieldblock}
 	{BEGIN event_subject_fieldblock}		
 	<div class="container {$fielddispclass_event_subject}" data-fieldname="event_subject">
 		<div class="form-group">
@@ -172,56 +222,6 @@
 		</div>
 	</div>
 {END event_attachments_fieldblock}
-	{BEGIN event_add_date_fieldblock}		
-	<div class="container {$fielddispclass_event_add_date}" data-fieldname="event_add_date">
-		<div class="form-group">
-			<div class="col-md-2">
-				<div class="row">
-					<label class="col-md-9 control-label" for="{$labelfor_event_add_date}">
-						{$label events event_add_date}
-					</label>
-					<div class="col-md-3 checkbox rnr-bc">
-						<span><input type="checkbox" {$event_add_date_notbox}></span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2" >
-				{$searchtype_event_add_date}
-			</div>
-			<div class="col-md-4" >
-				{$event_add_date_editcontrol}
-			</div>
-			<div class="col-md-4" >
-				{$event_add_date_editcontrol1}
-			</div>
-		</div>
-	</div>
-{END event_add_date_fieldblock}
-	{BEGIN event_project_fieldblock}		
-	<div class="container {$fielddispclass_event_project}" data-fieldname="event_project">
-		<div class="form-group">
-			<div class="col-md-2">
-				<div class="row">
-					<label class="col-md-9 control-label" for="{$labelfor_event_project}">
-						{$label events event_project}
-					</label>
-					<div class="col-md-3 checkbox rnr-bc">
-						<span><input type="checkbox" {$event_project_notbox}></span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2" >
-				{$searchtype_event_project}
-			</div>
-			<div class="col-md-4" >
-				{$event_project_editcontrol}
-			</div>
-			<div class="col-md-4" >
-				{$event_project_editcontrol1}
-			</div>
-		</div>
-	</div>
-{END event_project_fieldblock}
 </div>
 
 

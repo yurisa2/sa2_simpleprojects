@@ -1232,8 +1232,6 @@ function SetAuthSessionData($pUsername, &$data, $fromFacebook, $password, &$page
 	$_SESSION["GroupID"] = $data["groupid"];
 
 
-		$_SESSION["OwnerID"] = $data["active"];
-	$_SESSION["_tasks_stakeholders_OwnerID"] = $data["active"];
 	if($globalEvents->exists("AfterSuccessfulLogin"))
 	{
 		$globalEvents->AfterSuccessfulLogin($pUsername != "Guest" ? $pUsername : "", $password, $data, $pageObject);

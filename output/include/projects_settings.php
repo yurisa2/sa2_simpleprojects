@@ -1084,7 +1084,8 @@ $tdataprojects[".printFields"][] = "project_attachments";
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "project_attachments";
 
-	
+		$fdata["DeleteAssociatedFile"] = true;
+
 	
 				$fdata["FieldPermissions"] = true;
 
@@ -1093,11 +1094,13 @@ $tdataprojects[".printFields"][] = "project_attachments";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 
 	
 	
 	
+								$vdata["ShowIcon"] = true;
+		
 	
 	
 	
@@ -1106,15 +1109,13 @@ $tdataprojects[".printFields"][] = "project_attachments";
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Document upload");
 
 	
 	
@@ -1127,17 +1128,14 @@ $tdataprojects[".printFields"][] = "project_attachments";
 	
 			$edata["acceptFileTypes"] = ".+$";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation

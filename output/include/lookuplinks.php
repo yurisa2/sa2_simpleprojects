@@ -40,6 +40,8 @@ function InitLookupLinks()
 
 	$lookupTableLinks = array();
 
+	$lookupTableLinks["projects"]["tasks.task_project"]["edit"] = array("table" => "tasks", "field" => "task_project", "page" => "edit");
+	$lookupTableLinks["projects"]["events.event_project"]["edit"] = array("table" => "events", "field" => "event_project", "page" => "edit");
 }
 
 ?>

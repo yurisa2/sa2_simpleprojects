@@ -102,6 +102,16 @@
 	{BEGIN grid_header}
 		<tr class="{$gridHeader_class}" >
 		{BEGIN record_header}
+			{BEGIN event_project_fieldheadercolumn}
+			<th class="{$event_project_class}" {$event_project_style}>
+				{$label events event_project}
+			</th>
+			{END event_project_fieldheadercolumn}
+			{BEGIN event_add_date_fieldheadercolumn}
+			<th class="{$event_add_date_class}" {$event_add_date_style}>
+				{$label events event_add_date}
+			</th>
+			{END event_add_date_fieldheadercolumn}
 			{BEGIN event_subject_fieldheadercolumn}
 			<th class="{$event_subject_class}" {$event_subject_style}>
 				{$label events event_subject}
@@ -117,16 +127,6 @@
 				{$label events event_attachments}
 			</th>
 			{END event_attachments_fieldheadercolumn}
-			{BEGIN event_add_date_fieldheadercolumn}
-			<th class="{$event_add_date_class}" {$event_add_date_style}>
-				{$label events event_add_date}
-			</th>
-			{END event_add_date_fieldheadercolumn}
-			{BEGIN event_project_fieldheadercolumn}
-			<th class="{$event_project_class}" {$event_project_style}>
-				{$label events event_project}
-			</th>
-			{END event_project_fieldheadercolumn}
 			{BEGIN endrecordheader_block}
 			<th class="rnr-cs">&nbsp;</th>
 			{END endrecordheader_block}
@@ -139,6 +139,16 @@
 	{BEGIN grid_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 		{BEGIN grid_record}
+			{BEGIN event_project_fieldcolumn}
+			<td  class="{$event_project_class}" {$event_project_style} {$recordattrs}>
+				{$event_project_value}
+			</td>
+			{END event_project_fieldcolumn}
+			{BEGIN event_add_date_fieldcolumn}
+			<td  class="{$event_add_date_class}" {$event_add_date_style} {$recordattrs}>
+				{$event_add_date_value}
+			</td>
+			{END event_add_date_fieldcolumn}
 			{BEGIN event_subject_fieldcolumn}
 			<td  class="{$event_subject_class}" {$event_subject_style} {$recordattrs}>
 				{$event_subject_value}
@@ -154,16 +164,6 @@
 				{$event_attachments_value}
 			</td>
 			{END event_attachments_fieldcolumn}
-			{BEGIN event_add_date_fieldcolumn}
-			<td  class="{$event_add_date_class}" {$event_add_date_style} {$recordattrs}>
-				{$event_add_date_value}
-			</td>
-			{END event_add_date_fieldcolumn}
-			{BEGIN event_project_fieldcolumn}
-			<td  class="{$event_project_class}" {$event_project_style} {$recordattrs}>
-				{$event_project_value}
-			</td>
-			{END event_project_fieldcolumn}
 			{BEGIN endrecord_block}
 			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
 			{END endrecord_block}

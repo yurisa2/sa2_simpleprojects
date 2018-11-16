@@ -102,6 +102,16 @@
 	{BEGIN grid_header}
 		<tr class="{$gridHeader_class}" >
 		{BEGIN record_header}
+			{BEGIN task_project_fieldheadercolumn}
+			<th class="{$task_project_class}" {$task_project_style}>
+				{$label tasks task_project}
+			</th>
+			{END task_project_fieldheadercolumn}
+			{BEGIN task_modify_date_fieldheadercolumn}
+			<th class="{$task_modify_date_class}" {$task_modify_date_style}>
+				{$label tasks task_modify_date}
+			</th>
+			{END task_modify_date_fieldheadercolumn}
 			{BEGIN task_subject_fieldheadercolumn}
 			<th class="{$task_subject_class}" {$task_subject_style}>
 				{$label tasks task_subject}
@@ -127,16 +137,6 @@
 				{$label tasks task_end_date}
 			</th>
 			{END task_end_date_fieldheadercolumn}
-			{BEGIN task_modify_date_fieldheadercolumn}
-			<th class="{$task_modify_date_class}" {$task_modify_date_style}>
-				{$label tasks task_modify_date}
-			</th>
-			{END task_modify_date_fieldheadercolumn}
-			{BEGIN task_project_fieldheadercolumn}
-			<th class="{$task_project_class}" {$task_project_style}>
-				{$label tasks task_project}
-			</th>
-			{END task_project_fieldheadercolumn}
 			{BEGIN task_obs_fieldheadercolumn}
 			<th class="{$task_obs_class}" {$task_obs_style}>
 				{$label tasks task_obs}
@@ -154,6 +154,16 @@
 	{BEGIN grid_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 		{BEGIN grid_record}
+			{BEGIN task_project_fieldcolumn}
+			<td  class="{$task_project_class}" {$task_project_style} {$recordattrs}>
+				{$task_project_value}
+			</td>
+			{END task_project_fieldcolumn}
+			{BEGIN task_modify_date_fieldcolumn}
+			<td  class="{$task_modify_date_class}" {$task_modify_date_style} {$recordattrs}>
+				{$task_modify_date_value}
+			</td>
+			{END task_modify_date_fieldcolumn}
 			{BEGIN task_subject_fieldcolumn}
 			<td  class="{$task_subject_class}" {$task_subject_style} {$recordattrs}>
 				{$task_subject_value}
@@ -179,16 +189,6 @@
 				{$task_end_date_value}
 			</td>
 			{END task_end_date_fieldcolumn}
-			{BEGIN task_modify_date_fieldcolumn}
-			<td  class="{$task_modify_date_class}" {$task_modify_date_style} {$recordattrs}>
-				{$task_modify_date_value}
-			</td>
-			{END task_modify_date_fieldcolumn}
-			{BEGIN task_project_fieldcolumn}
-			<td  class="{$task_project_class}" {$task_project_style} {$recordattrs}>
-				{$task_project_value}
-			</td>
-			{END task_project_fieldcolumn}
 			{BEGIN task_obs_fieldcolumn}
 			<td  class="{$task_obs_class}" {$task_obs_style} {$recordattrs}>
 				{$task_obs_value}

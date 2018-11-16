@@ -97,6 +97,56 @@
 		</div>
 	</div>
 {END task_id_fieldblock}
+	{BEGIN task_project_fieldblock}		
+	<div class="container {$fielddispclass_task_project}" data-fieldname="task_project">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_project}">
+						{$label tasks task_project}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_project_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_project}
+			</div>
+			<div class="col-md-4" >
+				{$task_project_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_project_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_project_fieldblock}
+	{BEGIN task_modify_date_fieldblock}		
+	<div class="container {$fielddispclass_task_modify_date}" data-fieldname="task_modify_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_modify_date}">
+						{$label tasks task_modify_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_modify_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_modify_date}
+			</div>
+			<div class="col-md-4" >
+				{$task_modify_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_modify_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_modify_date_fieldblock}
 	{BEGIN task_subject_fieldblock}		
 	<div class="container {$fielddispclass_task_subject}" data-fieldname="task_subject">
 		<div class="form-group">
@@ -222,56 +272,6 @@
 		</div>
 	</div>
 {END task_end_date_fieldblock}
-	{BEGIN task_modify_date_fieldblock}		
-	<div class="container {$fielddispclass_task_modify_date}" data-fieldname="task_modify_date">
-		<div class="form-group">
-			<div class="col-md-2">
-				<div class="row">
-					<label class="col-md-9 control-label" for="{$labelfor_task_modify_date}">
-						{$label tasks task_modify_date}
-					</label>
-					<div class="col-md-3 checkbox rnr-bc">
-						<span><input type="checkbox" {$task_modify_date_notbox}></span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2" >
-				{$searchtype_task_modify_date}
-			</div>
-			<div class="col-md-4" >
-				{$task_modify_date_editcontrol}
-			</div>
-			<div class="col-md-4" >
-				{$task_modify_date_editcontrol1}
-			</div>
-		</div>
-	</div>
-{END task_modify_date_fieldblock}
-	{BEGIN task_project_fieldblock}		
-	<div class="container {$fielddispclass_task_project}" data-fieldname="task_project">
-		<div class="form-group">
-			<div class="col-md-2">
-				<div class="row">
-					<label class="col-md-9 control-label" for="{$labelfor_task_project}">
-						{$label tasks task_project}
-					</label>
-					<div class="col-md-3 checkbox rnr-bc">
-						<span><input type="checkbox" {$task_project_notbox}></span>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-2" >
-				{$searchtype_task_project}
-			</div>
-			<div class="col-md-4" >
-				{$task_project_editcontrol}
-			</div>
-			<div class="col-md-4" >
-				{$task_project_editcontrol1}
-			</div>
-		</div>
-	</div>
-{END task_project_fieldblock}
 	{BEGIN task_obs_fieldblock}		
 	<div class="container {$fielddispclass_task_obs}" data-fieldname="task_obs">
 		<div class="form-group">

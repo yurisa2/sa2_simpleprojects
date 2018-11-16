@@ -68,7 +68,7 @@ function DisplayMasterTableInfo_tasks($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("task_body_class", $class); // add class for field header as field value
-	$xt->assign("task_attachments_mastervalue", $viewControls->showDBValue("task_attachments", $data, $keylink));
+	$xt->assign("task_attachments_mastervalue", "<span class='rnr-field-file'>".$viewControls->showDBValue("task_attachments", $data, $keylink)."</span>");
 	$format = $settings->getViewFormat("task_attachments");
 	$class = " rnr-field-text";
 	if($format == FORMAT_FILE) 

@@ -137,11 +137,11 @@ $tdataevents[".allSearchFields"] = array();
 $tdataevents[".filterFields"] = array();
 $tdataevents[".requiredSearchFields"] = array();
 
-$tdataevents[".allSearchFields"][] = "event_subject";
+$tdataevents[".allSearchFields"][] = "event_project";
+	$tdataevents[".allSearchFields"][] = "event_add_date";
+	$tdataevents[".allSearchFields"][] = "event_subject";
 	$tdataevents[".allSearchFields"][] = "event_body";
 	$tdataevents[".allSearchFields"][] = "event_attachments";
-	$tdataevents[".allSearchFields"][] = "event_add_date";
-	$tdataevents[".allSearchFields"][] = "event_project";
 	
 
 $tdataevents[".googleLikeFields"] = array();
@@ -154,12 +154,12 @@ $tdataevents[".googleLikeFields"][] = "event_project";
 
 
 $tdataevents[".advSearchFields"] = array();
+$tdataevents[".advSearchFields"][] = "event_project";
 $tdataevents[".advSearchFields"][] = "event_id";
+$tdataevents[".advSearchFields"][] = "event_add_date";
 $tdataevents[".advSearchFields"][] = "event_subject";
 $tdataevents[".advSearchFields"][] = "event_body";
 $tdataevents[".advSearchFields"][] = "event_attachments";
-$tdataevents[".advSearchFields"][] = "event_add_date";
-$tdataevents[".advSearchFields"][] = "event_project";
 
 $tdataevents[".tableType"] = "list";
 
@@ -246,54 +246,54 @@ $tableKeysevents[] = "event_id";
 $tdataevents[".Keys"] = $tableKeysevents;
 
 $tdataevents[".listFields"] = array();
+$tdataevents[".listFields"][] = "event_project";
+$tdataevents[".listFields"][] = "event_add_date";
 $tdataevents[".listFields"][] = "event_subject";
 $tdataevents[".listFields"][] = "event_body";
 $tdataevents[".listFields"][] = "event_attachments";
-$tdataevents[".listFields"][] = "event_add_date";
-$tdataevents[".listFields"][] = "event_project";
 
 $tdataevents[".hideMobileList"] = array();
 
 
 $tdataevents[".viewFields"] = array();
+$tdataevents[".viewFields"][] = "event_project";
+$tdataevents[".viewFields"][] = "event_add_date";
 $tdataevents[".viewFields"][] = "event_subject";
 $tdataevents[".viewFields"][] = "event_body";
 $tdataevents[".viewFields"][] = "event_attachments";
-$tdataevents[".viewFields"][] = "event_add_date";
-$tdataevents[".viewFields"][] = "event_project";
 
 $tdataevents[".addFields"] = array();
+$tdataevents[".addFields"][] = "event_project";
+$tdataevents[".addFields"][] = "event_add_date";
 $tdataevents[".addFields"][] = "event_subject";
 $tdataevents[".addFields"][] = "event_body";
 $tdataevents[".addFields"][] = "event_attachments";
-$tdataevents[".addFields"][] = "event_add_date";
-$tdataevents[".addFields"][] = "event_project";
 
 $tdataevents[".masterListFields"] = array();
+$tdataevents[".masterListFields"][] = "event_project";
 $tdataevents[".masterListFields"][] = "event_id";
+$tdataevents[".masterListFields"][] = "event_add_date";
 $tdataevents[".masterListFields"][] = "event_subject";
 $tdataevents[".masterListFields"][] = "event_body";
 $tdataevents[".masterListFields"][] = "event_attachments";
-$tdataevents[".masterListFields"][] = "event_add_date";
-$tdataevents[".masterListFields"][] = "event_project";
 
 $tdataevents[".inlineAddFields"] = array();
 
 $tdataevents[".editFields"] = array();
+$tdataevents[".editFields"][] = "event_project";
+$tdataevents[".editFields"][] = "event_add_date";
 $tdataevents[".editFields"][] = "event_subject";
 $tdataevents[".editFields"][] = "event_body";
 $tdataevents[".editFields"][] = "event_attachments";
-$tdataevents[".editFields"][] = "event_add_date";
-$tdataevents[".editFields"][] = "event_project";
 
 $tdataevents[".inlineEditFields"] = array();
 
 $tdataevents[".exportFields"] = array();
+$tdataevents[".exportFields"][] = "event_project";
+$tdataevents[".exportFields"][] = "event_add_date";
 $tdataevents[".exportFields"][] = "event_subject";
 $tdataevents[".exportFields"][] = "event_body";
 $tdataevents[".exportFields"][] = "event_attachments";
-$tdataevents[".exportFields"][] = "event_add_date";
-$tdataevents[".exportFields"][] = "event_project";
 
 $tdataevents[".importFields"] = array();
 $tdataevents[".importFields"][] = "event_subject";
@@ -303,11 +303,11 @@ $tdataevents[".importFields"][] = "event_add_date";
 $tdataevents[".importFields"][] = "event_project";
 
 $tdataevents[".printFields"] = array();
+$tdataevents[".printFields"][] = "event_project";
+$tdataevents[".printFields"][] = "event_add_date";
 $tdataevents[".printFields"][] = "event_subject";
 $tdataevents[".printFields"][] = "event_body";
 $tdataevents[".printFields"][] = "event_attachments";
-$tdataevents[".printFields"][] = "event_add_date";
-$tdataevents[".printFields"][] = "event_project";
 
 //	event_id
 //	Custom field settings
@@ -702,7 +702,8 @@ $tdataevents[".printFields"][] = "event_project";
 		$fdata["isSQLExpression"] = true;
 	$fdata["FullName"] = "event_attachments";
 
-	
+		$fdata["DeleteAssociatedFile"] = true;
+
 	
 				$fdata["FieldPermissions"] = true;
 
@@ -711,11 +712,13 @@ $tdataevents[".printFields"][] = "event_project";
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Document Download");
 
 	
 	
 	
+								$vdata["ShowIcon"] = true;
+		
 	
 	
 	
@@ -724,15 +727,13 @@ $tdataevents[".printFields"][] = "event_project";
 	
 	
 	
-		$vdata["NeedEncode"] = true;
-
 	$fdata["ViewFormats"]["view"] = $vdata;
 //  End View Formats
 
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text area");
+	$edata = array("EditFormat" => "Document upload");
 
 	
 	
@@ -745,14 +746,12 @@ $tdataevents[".printFields"][] = "event_project";
 	
 			$edata["acceptFileTypes"] = ".+$";
 
-		$edata["maxNumberOfFiles"] = 1;
+		$edata["maxNumberOfFiles"] = 0;
 
 	
 	
 	
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
-
+	
 	
 	
 		$edata["controlWidth"] = 200;
@@ -854,10 +853,9 @@ $tdataevents[".printFields"][] = "event_project";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Date");
+	$edata = array("EditFormat" => "Readonly");
 
-		$edata["ShowTime"] = true;
-
+	
 	
 
 
@@ -872,10 +870,7 @@ $tdataevents[".printFields"][] = "event_project";
 
 	
 	
-		$edata["DateEditType"] = 13;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 10;
-
+	
 	
 	
 	
@@ -978,11 +973,37 @@ $tdataevents[".printFields"][] = "event_project";
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Lookup wizard");
 
 	
 	
 
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "projects";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+	
+	
+		
+	$edata["LinkField"] = "project_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "project_name";
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+	
+// End Lookup Settings
 
 
 	
@@ -997,17 +1018,14 @@ $tdataevents[".printFields"][] = "event_project";
 	
 	
 	
-			$edata["HTML5InuptType"] = "number";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
 							
 	
 	//	End validation

@@ -780,6 +780,26 @@ function fileCustomExpression($file, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="projects" && $field=="project_attachments")
+	{
+		;
+		return $value;
+	}
+				if($table=="stakerholders" && $field=="stakeholder_attach")
+	{
+		;
+		return $value;
+	}
+				if($table=="tasks" && $field=="task_attachments")
+	{
+		;
+		return $value;
+	}
+				if($table=="events" && $field=="event_attachments")
+	{
+		;
+		return $value;
+	}
 	return $value;
 }
 

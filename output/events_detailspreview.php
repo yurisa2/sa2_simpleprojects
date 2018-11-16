@@ -168,7 +168,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("event_body")))
 				$class = ' rnr-field-number';
 			$row["event_body_class"] = $class;
-	//	event_attachments - 
+	//	event_attachments - Document Download
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("event_attachments", $data, $keylink);
 			$row["event_attachments_value"] = $value;

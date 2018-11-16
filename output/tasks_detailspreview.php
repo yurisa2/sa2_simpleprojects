@@ -168,7 +168,7 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("task_body")))
 				$class = ' rnr-field-number';
 			$row["task_body_class"] = $class;
-	//	task_attachments - 
+	//	task_attachments - Document Download
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("task_attachments", $data, $keylink);
 			$row["task_attachments_value"] = $value;

@@ -95,6 +95,42 @@
 
 
 <div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN task_project_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="task_project" data-signal-error-for="task_project{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_project}">
+		{BEGIN task_project_label}{$label tasks task_project}{END task_project_label}
+	</label>
+	<div class="col-md-6" >
+		{$task_project_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="task_project">
+		<div class="text-muted" >
+		{$tooltip tasks task_project}
+		</div>
+	</div>
+</div>
+</div>
+{END task_project_fieldblock}
+
+			{BEGIN task_modify_date_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="task_modify_date" data-signal-error-for="task_modify_date{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_modify_date}">
+		{BEGIN task_modify_date_label}{$label tasks task_modify_date}{END task_modify_date_label}
+	</label>
+	<div class="col-md-6" >
+		{$task_modify_date_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="task_modify_date">
+		<div class="text-muted" >
+		{$tooltip tasks task_modify_date}
+		</div>
+	</div>
+</div>
+</div>
+{END task_modify_date_fieldblock}
+
 			{BEGIN task_subject_fieldblock}
 <div class=container>
 <div class="form-group" data-fieldname="task_subject" data-signal-error-for="task_subject{$id}" >
@@ -185,23 +221,23 @@
 </div>
 {END task_end_date_fieldblock}
 
-			{BEGIN task_modify_date_fieldblock}
+			{BEGIN task_obs_fieldblock}
 <div class=container>
-<div class="form-group" data-fieldname="task_modify_date" data-signal-error-for="task_modify_date{$id}" >
-	<label class="col-md-3 control-label" for="{$labelfor_task_modify_date}">
-		{BEGIN task_modify_date_label}{$label tasks task_modify_date}{END task_modify_date_label}
+<div class="form-group" data-fieldname="task_obs" data-signal-error-for="task_obs{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_obs}">
+		{BEGIN task_obs_label}{$label tasks task_obs}{END task_obs_label}
 	</label>
 	<div class="col-md-6" >
-		{$task_modify_date_editcontrol}
+		{$task_obs_editcontrol}
 	</div>
-	<div class="col-md-3 help-block" data-helpfor="task_modify_date">
+	<div class="col-md-3 help-block" data-helpfor="task_obs">
 		<div class="text-muted" >
-		{$tooltip tasks task_modify_date}
+		{$tooltip tasks task_obs}
 		</div>
 	</div>
 </div>
 </div>
-{END task_modify_date_fieldblock}
+{END task_obs_fieldblock}
 
 
 </div>
