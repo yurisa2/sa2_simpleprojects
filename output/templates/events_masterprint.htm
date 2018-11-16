@@ -1,0 +1,52 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel events masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+		<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$event_project_class}">{$label events event_project}</th>
+			<th class="{$event_id_class}">{$label events event_id}</th>
+			<th class="{$event_add_date_class}">{$label events event_add_date}</th>
+			<th class="{$event_subject_class}">{$label events event_subject}</th>
+			<th class="{$event_body_class}">{$label events event_body}</th>
+			<th class="{$event_attachments_class}">{$label events event_attachments}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$event_project_class}">{$event_project_mastervalue}</td>
+			<td class="{$event_id_class}">{$event_id_mastervalue}</td>
+			<td class="{$event_add_date_class}">{$event_add_date_mastervalue}</td>
+			<td class="{$event_subject_class}">{$event_subject_mastervalue}</td>
+			<td class="{$event_body_class}">{$event_body_mastervalue}</td>
+			<td class="{$event_attachments_class}">{$event_attachments_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

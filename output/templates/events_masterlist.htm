@@ -1,0 +1,70 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><span>{$pagetitlelabel events masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=event_id]:before {
+		content: "{$label events event_id}";
+	}
+	.bs-gridcell[data-field=event_subject]:before {
+		content: "{$label events event_subject}";
+	}
+	.bs-gridcell[data-field=event_body]:before {
+		content: "{$label events event_body}";
+	}
+	.bs-gridcell[data-field=event_attachments]:before {
+		content: "{$label events event_attachments}";
+	}
+	.bs-gridcell[data-field=event_add_date]:before {
+		content: "{$label events event_add_date}";
+	}
+	.bs-gridcell[data-field=event_project]:before {
+		content: "{$label events event_project}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$event_project_class}">{$label events event_project}</th>
+			<th class="{$event_id_class}">{$label events event_id}</th>
+			<th class="{$event_add_date_class}">{$label events event_add_date}</th>
+			<th class="{$event_subject_class}">{$label events event_subject}</th>
+			<th class="{$event_body_class}">{$label events event_body}</th>
+			<th class="{$event_attachments_class}">{$label events event_attachments}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$event_project_class} bs-gridcell" data-field=event_project>{$event_project_mastervalue}</td>
+			<td class="{$event_id_class} bs-gridcell" data-field=event_id>{$event_id_mastervalue}</td>
+			<td class="{$event_add_date_class} bs-gridcell" data-field=event_add_date>{$event_add_date_mastervalue}</td>
+			<td class="{$event_subject_class} bs-gridcell" data-field=event_subject>{$event_subject_mastervalue}</td>
+			<td class="{$event_body_class} bs-gridcell" data-field=event_body>{$event_body_mastervalue}</td>
+			<td class="{$event_attachments_class} bs-gridcell" data-field=event_attachments>{$event_attachments_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

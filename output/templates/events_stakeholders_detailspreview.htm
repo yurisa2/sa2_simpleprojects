@@ -1,0 +1,48 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div class="rnr-c rnr-ch rnr-c-dcount">
+
+
+<div  class="style1 rnr-bl rnr-b-bsdetailspreviewcount {$brickclass_bsdetailspreviewcount}"><span {$bsdetailspreviewcount_hiddenattr} data-pageid="{$pageid}" data-brick="bsdetailspreviewcount">Details found: <strong>{$row_count}.</strong></span>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="table striped">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="{$gridHeader_class}" >
+			<th class="{$id_link_class}">{$label events_stakeholders id_link}</th>
+			<th class="{$event_id_class}">{$label events_stakeholders event_id}</th>
+			<th class="{$stakeholder_id_class}">{$label events_stakeholders stakeholder_id}</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr>
+			<td class="{$id_link_class}">{$id_link_value}</td>
+			<td class="{$event_id_class}">{$event_id_value}</td>
+			<td class="{$stakeholder_id_class}">{$stakeholder_id_value}</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>
