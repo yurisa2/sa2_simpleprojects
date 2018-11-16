@@ -1,0 +1,266 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel stakerholders search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-2 control-label">
+			NOT
+			&nbsp;
+		</div>
+		<div class="col-md-10" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN stakeholder_id_fieldblock}		
+	<div class="container {$fielddispclass_stakeholder_id}" data-fieldname="stakeholder_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_stakeholder_id}">
+						{$label stakerholders stakeholder_id}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$stakeholder_id_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_stakeholder_id}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stakeholder_id_fieldblock}
+	{BEGIN stakeholder_name_fieldblock}		
+	<div class="container {$fielddispclass_stakeholder_name}" data-fieldname="stakeholder_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_stakeholder_name}">
+						{$label stakerholders stakeholder_name}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$stakeholder_name_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_stakeholder_name}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stakeholder_name_fieldblock}
+	{BEGIN stakeholder_email_fieldblock}		
+	<div class="container {$fielddispclass_stakeholder_email}" data-fieldname="stakeholder_email">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_stakeholder_email}">
+						{$label stakerholders stakeholder_email}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$stakeholder_email_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_stakeholder_email}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_email_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_email_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stakeholder_email_fieldblock}
+	{BEGIN stakeholder_obs_fieldblock}		
+	<div class="container {$fielddispclass_stakeholder_obs}" data-fieldname="stakeholder_obs">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_stakeholder_obs}">
+						{$label stakerholders stakeholder_obs}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$stakeholder_obs_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_stakeholder_obs}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_obs_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_obs_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stakeholder_obs_fieldblock}
+	{BEGIN stakeholder_attach_fieldblock}		
+	<div class="container {$fielddispclass_stakeholder_attach}" data-fieldname="stakeholder_attach">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_stakeholder_attach}">
+						{$label stakerholders stakeholder_attach}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$stakeholder_attach_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_stakeholder_attach}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_attach_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$stakeholder_attach_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END stakeholder_attach_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

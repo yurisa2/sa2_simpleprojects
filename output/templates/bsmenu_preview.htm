@@ -1,0 +1,21 @@
+{BEGIN mainmenu_block}
+
+##if exists(@TABLE)##
+##set @isAdminTable=eval(IsAdminTable(@TABLE))##
+##else##
+##set @isAdminTable="0"##
+##endif##
+
+##if !@isAdminTable##
+	##if @MENU.strMenuName!=WELCOME_MENU##
+		##include templates\bsmenu_welcome_preview.htm##
+	##elseif @MENU.InlineMenu##
+		<H4>Please, contact the developer to create proper menu preview </H4>
+	##else##
+		<H4>Please, contact the developer to create proper menu preview </H4>
+	##endif##
+##else##
+	<H4>Please, contact the developer to create proper menu preview </H4>
+##endif##
+
+{END mainmenu_block}

@@ -1,0 +1,366 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel tasks search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-2 control-label">
+			NOT
+			&nbsp;
+		</div>
+		<div class="col-md-10" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN task_id_fieldblock}		
+	<div class="container {$fielddispclass_task_id}" data-fieldname="task_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_id}">
+						{$label tasks task_id}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_id_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_id}
+			</div>
+			<div class="col-md-4" >
+				{$task_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_id_fieldblock}
+	{BEGIN task_subject_fieldblock}		
+	<div class="container {$fielddispclass_task_subject}" data-fieldname="task_subject">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_subject}">
+						{$label tasks task_subject}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_subject_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_subject}
+			</div>
+			<div class="col-md-4" >
+				{$task_subject_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_subject_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_subject_fieldblock}
+	{BEGIN task_body_fieldblock}		
+	<div class="container {$fielddispclass_task_body}" data-fieldname="task_body">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_body}">
+						{$label tasks task_body}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_body_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_body}
+			</div>
+			<div class="col-md-4" >
+				{$task_body_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_body_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_body_fieldblock}
+	{BEGIN task_attachments_fieldblock}		
+	<div class="container {$fielddispclass_task_attachments}" data-fieldname="task_attachments">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_attachments}">
+						{$label tasks task_attachments}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_attachments_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_attachments}
+			</div>
+			<div class="col-md-4" >
+				{$task_attachments_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_attachments_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_attachments_fieldblock}
+	{BEGIN task_start_date_fieldblock}		
+	<div class="container {$fielddispclass_task_start_date}" data-fieldname="task_start_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_start_date}">
+						{$label tasks task_start_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_start_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_start_date}
+			</div>
+			<div class="col-md-4" >
+				{$task_start_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_start_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_start_date_fieldblock}
+	{BEGIN task_end_date_fieldblock}		
+	<div class="container {$fielddispclass_task_end_date}" data-fieldname="task_end_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_end_date}">
+						{$label tasks task_end_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_end_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_end_date}
+			</div>
+			<div class="col-md-4" >
+				{$task_end_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_end_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_end_date_fieldblock}
+	{BEGIN task_modify_date_fieldblock}		
+	<div class="container {$fielddispclass_task_modify_date}" data-fieldname="task_modify_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_modify_date}">
+						{$label tasks task_modify_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_modify_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_modify_date}
+			</div>
+			<div class="col-md-4" >
+				{$task_modify_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_modify_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_modify_date_fieldblock}
+	{BEGIN task_project_fieldblock}		
+	<div class="container {$fielddispclass_task_project}" data-fieldname="task_project">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_project}">
+						{$label tasks task_project}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_project_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_project}
+			</div>
+			<div class="col-md-4" >
+				{$task_project_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_project_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_project_fieldblock}
+	{BEGIN task_obs_fieldblock}		
+	<div class="container {$fielddispclass_task_obs}" data-fieldname="task_obs">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_obs}">
+						{$label tasks task_obs}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_obs_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_obs}
+			</div>
+			<div class="col-md-4" >
+				{$task_obs_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_obs_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_obs_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_searchpage}
+<div {$searchpage_chiddenattr} data-pageid="{$pageid}" data-container="searchpage" class="container    "> 
+
+
+
+
+{BEGIN container_header}
+<div {$header_chiddenattr} data-pageid="{$pageid}" data-container="header" class="   col-md-6 col-md-offset-3"> 
+
+{BEGIN searchheader}
+	<h2 {$bssearchheader_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchheader" >{$pagetitlelabel projects search}</h2>
+
+{END searchheader}
+
+
+
+</div>
+{END container_header}
+
+
+
+
+
+
+</div>
+{END container_searchpage}
+
+
+
+{BEGIN container_fields}
+<div {$fields_chiddenattr} data-pageid="{$pageid}" data-container="fields" class="   col-md-12 "> 
+
+
+<div {$bssearchfields_hiddenattr} data-pageid="{$pageid}" data-brick="bssearchfields" class="form-horizontal" role="form">
+<div class="container">
+	<div class="form-group">
+		<div class="col-md-2 control-label">
+			NOT
+			&nbsp;
+		</div>
+		<div class="col-md-10" >
+			&nbsp;
+		</div>
+	</div>
+</div>
+	{BEGIN project_id_fieldblock}		
+	<div class="container {$fielddispclass_project_id}" data-fieldname="project_id">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_id}">
+						{$label projects project_id}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_id_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_id}
+			</div>
+			<div class="col-md-4" >
+				{$project_id_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_id_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_id_fieldblock}
+	{BEGIN project_name_fieldblock}		
+	<div class="container {$fielddispclass_project_name}" data-fieldname="project_name">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_name}">
+						{$label projects project_name}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_name_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_name}
+			</div>
+			<div class="col-md-4" >
+				{$project_name_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_name_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_name_fieldblock}
+	{BEGIN project_owner_fieldblock}		
+	<div class="container {$fielddispclass_project_owner}" data-fieldname="project_owner">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_owner}">
+						{$label projects project_owner}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_owner_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_owner}
+			</div>
+			<div class="col-md-4" >
+				{$project_owner_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_owner_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_owner_fieldblock}
+	{BEGIN project_obs_fieldblock}		
+	<div class="container {$fielddispclass_project_obs}" data-fieldname="project_obs">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_obs}">
+						{$label projects project_obs}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_obs_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_obs}
+			</div>
+			<div class="col-md-4" >
+				{$project_obs_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_obs_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_obs_fieldblock}
+	{BEGIN project_start_date_fieldblock}		
+	<div class="container {$fielddispclass_project_start_date}" data-fieldname="project_start_date">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_start_date}">
+						{$label projects project_start_date}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_start_date_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_start_date}
+			</div>
+			<div class="col-md-4" >
+				{$project_start_date_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_start_date_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_start_date_fieldblock}
+	{BEGIN project_end_dat_fieldblock}		
+	<div class="container {$fielddispclass_project_end_dat}" data-fieldname="project_end_dat">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_end_dat}">
+						{$label projects project_end_dat}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_end_dat_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_end_dat}
+			</div>
+			<div class="col-md-4" >
+				{$project_end_dat_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_end_dat_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_end_dat_fieldblock}
+	{BEGIN project_attachments_fieldblock}		
+	<div class="container {$fielddispclass_project_attachments}" data-fieldname="project_attachments">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_attachments}">
+						{$label projects project_attachments}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_attachments_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_attachments}
+			</div>
+			<div class="col-md-4" >
+				{$project_attachments_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_attachments_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_attachments_fieldblock}
+</div>
+
+
+
+
+</div>
+{END container_fields}
+
+
+
+{BEGIN container_bottombuttons}
+<div {$bottombuttons_chiddenattr} data-pageid="{$pageid}" data-container="bottombuttons" class="container    "> 
+
+
+
+
+{BEGIN container_leftbuttons}
+<div {$leftbuttons_chiddenattr} data-pageid="{$pageid}" data-container="leftbuttons" class="   col-md-3 col-md-offset-4"> 
+
+{BEGIN searchbuttons}
+{BEGIN search_button}
+<button class="btn btn-primary" {$searchbutton_attrs}>Search</button>
+{END search_button} 
+{BEGIN reset_button}
+<button class="btn btn-default" {$resetbutton_attrs}>Reset</button>
+{END reset_button}
+{BEGIN back_button}
+<button class="btn btn-default" {$backbutton_attrs}>Back to list</button>
+{END back_button}
+{END searchbuttons}
+
+
+
+</div>
+{END container_leftbuttons}
+
+
+
+
+
+
+</div>
+{END container_bottombuttons}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

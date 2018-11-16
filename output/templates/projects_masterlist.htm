@@ -1,0 +1,73 @@
+<div {$pageattrs}>
+
+{BEGIN container_column}
+<div class="rnr-c rnr-ch rnr-c-column">
+
+{BEGIN masterlist_title}
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}"><span>{$pagetitlelabel projects masterlist}</span></div>
+{END masterlist_title}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_column}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+	<style>
+	.bs-gridcell[data-field=project_id]:before {
+		content: "{$label projects project_id}";
+	}
+	.bs-gridcell[data-field=project_name]:before {
+		content: "{$label projects project_name}";
+	}
+	.bs-gridcell[data-field=project_owner]:before {
+		content: "{$label projects project_owner}";
+	}
+	.bs-gridcell[data-field=project_obs]:before {
+		content: "{$label projects project_obs}";
+	}
+	.bs-gridcell[data-field=project_start_date]:before {
+		content: "{$label projects project_start_date}";
+	}
+	.bs-gridcell[data-field=project_end_dat]:before {
+		content: "{$label projects project_end_dat}";
+	}
+	.bs-gridcell[data-field=project_attachments]:before {
+		content: "{$label projects project_attachments}";
+	}
+</style>
+<table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
+		<thead>
+		<tr>
+			<th class="{$project_name_class}">{$label projects project_name}</th>
+			<th class="{$project_owner_class}">{$label projects project_owner}</th>
+			<th class="{$project_obs_class}">{$label projects project_obs}</th>
+			<th class="{$project_start_date_class}">{$label projects project_start_date}</th>
+			<th class="{$project_end_dat_class}">{$label projects project_end_dat}</th>
+			<th class="{$project_attachments_class}">{$label projects project_attachments}</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+			<td class="{$project_name_class} bs-gridcell" data-field=project_name>{$project_name_mastervalue}</td>
+			<td class="{$project_owner_class} bs-gridcell" data-field=project_owner>{$project_owner_mastervalue}</td>
+			<td class="{$project_obs_class} bs-gridcell" data-field=project_obs>{$project_obs_mastervalue}</td>
+			<td class="{$project_start_date_class} bs-gridcell" data-field=project_start_date>{$project_start_date_mastervalue}</td>
+			<td class="{$project_end_dat_class} bs-gridcell" data-field=project_end_dat>{$project_end_dat_mastervalue}</td>
+			<td class="{$project_attachments_class} bs-gridcell" data-field=project_attachments>{$project_attachments_mastervalue}</td>
+		</tr>
+	</tbody>
+
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

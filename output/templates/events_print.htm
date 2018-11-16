@@ -1,0 +1,195 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<DIV class="bs-top">
+        
+
+{BEGIN container_pdf}
+<div {$pdf_chiddenattr} data-pageid="{$pageid}" data-container="pdf" class="   col-md-12 "> 
+
+{BEGIN printbuttons}
+
+{END printbuttons}
+
+
+
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div {$master_chiddenattr} data-pageid="{$pageid}" data-container="master" class="    "> 
+
+{BEGIN mastertable_block}
+<div class="panel panel-info table-panel">
+	<div class="panel-heading">
+	{$master_heading}
+	</div>
+	<div class="panel-body">
+{$showmasterfile}
+	</div>
+</div>
+
+{END mastertable_block}
+
+
+
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="bs-middle ">
+			<div class="bs-topmiddle">
+				
+			</div>
+			<div class="bs-left" {$blockattr_left}>
+				
+			</div>
+			<div class="bs-center">
+				
+
+{BEGIN container_pageheader}
+<div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
+
+{BEGIN printheader}
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel events print}</h2>
+
+{END printheader}
+
+
+{BEGIN page_number}
+<span>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></span>
+{END page_number}
+
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="table table-bordered rp-maintable" {$printgrid_hiddenattr} data-pageid="{$pageid}" data-brick="printgrid" >
+	<thead>
+	{BEGIN grid_header}
+		<tr class="{$gridHeader_class}" >
+		{BEGIN record_header}
+			{BEGIN event_subject_fieldheadercolumn}
+			<th class="{$event_subject_class}" {$event_subject_style}>
+				{$label events event_subject}
+			</th>
+			{END event_subject_fieldheadercolumn}
+			{BEGIN event_body_fieldheadercolumn}
+			<th class="{$event_body_class}" {$event_body_style}>
+				{$label events event_body}
+			</th>
+			{END event_body_fieldheadercolumn}
+			{BEGIN event_attachments_fieldheadercolumn}
+			<th class="{$event_attachments_class}" {$event_attachments_style}>
+				{$label events event_attachments}
+			</th>
+			{END event_attachments_fieldheadercolumn}
+			{BEGIN event_add_date_fieldheadercolumn}
+			<th class="{$event_add_date_class}" {$event_add_date_style}>
+				{$label events event_add_date}
+			</th>
+			{END event_add_date_fieldheadercolumn}
+			{BEGIN event_project_fieldheadercolumn}
+			<th class="{$event_project_class}" {$event_project_style}>
+				{$label events event_project}
+			</th>
+			{END event_project_fieldheadercolumn}
+			{BEGIN endrecordheader_block}
+			<th class="rnr-cs">&nbsp;</th>
+			{END endrecordheader_block}
+		{END record_header}
+		</tr>
+	{END grid_header}
+	</thead>
+	
+	<tbody>	
+	{BEGIN grid_row}
+		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+			{BEGIN event_subject_fieldcolumn}
+			<td  class="{$event_subject_class}" {$event_subject_style} {$recordattrs}>
+				{$event_subject_value}
+			</td>
+			{END event_subject_fieldcolumn}
+			{BEGIN event_body_fieldcolumn}
+			<td  class="{$event_body_class}" {$event_body_style} {$recordattrs}>
+				{$event_body_value}
+			</td>
+			{END event_body_fieldcolumn}
+			{BEGIN event_attachments_fieldcolumn}
+			<td  class="{$event_attachments_class}" {$event_attachments_style} {$recordattrs}>
+				{$event_attachments_value}
+			</td>
+			{END event_attachments_fieldcolumn}
+			{BEGIN event_add_date_fieldcolumn}
+			<td  class="{$event_add_date_class}" {$event_add_date_style} {$recordattrs}>
+				{$event_add_date_value}
+			</td>
+			{END event_add_date_fieldcolumn}
+			{BEGIN event_project_fieldcolumn}
+			<td  class="{$event_project_class}" {$event_project_style} {$recordattrs}>
+				{$event_project_value}
+			</td>
+			{END event_project_fieldcolumn}
+			{BEGIN endrecord_block}
+			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+			{END endrecord_block}
+		{END grid_record}
+		</tr>
+{END grid_row}
+	</tbody>
+
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="bs-right">
+				
+			</div>
+		</div>
+		<DIV class="bs-bottom">
+        
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
