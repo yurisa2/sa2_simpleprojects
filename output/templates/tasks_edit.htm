@@ -98,6 +98,60 @@
 
 
 
+			{BEGIN task_done_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="task_done" data-signal-error-for="task_done{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_done}">
+		{BEGIN task_done_label}{$label tasks task_done}{END task_done_label}
+	</label>
+	<div class="col-md-6" >
+		{$task_done_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="task_done">
+		<div class="text-muted" >
+		{$tooltip tasks task_done}
+		</div>
+	</div>
+</div>
+</div>
+{END task_done_fieldblock}
+
+			{BEGIN task_timestamp_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="task_timestamp" data-signal-error-for="task_timestamp{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_timestamp}">
+		{BEGIN task_timestamp_label}{$label tasks task_timestamp}{END task_timestamp_label}
+	</label>
+	<div class="col-md-6" >
+		{$task_timestamp_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="task_timestamp">
+		<div class="text-muted" >
+		{$tooltip tasks task_timestamp}
+		</div>
+	</div>
+</div>
+</div>
+{END task_timestamp_fieldblock}
+
+			{BEGIN task_completed_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="task_completed" data-signal-error-for="task_completed{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_task_completed}">
+		{BEGIN task_completed_label}{$label tasks task_completed}{END task_completed_label}
+	</label>
+	<div class="col-md-6" >
+		{$task_completed_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="task_completed">
+		<div class="text-muted" >
+		{$tooltip tasks task_completed}
+		</div>
+	</div>
+</div>
+</div>
+{END task_completed_fieldblock}
+
 			{BEGIN task_project_fieldblock}
 <div class=container>
 <div class="form-group" data-fieldname="task_project" data-signal-error-for="task_project{$id}" >

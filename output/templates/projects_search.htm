@@ -247,6 +247,31 @@
 		</div>
 	</div>
 {END project_attachments_fieldblock}
+	{BEGIN project_timestamp_fieldblock}		
+	<div class="container {$fielddispclass_project_timestamp}" data-fieldname="project_timestamp">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_project_timestamp}">
+						{$label projects project_timestamp}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$project_timestamp_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_project_timestamp}
+			</div>
+			<div class="col-md-4" >
+				{$project_timestamp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$project_timestamp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END project_timestamp_fieldblock}
 </div>
 
 

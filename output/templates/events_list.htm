@@ -581,6 +581,12 @@
 	.bs-gridcell[data-field=event_project]:before {
 		content: "{$label events event_project}";
 	}
+	.bs-gridcell[data-field=event_task]:before {
+		content: "{$label events event_task}";
+	}
+	.bs-gridcell[data-field=event_timestamp]:before {
+		content: "{$label events event_timestamp}";
+	}
 </style>
 <table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
 	<thead>
@@ -600,6 +606,32 @@
 																		{BEGIN events_dtable_column}
 									<th >&nbsp;</th>
 									{END events_dtable_column}
+									
+									{BEGIN event_task_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$event_task_class}">
+									{BEGIN event_task_fieldheader}
+																				<span {$event_task_orderlinkattrs}>
+											{$label events event_task}
+										</span>
+									{END event_task_fieldheader}
+									</th>
+									{END event_task_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN event_timestamp_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$event_timestamp_class}">
+									{BEGIN event_timestamp_fieldheader}
+																				<span {$event_timestamp_orderlinkattrs}>
+											{$label events event_timestamp}
+										</span>
+									{END event_timestamp_fieldheader}
+									</th>
+									{END event_timestamp_fieldheadercolumn}
+									
+									
+									
 									
 									{BEGIN event_project_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$event_project_class}">
@@ -724,6 +756,20 @@
 	
 	</td>
 	{END events_dtable_column}
+
+
+	{BEGIN event_task_fieldcolumn}
+	<td class="bs-gridcell {$event_task_class}" {$event_task_style} data-field=event_task>
+		{$event_task_value}
+	</td>
+{END event_task_fieldcolumn}
+
+
+	{BEGIN event_timestamp_fieldcolumn}
+	<td class="bs-gridcell {$event_timestamp_class}" {$event_timestamp_style} data-field=event_timestamp>
+		{$event_timestamp_value}
+	</td>
+{END event_timestamp_fieldcolumn}
 
 
 	{BEGIN event_project_fieldcolumn}

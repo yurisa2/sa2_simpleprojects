@@ -102,6 +102,16 @@
 	{BEGIN grid_header}
 		<tr class="{$gridHeader_class}" >
 		{BEGIN record_header}
+			{BEGIN event_task_fieldheadercolumn}
+			<th class="{$event_task_class}" {$event_task_style}>
+				{$label events event_task}
+			</th>
+			{END event_task_fieldheadercolumn}
+			{BEGIN event_timestamp_fieldheadercolumn}
+			<th class="{$event_timestamp_class}" {$event_timestamp_style}>
+				{$label events event_timestamp}
+			</th>
+			{END event_timestamp_fieldheadercolumn}
 			{BEGIN event_project_fieldheadercolumn}
 			<th class="{$event_project_class}" {$event_project_style}>
 				{$label events event_project}
@@ -139,6 +149,16 @@
 	{BEGIN grid_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 		{BEGIN grid_record}
+			{BEGIN event_task_fieldcolumn}
+			<td  class="{$event_task_class}" {$event_task_style} {$recordattrs}>
+				{$event_task_value}
+			</td>
+			{END event_task_fieldcolumn}
+			{BEGIN event_timestamp_fieldcolumn}
+			<td  class="{$event_timestamp_class}" {$event_timestamp_style} {$recordattrs}>
+				{$event_timestamp_value}
+			</td>
+			{END event_timestamp_fieldcolumn}
 			{BEGIN event_project_fieldcolumn}
 			<td  class="{$event_project_class}" {$event_project_style} {$recordattrs}>
 				{$event_project_value}
@@ -172,7 +192,7 @@
 	{BEGIN details_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 			{BEGIN details_record}
-				<td colspan="6">
+				<td colspan="8">
 					{BEGIN details_table}
 						{$details}
 					{END details_table}

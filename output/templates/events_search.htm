@@ -72,6 +72,56 @@
 		</div>
 	</div>
 </div>
+	{BEGIN event_task_fieldblock}		
+	<div class="container {$fielddispclass_event_task}" data-fieldname="event_task">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_event_task}">
+						{$label events event_task}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$event_task_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_event_task}
+			</div>
+			<div class="col-md-4" >
+				{$event_task_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$event_task_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END event_task_fieldblock}
+	{BEGIN event_timestamp_fieldblock}		
+	<div class="container {$fielddispclass_event_timestamp}" data-fieldname="event_timestamp">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_event_timestamp}">
+						{$label events event_timestamp}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$event_timestamp_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_event_timestamp}
+			</div>
+			<div class="col-md-4" >
+				{$event_timestamp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$event_timestamp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END event_timestamp_fieldblock}
 	{BEGIN event_project_fieldblock}		
 	<div class="container {$fielddispclass_event_project}" data-fieldname="event_project">
 		<div class="form-group">

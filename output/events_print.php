@@ -101,6 +101,42 @@ $layout->skinsparams["2"] = array("button"=>"button1");
 $layout->skinsparams["3"] = array("button"=>"button1");
 
 
+	
+
+
+$layout = new TLayout("masterprint", "OfficeOffice", "MobileOffice");
+$layout->version = 2;
+$layout->blocks["bare"] = array();
+$layout->containers["masterlistheader"] = array();
+$layout->container_properties["masterlistheader"] = array(  );
+$layout->containers["masterlistheader"][] = array("name"=>"masterprintheader",
+	"block"=>"", "substyle"=>1  );
+
+$layout->skins["masterlistheader"] = "empty";
+
+$layout->blocks["bare"][] = "masterlistheader";
+$layout->containers["mastergrid"] = array();
+$layout->container_properties["mastergrid"] = array(  );
+$layout->containers["mastergrid"][] = array("name"=>"masterprintgrid",
+	"block"=>"", "substyle"=>1  );
+
+$layout->skins["mastergrid"] = "grid";
+
+$layout->blocks["bare"][] = "mastergrid";
+$page_layouts["tasks_masterprint"] = $layout;
+
+$layout->skinsparams = array();
+$layout->skinsparams["empty"] = array("button"=>"button2");
+$layout->skinsparams["menu"] = array("button"=>"button1");
+$layout->skinsparams["hmenu"] = array("button"=>"button1");
+$layout->skinsparams["undermenu"] = array("button"=>"button1");
+$layout->skinsparams["fields"] = array("button"=>"button1");
+$layout->skinsparams["form"] = array("button"=>"button1");
+$layout->skinsparams["1"] = array("button"=>"button1");
+$layout->skinsparams["2"] = array("button"=>"button1");
+$layout->skinsparams["3"] = array("button"=>"button1");
+
+
 
 		
 

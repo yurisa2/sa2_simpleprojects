@@ -23,9 +23,9 @@ if(mlang_getcurrentlang()=="English")
 	$pageTitlestasks_stakeholders["English"] = array();
 	$fieldLabelstasks_stakeholders["English"]["id_link"] = "Id Link";
 	$fieldToolTipstasks_stakeholders["English"]["id_link"] = "";
-	$fieldLabelstasks_stakeholders["English"]["task_id"] = "Task Id";
+	$fieldLabelstasks_stakeholders["English"]["task_id"] = "Task";
 	$fieldToolTipstasks_stakeholders["English"]["task_id"] = "";
-	$fieldLabelstasks_stakeholders["English"]["stakeholder_id"] = "Stakeholder Id";
+	$fieldLabelstasks_stakeholders["English"]["stakeholder_id"] = "Stakeholder";
 	$fieldToolTipstasks_stakeholders["English"]["stakeholder_id"] = "";
 	if (count($fieldToolTipstasks_stakeholders["English"]))
 		$tdatatasks_stakeholders[".isUseToolTips"] = true;
@@ -77,25 +77,18 @@ $tdatatasks_stakeholders[".listAjax"] = false;
 
 	$tdatatasks_stakeholders[".locking"] = false;
 
-$tdatatasks_stakeholders[".edit"] = true;
-$tdatatasks_stakeholders[".afterEditAction"] = 1;
-$tdatatasks_stakeholders[".closePopupAfterEdit"] = 1;
-$tdatatasks_stakeholders[".afterEditActionDetTable"] = "";
 
-$tdatatasks_stakeholders[".add"] = true;
-$tdatatasks_stakeholders[".afterAddAction"] = 1;
-$tdatatasks_stakeholders[".closePopupAfterAdd"] = 1;
-$tdatatasks_stakeholders[".afterAddActionDetTable"] = "";
 
 $tdatatasks_stakeholders[".list"] = true;
 
+$tdatatasks_stakeholders[".inlineEdit"] = true;
+$tdatatasks_stakeholders[".inlineAdd"] = true;
 $tdatatasks_stakeholders[".view"] = true;
 
 $tdatatasks_stakeholders[".import"] = true;
 
 $tdatatasks_stakeholders[".exportTo"] = true;
 
-$tdatatasks_stakeholders[".printFriendly"] = true;
 
 $tdatatasks_stakeholders[".delete"] = true;
 
@@ -124,7 +117,7 @@ $tdatatasks_stakeholders[".isUseTimeForSearch"] = false;
 
 
 
-$tdatatasks_stakeholders[".badgeColor"] = "db7093";
+$tdatatasks_stakeholders[".badgeColor"] = "DB7093";
 
 
 $tdatatasks_stakeholders[".allSearchFields"] = array();
@@ -242,8 +235,6 @@ $tdatatasks_stakeholders[".viewFields"][] = "task_id";
 $tdatatasks_stakeholders[".viewFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".addFields"] = array();
-$tdatatasks_stakeholders[".addFields"][] = "task_id";
-$tdatatasks_stakeholders[".addFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".masterListFields"] = array();
 $tdatatasks_stakeholders[".masterListFields"][] = "id_link";
@@ -251,12 +242,14 @@ $tdatatasks_stakeholders[".masterListFields"][] = "task_id";
 $tdatatasks_stakeholders[".masterListFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".inlineAddFields"] = array();
+$tdatatasks_stakeholders[".inlineAddFields"][] = "task_id";
+$tdatatasks_stakeholders[".inlineAddFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".editFields"] = array();
-$tdatatasks_stakeholders[".editFields"][] = "task_id";
-$tdatatasks_stakeholders[".editFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".inlineEditFields"] = array();
+$tdatatasks_stakeholders[".inlineEditFields"][] = "task_id";
+$tdatatasks_stakeholders[".inlineEditFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".exportFields"] = array();
 $tdatatasks_stakeholders[".exportFields"][] = "task_id";
@@ -267,8 +260,6 @@ $tdatatasks_stakeholders[".importFields"][] = "task_id";
 $tdatatasks_stakeholders[".importFields"][] = "stakeholder_id";
 
 $tdatatasks_stakeholders[".printFields"] = array();
-$tdatatasks_stakeholders[".printFields"][] = "task_id";
-$tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 
 //	id_link
 //	Custom field settings
@@ -399,18 +390,17 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 	
 		$fdata["bListPage"] = true;
 
-		$fdata["bAddPage"] = true;
+	
+		$fdata["bInlineAdd"] = true;
 
 	
-		$fdata["bEditPage"] = true;
+		$fdata["bInlineEdit"] = true;
 
-	
 		$fdata["bViewPage"] = true;
 
 		$fdata["bAdvancedSearch"] = true;
 
-		$fdata["bPrinterPage"] = true;
-
+	
 		$fdata["bExportPage"] = true;
 
 		$fdata["strField"] = "task_id";
@@ -547,18 +537,17 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 	
 		$fdata["bListPage"] = true;
 
-		$fdata["bAddPage"] = true;
+	
+		$fdata["bInlineAdd"] = true;
 
 	
-		$fdata["bEditPage"] = true;
+		$fdata["bInlineEdit"] = true;
 
-	
 		$fdata["bViewPage"] = true;
 
 		$fdata["bAdvancedSearch"] = true;
 
-		$fdata["bPrinterPage"] = true;
-
+	
 		$fdata["bExportPage"] = true;
 
 		$fdata["strField"] = "stakeholder_id";
@@ -619,7 +608,8 @@ $tdatatasks_stakeholders[".printFields"][] = "stakeholder_id";
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+
 	
 
 	
@@ -702,7 +692,7 @@ $masterTablesData["tasks_stakeholders"] = array();
 	$masterParams["mShortTable"]= "stakerholders";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
-	$masterParams["dispChildCount"]= "0";
+	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispMasterInfo"] = array();
 				$masterParams["dispMasterInfo"][PAGE_LIST] = true;

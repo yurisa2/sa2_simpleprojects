@@ -21,6 +21,9 @@
 <table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
 		<thead>
 		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$task_done_class}">{$label tasks task_done}</th>
+			<th class="{$task_completed_class}">{$label tasks task_completed}</th>
+			<th class="{$task_timestamp_class}">{$label tasks task_timestamp}</th>
 			<th class="{$task_project_class}">{$label tasks task_project}</th>
 			<th class="{$task_modify_date_class}">{$label tasks task_modify_date}</th>
 			<th class="{$task_subject_class}">{$label tasks task_subject}</th>
@@ -34,6 +37,9 @@
 	</thead>
 	<tbody>
 		<tr class="rnr-row style1">
+			<td class="{$task_done_class}">{$task_done_mastervalue}</td>
+			<td class="{$task_completed_class}">{$task_completed_mastervalue}</td>
+			<td class="{$task_timestamp_class}">{$task_timestamp_mastervalue}</td>
 			<td class="{$task_project_class}">{$task_project_mastervalue}</td>
 			<td class="{$task_modify_date_class}">{$task_modify_date_mastervalue}</td>
 			<td class="{$task_subject_class}">{$task_subject_mastervalue}</td>

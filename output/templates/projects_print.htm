@@ -112,6 +112,11 @@
 				{$label projects project_attachments}
 			</th>
 			{END project_attachments_fieldheadercolumn}
+			{BEGIN project_timestamp_fieldheadercolumn}
+			<th class="{$project_timestamp_class}" {$project_timestamp_style}>
+				{$label projects project_timestamp}
+			</th>
+			{END project_timestamp_fieldheadercolumn}
 			{BEGIN endrecordheader_block}
 			<th class="rnr-cs">&nbsp;</th>
 			{END endrecordheader_block}
@@ -154,6 +159,11 @@
 				{$project_attachments_value}
 			</td>
 			{END project_attachments_fieldcolumn}
+			{BEGIN project_timestamp_fieldcolumn}
+			<td  class="{$project_timestamp_class}" {$project_timestamp_style} {$recordattrs}>
+				{$project_timestamp_value}
+			</td>
+			{END project_timestamp_fieldcolumn}
 			{BEGIN endrecord_block}
 			<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
 			{END endrecord_block}
@@ -162,7 +172,7 @@
 	{BEGIN details_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 			{BEGIN details_record}
-				<td colspan="7">
+				<td colspan="8">
 					{BEGIN details_table}
 						{$details}
 					{END details_table}

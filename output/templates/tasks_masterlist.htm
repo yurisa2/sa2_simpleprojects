@@ -45,10 +45,22 @@
 	.bs-gridcell[data-field=task_obs]:before {
 		content: "{$label tasks task_obs}";
 	}
+	.bs-gridcell[data-field=task_completed]:before {
+		content: "{$label tasks task_completed}";
+	}
+	.bs-gridcell[data-field=task_done]:before {
+		content: "{$label tasks task_done}";
+	}
+	.bs-gridcell[data-field=task_timestamp]:before {
+		content: "{$label tasks task_timestamp}";
+	}
 </style>
 <table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
 		<thead>
 		<tr>
+			<th class="{$task_done_class}">{$label tasks task_done}</th>
+			<th class="{$task_completed_class}">{$label tasks task_completed}</th>
+			<th class="{$task_timestamp_class}">{$label tasks task_timestamp}</th>
 			<th class="{$task_project_class}">{$label tasks task_project}</th>
 			<th class="{$task_modify_date_class}">{$label tasks task_modify_date}</th>
 			<th class="{$task_subject_class}">{$label tasks task_subject}</th>
@@ -62,6 +74,9 @@
 	
 	<tbody>
 		<tr>
+			<td class="{$task_done_class} bs-gridcell" data-field=task_done>{$task_done_mastervalue}</td>
+			<td class="{$task_completed_class} bs-gridcell" data-field=task_completed>{$task_completed_mastervalue}</td>
+			<td class="{$task_timestamp_class} bs-gridcell" data-field=task_timestamp>{$task_timestamp_mastervalue}</td>
 			<td class="{$task_project_class} bs-gridcell" data-field=task_project>{$task_project_mastervalue}</td>
 			<td class="{$task_modify_date_class} bs-gridcell" data-field=task_modify_date>{$task_modify_date_mastervalue}</td>
 			<td class="{$task_subject_class} bs-gridcell" data-field=task_subject>{$task_subject_mastervalue}</td>

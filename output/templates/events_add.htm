@@ -95,6 +95,42 @@
 
 
 <div {$addfields_hiddenattr} data-pageid="{$pageid}" data-brick="addfields" class="form-horizontal" role="form">
+			{BEGIN event_timestamp_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="event_timestamp" data-signal-error-for="event_timestamp{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_event_timestamp}">
+		{BEGIN event_timestamp_label}{$label events event_timestamp}{END event_timestamp_label}
+	</label>
+	<div class="col-md-6" >
+		{$event_timestamp_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="event_timestamp">
+		<div class="text-muted" >
+		{$tooltip events event_timestamp}
+		</div>
+	</div>
+</div>
+</div>
+{END event_timestamp_fieldblock}
+
+			{BEGIN event_task_fieldblock}
+<div class=container>
+<div class="form-group" data-fieldname="event_task" data-signal-error-for="event_task{$id}" >
+	<label class="col-md-3 control-label" for="{$labelfor_event_task}">
+		{BEGIN event_task_label}{$label events event_task}{END event_task_label}
+	</label>
+	<div class="col-md-6" >
+		{$event_task_editcontrol}
+	</div>
+	<div class="col-md-3 help-block" data-helpfor="event_task">
+		<div class="text-muted" >
+		{$tooltip events event_task}
+		</div>
+	</div>
+</div>
+</div>
+{END event_task_fieldblock}
+
 			{BEGIN event_project_fieldblock}
 <div class=container>
 <div class="form-group" data-fieldname="event_project" data-signal-error-for="event_project{$id}" >

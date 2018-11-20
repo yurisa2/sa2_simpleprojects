@@ -102,6 +102,21 @@
 	{BEGIN grid_header}
 		<tr class="{$gridHeader_class}" >
 		{BEGIN record_header}
+			{BEGIN task_done_fieldheadercolumn}
+			<th class="{$task_done_class}" {$task_done_style}>
+				{$label tasks task_done}
+			</th>
+			{END task_done_fieldheadercolumn}
+			{BEGIN task_completed_fieldheadercolumn}
+			<th class="{$task_completed_class}" {$task_completed_style}>
+				{$label tasks task_completed}
+			</th>
+			{END task_completed_fieldheadercolumn}
+			{BEGIN task_timestamp_fieldheadercolumn}
+			<th class="{$task_timestamp_class}" {$task_timestamp_style}>
+				{$label tasks task_timestamp}
+			</th>
+			{END task_timestamp_fieldheadercolumn}
 			{BEGIN task_project_fieldheadercolumn}
 			<th class="{$task_project_class}" {$task_project_style}>
 				{$label tasks task_project}
@@ -154,6 +169,21 @@
 	{BEGIN grid_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 		{BEGIN grid_record}
+			{BEGIN task_done_fieldcolumn}
+			<td  class="{$task_done_class}" {$task_done_style} {$recordattrs}>
+				{$task_done_value}
+			</td>
+			{END task_done_fieldcolumn}
+			{BEGIN task_completed_fieldcolumn}
+			<td  class="{$task_completed_class}" {$task_completed_style} {$recordattrs}>
+				{$task_completed_value}
+			</td>
+			{END task_completed_fieldcolumn}
+			{BEGIN task_timestamp_fieldcolumn}
+			<td  class="{$task_timestamp_class}" {$task_timestamp_style} {$recordattrs}>
+				{$task_timestamp_value}
+			</td>
+			{END task_timestamp_fieldcolumn}
 			{BEGIN task_project_fieldcolumn}
 			<td  class="{$task_project_class}" {$task_project_style} {$recordattrs}>
 				{$task_project_value}
@@ -202,7 +232,7 @@
 	{BEGIN details_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 			{BEGIN details_record}
-				<td colspan="9">
+				<td colspan="12">
 					{BEGIN details_table}
 						{$details}
 					{END details_table}

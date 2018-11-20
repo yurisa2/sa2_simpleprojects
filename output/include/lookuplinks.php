@@ -46,6 +46,7 @@ function InitLookupLinks()
 	$lookupTableLinks["tasks"]["tasks_stakeholders.task_id"]["edit"] = array("table" => "tasks_stakeholders", "field" => "task_id", "page" => "edit");
 	$lookupTableLinks["stakerholders"]["tasks_stakeholders.stakeholder_id"]["edit"] = array("table" => "tasks_stakeholders", "field" => "stakeholder_id", "page" => "edit");
 	$lookupTableLinks["projects"]["events.event_project"]["edit"] = array("table" => "events", "field" => "event_project", "page" => "edit");
+	$lookupTableLinks["tasks"]["events.event_task"]["edit"] = array("table" => "events", "field" => "event_task", "page" => "edit");
 	$lookupTableLinks["events"]["events_stakeholders.event_id"]["edit"] = array("table" => "events_stakeholders", "field" => "event_id", "page" => "edit");
 	$lookupTableLinks["stakerholders"]["events_stakeholders.stakeholder_id"]["edit"] = array("table" => "events_stakeholders", "field" => "stakeholder_id", "page" => "edit");
 }

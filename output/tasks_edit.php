@@ -278,6 +278,7 @@ $page_layouts["tasks_list"] = $layout;
 
 
 	
+		
 	
 // parse control parameters
 $pageMode = EditPage::readEditModeFromRequest();

@@ -39,6 +39,9 @@
 	.bs-gridcell[data-field=project_attachments]:before {
 		content: "{$label projects project_attachments}";
 	}
+	.bs-gridcell[data-field=project_timestamp]:before {
+		content: "{$label projects project_timestamp}";
+	}
 </style>
 <table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
 		<thead>
@@ -49,6 +52,7 @@
 			<th class="{$project_start_date_class}">{$label projects project_start_date}</th>
 			<th class="{$project_end_dat_class}">{$label projects project_end_dat}</th>
 			<th class="{$project_attachments_class}">{$label projects project_attachments}</th>
+			<th class="{$project_timestamp_class}">{$label projects project_timestamp}</th>
 		</tr>
 	</thead>
 	
@@ -60,6 +64,7 @@
 			<td class="{$project_start_date_class} bs-gridcell" data-field=project_start_date>{$project_start_date_mastervalue}</td>
 			<td class="{$project_end_dat_class} bs-gridcell" data-field=project_end_dat>{$project_end_dat_mastervalue}</td>
 			<td class="{$project_attachments_class} bs-gridcell" data-field=project_attachments>{$project_attachments_mastervalue}</td>
+			<td class="{$project_timestamp_class} bs-gridcell" data-field=project_timestamp>{$project_timestamp_mastervalue}</td>
 		</tr>
 	</tbody>
 

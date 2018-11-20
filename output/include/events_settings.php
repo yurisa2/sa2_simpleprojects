@@ -33,6 +33,10 @@ if(mlang_getcurrentlang()=="English")
 	$fieldToolTipsevents["English"]["event_add_date"] = "";
 	$fieldLabelsevents["English"]["event_project"] = "Event Project";
 	$fieldToolTipsevents["English"]["event_project"] = "";
+	$fieldLabelsevents["English"]["event_task"] = "Event Task";
+	$fieldToolTipsevents["English"]["event_task"] = "";
+	$fieldLabelsevents["English"]["event_timestamp"] = "Event Timestamp";
+	$fieldToolTipsevents["English"]["event_timestamp"] = "";
 	if (count($fieldToolTipsevents["English"]))
 		$tdataevents[".isUseToolTips"] = true;
 }
@@ -41,6 +45,10 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsevents[""] = array();
 	$fieldToolTipsevents[""] = array();
 	$pageTitlesevents[""] = array();
+	$fieldLabelsevents[""]["event_task"] = "Event Task";
+	$fieldToolTipsevents[""]["event_task"] = "";
+	$fieldLabelsevents[""]["event_timestamp"] = "Event Timestamp";
+	$fieldToolTipsevents[""]["event_timestamp"] = "";
 	if (count($fieldToolTipsevents[""]))
 		$tdataevents[".isUseToolTips"] = true;
 }
@@ -130,14 +138,16 @@ $tdataevents[".isUseTimeForSearch"] = false;
 
 
 
-$tdataevents[".badgeColor"] = "daa520";
+$tdataevents[".badgeColor"] = "DAA520";
 
 
 $tdataevents[".allSearchFields"] = array();
 $tdataevents[".filterFields"] = array();
 $tdataevents[".requiredSearchFields"] = array();
 
-$tdataevents[".allSearchFields"][] = "event_project";
+$tdataevents[".allSearchFields"][] = "event_task";
+	$tdataevents[".allSearchFields"][] = "event_timestamp";
+	$tdataevents[".allSearchFields"][] = "event_project";
 	$tdataevents[".allSearchFields"][] = "event_add_date";
 	$tdataevents[".allSearchFields"][] = "event_subject";
 	$tdataevents[".allSearchFields"][] = "event_body";
@@ -151,9 +161,13 @@ $tdataevents[".googleLikeFields"][] = "event_body";
 $tdataevents[".googleLikeFields"][] = "event_attachments";
 $tdataevents[".googleLikeFields"][] = "event_add_date";
 $tdataevents[".googleLikeFields"][] = "event_project";
+$tdataevents[".googleLikeFields"][] = "event_task";
+$tdataevents[".googleLikeFields"][] = "event_timestamp";
 
 
 $tdataevents[".advSearchFields"] = array();
+$tdataevents[".advSearchFields"][] = "event_task";
+$tdataevents[".advSearchFields"][] = "event_timestamp";
 $tdataevents[".advSearchFields"][] = "event_project";
 $tdataevents[".advSearchFields"][] = "event_id";
 $tdataevents[".advSearchFields"][] = "event_add_date";
@@ -202,7 +216,7 @@ $tdataevents[".strOrderBy"] = $tstrOrderBy;
 
 $tdataevents[".orderindexes"] = array();
 
-$tdataevents[".sqlHead"] = "SELECT event_id,  	event_subject,  	event_body,  	event_attachments,  	event_add_date,  	event_project";
+$tdataevents[".sqlHead"] = "SELECT event_id,  	event_subject,  	event_body,  	event_attachments,  	event_add_date,  	event_project,  	event_task,  	event_timestamp";
 $tdataevents[".sqlFrom"] = "FROM events";
 $tdataevents[".sqlWhereExpr"] = "";
 $tdataevents[".sqlTail"] = "";
@@ -246,6 +260,8 @@ $tableKeysevents[] = "event_id";
 $tdataevents[".Keys"] = $tableKeysevents;
 
 $tdataevents[".listFields"] = array();
+$tdataevents[".listFields"][] = "event_task";
+$tdataevents[".listFields"][] = "event_timestamp";
 $tdataevents[".listFields"][] = "event_project";
 $tdataevents[".listFields"][] = "event_add_date";
 $tdataevents[".listFields"][] = "event_subject";
@@ -256,6 +272,8 @@ $tdataevents[".hideMobileList"] = array();
 
 
 $tdataevents[".viewFields"] = array();
+$tdataevents[".viewFields"][] = "event_task";
+$tdataevents[".viewFields"][] = "event_timestamp";
 $tdataevents[".viewFields"][] = "event_project";
 $tdataevents[".viewFields"][] = "event_add_date";
 $tdataevents[".viewFields"][] = "event_subject";
@@ -263,6 +281,8 @@ $tdataevents[".viewFields"][] = "event_body";
 $tdataevents[".viewFields"][] = "event_attachments";
 
 $tdataevents[".addFields"] = array();
+$tdataevents[".addFields"][] = "event_task";
+$tdataevents[".addFields"][] = "event_timestamp";
 $tdataevents[".addFields"][] = "event_project";
 $tdataevents[".addFields"][] = "event_add_date";
 $tdataevents[".addFields"][] = "event_subject";
@@ -270,6 +290,8 @@ $tdataevents[".addFields"][] = "event_body";
 $tdataevents[".addFields"][] = "event_attachments";
 
 $tdataevents[".masterListFields"] = array();
+$tdataevents[".masterListFields"][] = "event_task";
+$tdataevents[".masterListFields"][] = "event_timestamp";
 $tdataevents[".masterListFields"][] = "event_project";
 $tdataevents[".masterListFields"][] = "event_id";
 $tdataevents[".masterListFields"][] = "event_add_date";
@@ -278,8 +300,11 @@ $tdataevents[".masterListFields"][] = "event_body";
 $tdataevents[".masterListFields"][] = "event_attachments";
 
 $tdataevents[".inlineAddFields"] = array();
+$tdataevents[".inlineAddFields"][] = "event_timestamp";
 
 $tdataevents[".editFields"] = array();
+$tdataevents[".editFields"][] = "event_task";
+$tdataevents[".editFields"][] = "event_timestamp";
 $tdataevents[".editFields"][] = "event_project";
 $tdataevents[".editFields"][] = "event_add_date";
 $tdataevents[".editFields"][] = "event_subject";
@@ -287,8 +312,11 @@ $tdataevents[".editFields"][] = "event_body";
 $tdataevents[".editFields"][] = "event_attachments";
 
 $tdataevents[".inlineEditFields"] = array();
+$tdataevents[".inlineEditFields"][] = "event_timestamp";
 
 $tdataevents[".exportFields"] = array();
+$tdataevents[".exportFields"][] = "event_task";
+$tdataevents[".exportFields"][] = "event_timestamp";
 $tdataevents[".exportFields"][] = "event_project";
 $tdataevents[".exportFields"][] = "event_add_date";
 $tdataevents[".exportFields"][] = "event_subject";
@@ -301,8 +329,12 @@ $tdataevents[".importFields"][] = "event_body";
 $tdataevents[".importFields"][] = "event_attachments";
 $tdataevents[".importFields"][] = "event_add_date";
 $tdataevents[".importFields"][] = "event_project";
+$tdataevents[".importFields"][] = "event_task";
+$tdataevents[".importFields"][] = "event_timestamp";
 
 $tdataevents[".printFields"] = array();
+$tdataevents[".printFields"][] = "event_task";
+$tdataevents[".printFields"][] = "event_timestamp";
 $tdataevents[".printFields"][] = "event_project";
 $tdataevents[".printFields"][] = "event_add_date";
 $tdataevents[".printFields"][] = "event_subject";
@@ -1054,6 +1086,275 @@ $tdataevents[".printFields"][] = "event_attachments";
 
 
 	$tdataevents["event_project"] = $fdata;
+//	event_task
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "event_task";
+	$fdata["GoodName"] = "event_task";
+	$fdata["ownerTable"] = "events";
+	$fdata["Label"] = GetFieldLabel("events","event_task");
+	$fdata["FieldType"] = 3;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+	
+		$fdata["bEditPage"] = true;
+
+	
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "event_task";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "event_task";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "tasks";
+		$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+	
+	
+		
+	$edata["LinkField"] = "task_id";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "task_subject";
+
+	
+	$edata["LookupOrderBy"] = "";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+							
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdataevents["event_task"] = $fdata;
+//	event_timestamp
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "event_timestamp";
+	$fdata["GoodName"] = "event_timestamp";
+	$fdata["ownerTable"] = "events";
+	$fdata["Label"] = GetFieldLabel("events","event_timestamp");
+	$fdata["FieldType"] = 135;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+		$fdata["bInlineAdd"] = true;
+
+		$fdata["bEditPage"] = true;
+
+		$fdata["bInlineEdit"] = true;
+
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "event_timestamp";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "event_timestamp";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Datetime");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdataevents["event_timestamp"] = $fdata;
 
 
 $tables_data["events"]=&$tdataevents;
@@ -1131,6 +1432,33 @@ $masterTablesData["events"] = array();
 				$masterTablesData["events"][0]["detailKeys"] = array();
 	$masterTablesData["events"][0]["detailKeys"][]="event_project";
 		
+	
+				$strOriginalDetailsTable="tasks";
+	$masterParams = array();
+	$masterParams["mDataSourceTable"]="tasks";
+	$masterParams["mOriginalTable"]= $strOriginalDetailsTable;
+	$masterParams["mShortTable"]= "tasks";
+	$masterParams["masterKeys"]= array();
+	$masterParams["detailKeys"]= array();
+	$masterParams["dispChildCount"]= "0";
+	$masterParams["hideChild"]= "0";
+	$masterParams["dispMasterInfo"] = array();
+				$masterParams["dispMasterInfo"][PAGE_LIST] = true;
+			$masterParams["dispMasterInfo"][PAGE_PRINT] = true;
+			
+	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnAdd"]= 0;
+	$masterParams["previewOnEdit"]= 0;
+	$masterParams["previewOnView"]= 0;
+	$masterParams["proceedLink"]= 1;
+
+	$masterParams["type"] = PAGE_LIST;
+					$masterTablesData["events"][1] = $masterParams;
+				$masterTablesData["events"][1]["masterKeys"] = array();
+	$masterTablesData["events"][1]["masterKeys"][]="task_id";
+				$masterTablesData["events"][1]["detailKeys"] = array();
+	$masterTablesData["events"][1]["detailKeys"][]="event_task";
+		
 // -----------------end  prepare master-details data arrays ------------------------------//
 
 require_once(getabspath("classes/sql.php"));
@@ -1148,7 +1476,7 @@ function createSqlQuery_events()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "event_id,  	event_subject,  	event_body,  	event_attachments,  	event_add_date,  	event_project";
+$proto0["m_strFieldList"] = "event_id,  	event_subject,  	event_body,  	event_attachments,  	event_add_date,  	event_project,  	event_task,  	event_timestamp";
 $proto0["m_strFrom"] = "FROM events";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1273,42 +1601,72 @@ $proto16["m_alias"] = "";
 $obj = new SQLFieldListItem($proto16);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto18=array();
-$proto18["m_link"] = "SQLL_MAIN";
-			$proto19=array();
-$proto19["m_strName"] = "events";
-$proto19["m_srcTableName"] = "events";
-$proto19["m_columns"] = array();
-$proto19["m_columns"][] = "event_id";
-$proto19["m_columns"][] = "event_subject";
-$proto19["m_columns"][] = "event_body";
-$proto19["m_columns"][] = "event_attachments";
-$proto19["m_columns"][] = "event_add_date";
-$proto19["m_columns"][] = "event_project";
-$obj = new SQLTable($proto19);
+						$proto18=array();
+			$obj = new SQLField(array(
+	"m_strName" => "event_task",
+	"m_strTable" => "events",
+	"m_srcTableName" => "events"
+));
 
-$proto18["m_table"] = $obj;
-$proto18["m_sql"] = "events";
-$proto18["m_alias"] = "";
+$proto18["m_sql"] = "event_task";
 $proto18["m_srcTableName"] = "events";
-$proto20=array();
-$proto20["m_sql"] = "";
-$proto20["m_uniontype"] = "SQLL_UNKNOWN";
+$proto18["m_expr"]=$obj;
+$proto18["m_alias"] = "";
+$obj = new SQLFieldListItem($proto18);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "event_timestamp",
+	"m_strTable" => "events",
+	"m_srcTableName" => "events"
+));
+
+$proto20["m_sql"] = "event_timestamp";
+$proto20["m_srcTableName"] = "events";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "events";
+$proto23["m_srcTableName"] = "events";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "event_id";
+$proto23["m_columns"][] = "event_subject";
+$proto23["m_columns"][] = "event_body";
+$proto23["m_columns"][] = "event_attachments";
+$proto23["m_columns"][] = "event_add_date";
+$proto23["m_columns"][] = "event_project";
+$proto23["m_columns"][] = "event_task";
+$proto23["m_columns"][] = "event_timestamp";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "events";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "events";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto20["m_column"]=$obj;
-$proto20["m_contained"] = array();
-$proto20["m_strCase"] = "";
-$proto20["m_havingmode"] = false;
-$proto20["m_inBrackets"] = false;
-$proto20["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto20);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto18["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto18);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1324,7 +1682,7 @@ $queryData_events = createSqlQuery_events();
 	
 		;
 
-						
+								
 
 $tdataevents[".sqlquery"] = $queryData_events;
 

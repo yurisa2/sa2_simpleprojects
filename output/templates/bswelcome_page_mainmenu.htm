@@ -55,20 +55,21 @@
 	</div>
 	
 	
-			<div class="col-lg-3 col-md-4 col-sm-6">
-		<div class="bs-welcome-item">
-			<div class="bs-welcome-header" {$item5_menulink_style}> 
-				<a {$item5_menulink_attrs}>{$item5_icon}{$item5_title}</a>
-			</div>
-			{BEGIN item5_comments}
-			<div class="bs-welcome-content">
-				{$item5_comments_text}
-			</div>
-			{END item5_comments}
+		<div class="clearfix">
+	</div>
+			<div class=" clearfix col-lg-12">
+	<h2>{$item5_icon}{$item5_title}</h2>
+		{BEGIN item5_comments}
+		<div class="bs-welcome-group-comments">
+			{$item5_comments_text}
 		</div>
+		{END item5_comments}
+	
 	</div>
 	
 	
+		<div class="clearfix">
+	</div>
 			<div class="col-lg-3 col-md-4 col-sm-6">
 		<div class="bs-welcome-item">
 			<div class="bs-welcome-header" {$item6_menulink_style}> 
@@ -107,6 +108,20 @@
 				{$item8_comments_text}
 			</div>
 			{END item8_comments}
+		</div>
+	</div>
+	
+	
+			<div class="col-lg-3 col-md-4 col-sm-6">
+		<div class="bs-welcome-item">
+			<div class="bs-welcome-header" {$item9_menulink_style}> 
+				<a {$item9_menulink_attrs}>{$item9_icon}{$item9_title}</a>
+			</div>
+			{BEGIN item9_comments}
+			<div class="bs-welcome-content">
+				{$item9_comments_text}
+			</div>
+			{END item9_comments}
 		</div>
 	</div>
 	

@@ -230,6 +230,34 @@ $page_layouts["projects_masterlist"] = $layout;
 
 
 
+
+
+
+$layout = new TLayout("masterlist_bootstrap", "OfficeOffice", "MobileOffice");
+$layout->version = 3;
+	$layout->bootstrapTheme = "yeti";
+$layout->blocks["bare"] = array();
+$layout->containers["column"] = array();
+$layout->container_properties["column"] = array(  );
+$layout->containers["column"][] = array("name"=>"masterlistheader",
+	"block"=>"masterlist_title", "substyle"=>1  );
+
+$layout->skins["column"] = "";
+
+$layout->blocks["bare"][] = "column";
+$layout->containers["mastergrid"] = array();
+$layout->container_properties["mastergrid"] = array(  );
+$layout->containers["mastergrid"][] = array("name"=>"masterlistgrid",
+	"block"=>"", "substyle"=>1  );
+
+$layout->skins["mastergrid"] = "";
+
+$layout->blocks["bare"][] = "mastergrid";
+$page_layouts["tasks_masterlist"] = $layout;
+
+
+
+
 $options = array();
 //array of params for classes
 

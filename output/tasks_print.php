@@ -145,7 +145,7 @@ $layout->containers["master"][] = array("name"=>"masterinfo",
 $layout->skins["master"] = "";
 
 $layout->blocks["top"][] = "master";
-$page_layouts["tasks_stakeholders_print"] = $layout;
+$page_layouts["events_print"] = $layout;
 
 
 

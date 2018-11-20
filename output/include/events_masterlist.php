@@ -120,6 +120,32 @@ function DisplayMasterTableInfo_events($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("event_project_class", $class); // add class for field header as field value
+	$xt->assign("event_task_mastervalue", $viewControls->showDBValue("event_task", $data, $keylink));
+	$format = $settings->getViewFormat("event_task");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("event_task")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("event_task_class", $class); // add class for field header as field value
+	$xt->assign("event_timestamp_mastervalue", $viewControls->showDBValue("event_timestamp", $data, $keylink));
+	$format = $settings->getViewFormat("event_timestamp");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("event_timestamp")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("event_timestamp_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("events", 'masterlist');
 	if( $layout )

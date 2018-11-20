@@ -123,10 +123,7 @@
 		<span class="caret"></span>
 	</button>
 	<ul class="dropdown-menu">
-				{BEGIN editselected_link}
-		<li class="massButton{$id} disabled"><a href="#" {$editselectedlink_attrs} {$editselectedlink_span} >Edit selected</a></li>
-		{END editselected_link}
-
+		
 				{BEGIN exportselected_link}
 		<li class="massButton{$id} disabled"><a href="#" {$exportselectedlink_attrs} {$exportselectedlink_span} >Export selected</a></li>
 		{END exportselected_link}
@@ -137,7 +134,7 @@
 		<li role="separator" class="divider"></li>	
 
 				{BEGIN asearch_link}
-		<li><a href="events_stakeholders_search.php" {$advsearchlink_attrs}>Advanced search</a></li>
+		<li><a href="tasks_search.php" {$advsearchlink_attrs}>Advanced search</a></li>
 		{END asearch_link}
 
 				{BEGIN searchPanelTopButtons}
@@ -145,11 +142,11 @@
 		{END searchPanelTopButtons}	
 				<li role="separator" class="divider"></li>	
 				{BEGIN export_link}
-		<li><a target="_blank" href="events_stakeholders_export.php"  {$exportlink_attrs}>Export results</a></li>
+		<li><a target="_blank" href="tasks_export.php"  {$exportlink_attrs}>Export results</a></li>
 		{END export_link}
 
 				{BEGIN import_link}
-		<li><a href="events_stakeholders_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Import</a></li>
+		<li><a href="tasks_import.php?{$crosstable_attrs}"  {$importlink_attrs}>Import</a></li>
 		{END import_link}
 		
 		<li role="separator" class="divider"></li>	
@@ -305,11 +302,11 @@
 <div {$add_delete_chiddenattr} data-pageid="{$pageid}" data-container="add_delete" class=" bottom-margin  col-md-6 "> 
 
 {BEGIN newrecord_controls_block}
-	
-		{BEGIN inlineadd_link}
-		<button {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$inlineaddlink_attrs}>Inline Add</button>
-	{END inlineadd_link}
+		{BEGIN add_link}
+		<a {$add_hiddenattr} data-pageid="{$pageid}" data-brick="add" type="button" class="btn btn-primary" {$addlink_attrs}>Add new</a>
+	{END add_link}
 
+	
 {END newrecord_controls_block}
 
 
@@ -319,13 +316,7 @@
 	<button type="button" class="btn btn-default bs-invisible-button" {$deleteselectedlink_attrs} {$deleteselectedlink_span}>Delete</button>
 	{END deleteselected_link}
 
-		{BEGIN saveall_link}
-		<button type="button" class="btn btn-primary" {$savealllink_attrs} {$savealllink_span}>Save all</button>
-	{END saveall_link}
-	{BEGIN cancelall_link}
-		<button type="button" class="btn btn-default" {$cancelalllink_attrs} {$cancelalllink_span}>Cancel</button>
-	{END cancelall_link}
-</span>
+	</span>
 
 {END record_controls_block}
 
@@ -370,7 +361,7 @@
 										{BEGIN print_friendly_all}
 					<div class="col-md-8">
 						<label for="printAll{$id}">
-							<input type="radio" id="printAll{$id}" data-href="events_stakeholders_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
+							<input type="radio" id="printAll{$id}" data-href="tasks_print.php?all=1&amp;{$crosstable_attrs}" name="printScope">
 							Print all pages
 						</label>
 					</div>
@@ -380,7 +371,7 @@
 					<div class="col-md-4">&nbsp;</div>
 					<div class="col-md-8">
 						<label for="printPage{$id}">
-							<input type="radio" id="printPage{$id}" data-href="events_stakeholders_print.php?{$crosstable_attrs}" name="printScope" checked>
+							<input type="radio" id="printPage{$id}" data-href="tasks_print.php?{$crosstable_attrs}" name="printScope" checked>
 							Print this page
 						</label>
 					</div>
@@ -398,7 +389,29 @@
 		</li>
 		<li class="divider" role="separator"></li>
 
-		
+				<li>			
+		{BEGIN print_details}
+			<div class="rnr-printdetails">
+				<label for="printDetailsToggler{$id}">
+					<input type="checkbox" id="printDetailsToggler{$id}">
+					Print details
+				</label>
+				<div class="rnr-printdetailstables"  id="printdetailstables{$id}" style="display:none;">
+					{BEGIN print_details_tasks_stakeholders}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailstasks_stakeholders{$id}">
+									<input type="checkbox" value="tasks_stakeholders" id="printDetailstasks_stakeholders{$id}" checked>
+									Tasks Stakeholders
+								</label>
+							</div>
+					{END print_details_tasks_stakeholders}
+				</div>
+			</div>
+		{END print_details}
+		</li>
+		<li class="divider" role="separator"></li>
+
 				<li>	
 			<div class="rnr-printdetails">
 				<label for="printPerPage{$id}">
@@ -550,14 +563,38 @@
 
 {BEGIN grid_block}
 	<style>
-	.bs-gridcell[data-field=id_link]:before {
-		content: "{$label events_stakeholders id_link}";
+	.bs-gridcell[data-field=task_id]:before {
+		content: "{$label tasks task_id}";
 	}
-	.bs-gridcell[data-field=event_id]:before {
-		content: "{$label events_stakeholders event_id}";
+	.bs-gridcell[data-field=task_subject]:before {
+		content: "{$label tasks task_subject}";
 	}
-	.bs-gridcell[data-field=stakeholder_id]:before {
-		content: "{$label events_stakeholders stakeholder_id}";
+	.bs-gridcell[data-field=task_body]:before {
+		content: "{$label tasks task_body}";
+	}
+	.bs-gridcell[data-field=task_attachments]:before {
+		content: "{$label tasks task_attachments}";
+	}
+	.bs-gridcell[data-field=task_start_date]:before {
+		content: "{$label tasks task_start_date}";
+	}
+	.bs-gridcell[data-field=task_end_date]:before {
+		content: "{$label tasks task_end_date}";
+	}
+	.bs-gridcell[data-field=task_modify_date]:before {
+		content: "{$label tasks task_modify_date}";
+	}
+	.bs-gridcell[data-field=task_project]:before {
+		content: "{$label tasks task_project}";
+	}
+	.bs-gridcell[data-field=task_obs]:before {
+		content: "{$label tasks task_obs}";
+	}
+	.bs-gridcell[data-field=task_completed]:before {
+		content: "{$label tasks task_completed}";
+	}
+	.bs-gridcell[data-field=task_done]:before {
+		content: "{$label tasks task_done}";
 	}
 </style>
 <table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
@@ -575,29 +612,136 @@
 									</th>
 									{END checkbox_column}
 
-																		
-									{BEGIN event_id_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$event_id_class}">
-									{BEGIN event_id_fieldheader}
-																				<span {$event_id_orderlinkattrs}>
-											{$label events_stakeholders event_id}
+																		{BEGIN tasks_dtable_column}
+									<th >&nbsp;</th>
+									{END tasks_dtable_column}
+									
+									{BEGIN task_done_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_done_class}">
+									{BEGIN task_done_fieldheader}
+																				<span {$task_done_orderlinkattrs}>
+											{$label tasks task_done}
 										</span>
-									{END event_id_fieldheader}
+									{END task_done_fieldheader}
 									</th>
-									{END event_id_fieldheadercolumn}
+									{END task_done_fieldheadercolumn}
 									
 									
 									
 									
-									{BEGIN stakeholder_id_fieldheadercolumn}
-									<th class="rnr-gridfieldlabel {$stakeholder_id_class}">
-									{BEGIN stakeholder_id_fieldheader}
-																				<span {$stakeholder_id_orderlinkattrs}>
-											{$label events_stakeholders stakeholder_id}
+									{BEGIN task_completed_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_completed_class}">
+									{BEGIN task_completed_fieldheader}
+																				<span {$task_completed_orderlinkattrs}>
+											{$label tasks task_completed}
 										</span>
-									{END stakeholder_id_fieldheader}
+									{END task_completed_fieldheader}
 									</th>
-									{END stakeholder_id_fieldheadercolumn}
+									{END task_completed_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_project_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_project_class}">
+									{BEGIN task_project_fieldheader}
+																				<span {$task_project_orderlinkattrs}>
+											{$label tasks task_project}
+										</span>
+									{END task_project_fieldheader}
+									</th>
+									{END task_project_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_modify_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_modify_date_class}">
+									{BEGIN task_modify_date_fieldheader}
+																				<span {$task_modify_date_orderlinkattrs}>
+											{$label tasks task_modify_date}
+										</span>
+									{END task_modify_date_fieldheader}
+									</th>
+									{END task_modify_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_subject_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_subject_class}">
+									{BEGIN task_subject_fieldheader}
+																				<span {$task_subject_orderlinkattrs}>
+											{$label tasks task_subject}
+										</span>
+									{END task_subject_fieldheader}
+									</th>
+									{END task_subject_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_body_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_body_class}">
+									{BEGIN task_body_fieldheader}
+																				<span {$task_body_orderlinkattrs}>
+											{$label tasks task_body}
+										</span>
+									{END task_body_fieldheader}
+									</th>
+									{END task_body_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_attachments_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_attachments_class}">
+									{BEGIN task_attachments_fieldheader}
+																				<span {$task_attachments_orderlinkattrs}>
+											{$label tasks task_attachments}
+										</span>
+									{END task_attachments_fieldheader}
+									</th>
+									{END task_attachments_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_start_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_start_date_class}">
+									{BEGIN task_start_date_fieldheader}
+																				<span {$task_start_date_orderlinkattrs}>
+											{$label tasks task_start_date}
+										</span>
+									{END task_start_date_fieldheader}
+									</th>
+									{END task_start_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_end_date_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_end_date_class}">
+									{BEGIN task_end_date_fieldheader}
+																				<span {$task_end_date_orderlinkattrs}>
+											{$label tasks task_end_date}
+										</span>
+									{END task_end_date_fieldheader}
+									</th>
+									{END task_end_date_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_obs_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_obs_class}">
+									{BEGIN task_obs_fieldheader}
+																				<span {$task_obs_orderlinkattrs}>
+											{$label tasks task_obs}
+										</span>
+									{END task_obs_fieldheader}
+									</th>
+									{END task_obs_fieldheadercolumn}
 									
 									
 									
@@ -619,13 +763,13 @@
 	{BEGIN grid_record}
 	{BEGIN listIcons_column}
 	<td class="bs-gridicons" iEditCont="all" {$rowstyle} {$recordattrs}>
-	
-		{BEGIN inlineedit_column}
-	{BEGIN inlineedit_link}
-			<a class="glyphicon glyphicon-edit" {$inlineeditlink_attrs} title="Inline Edit"></a>
-	{END inlineedit_link}
-	{END inlineedit_column}
+		{BEGIN edit_column}
+	{BEGIN edit_link}
+			<a class="glyphicon glyphicon-pencil" {$editlink_attrs} title="Edit"></a>
+	{END edit_link}
+	{END edit_column}
 
+	
 	
 		{BEGIN view_column}
 	{BEGIN view_link}
@@ -643,20 +787,93 @@
 	</td>
 	{END checkbox_column}
 
+		{BEGIN tasks_dtable_column}
+	<td class="rnr-nowrap bs-griddetails" {$rowstyle} {$recordattrs}>
 	
-
-	{BEGIN event_id_fieldcolumn}
-	<td class="bs-gridcell {$event_id_class}" {$event_id_style} data-field=event_id>
-		{$event_id_value}
+			{BEGIN dtables_link}
+		
+							
+				
+					<a {$dtables_link_attrs}  title="Show details">
+				<span class="badge tasks_stakeholders_badge" {$tasks_stakeholders_childnumber_attr}>
+					<span class="glyphicon glyphicon-th-list"></span> 
+					<span class="{$tasks_stakeholders_cntspan_class}" >{$tasks_stakeholders_childnumber}</span>
+				</span></a>
+		{END dtables_link}
+	
+	
 	</td>
-{END event_id_fieldcolumn}
+	{END tasks_dtable_column}
 
 
-	{BEGIN stakeholder_id_fieldcolumn}
-	<td class="bs-gridcell {$stakeholder_id_class}" {$stakeholder_id_style} data-field=stakeholder_id>
-		{$stakeholder_id_value}
+	{BEGIN task_done_fieldcolumn}
+	<td class="bs-gridcell {$task_done_class}" {$task_done_style} data-field=task_done>
+		{$task_done_value}
 	</td>
-{END stakeholder_id_fieldcolumn}
+{END task_done_fieldcolumn}
+
+
+	{BEGIN task_completed_fieldcolumn}
+	<td class="bs-gridcell {$task_completed_class}" {$task_completed_style} data-field=task_completed>
+		{$task_completed_value}
+	</td>
+{END task_completed_fieldcolumn}
+
+
+	{BEGIN task_project_fieldcolumn}
+	<td class="bs-gridcell {$task_project_class}" {$task_project_style} data-field=task_project>
+		{$task_project_value}
+	</td>
+{END task_project_fieldcolumn}
+
+
+	{BEGIN task_modify_date_fieldcolumn}
+	<td class="bs-gridcell {$task_modify_date_class}" {$task_modify_date_style} data-field=task_modify_date>
+		{$task_modify_date_value}
+	</td>
+{END task_modify_date_fieldcolumn}
+
+
+	{BEGIN task_subject_fieldcolumn}
+	<td class="bs-gridcell {$task_subject_class}" {$task_subject_style} data-field=task_subject>
+		{$task_subject_value}
+	</td>
+{END task_subject_fieldcolumn}
+
+
+	{BEGIN task_body_fieldcolumn}
+	<td class="bs-gridcell {$task_body_class}" {$task_body_style} data-field=task_body>
+		{$task_body_value}
+	</td>
+{END task_body_fieldcolumn}
+
+
+	{BEGIN task_attachments_fieldcolumn}
+	<td class="bs-gridcell {$task_attachments_class}" {$task_attachments_style} data-field=task_attachments>
+		{$task_attachments_value}
+	</td>
+{END task_attachments_fieldcolumn}
+
+
+	{BEGIN task_start_date_fieldcolumn}
+	<td class="bs-gridcell {$task_start_date_class}" {$task_start_date_style} data-field=task_start_date>
+		{$task_start_date_value}
+	</td>
+{END task_start_date_fieldcolumn}
+
+
+	{BEGIN task_end_date_fieldcolumn}
+	<td class="bs-gridcell {$task_end_date_class}" {$task_end_date_style} data-field=task_end_date>
+		{$task_end_date_value}
+	</td>
+{END task_end_date_fieldcolumn}
+
+
+	{BEGIN task_obs_fieldcolumn}
+	<td class="bs-gridcell {$task_obs_class}" {$task_obs_style} data-field=task_obs>
+		{$task_obs_value}
+	</td>
+{END task_obs_fieldcolumn}
 
 	<!--<td class="rnr-edge" {$recordattrs}>&nbsp;</td>-->
 	{BEGIN endrecord_block}

@@ -77,7 +77,7 @@
 <div {$pageheader_chiddenattr} data-pageid="{$pageid}" data-container="pageheader" class="    "> 
 
 {BEGIN printheader}
-	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel events_stakeholders print}</h2>
+	<h2 {$printheader_hiddenattr} data-pageid="{$pageid}" data-brick="printheader" >{$pagetitlelabel projects_stakeholders print}</h2>
 
 {END printheader}
 
@@ -102,14 +102,14 @@
 	{BEGIN grid_header}
 		<tr class="{$gridHeader_class}" >
 		{BEGIN record_header}
-			{BEGIN event_id_fieldheadercolumn}
-			<th class="{$event_id_class}" {$event_id_style}>
-				{$label events_stakeholders event_id}
+			{BEGIN project_id_fieldheadercolumn}
+			<th class="{$project_id_class}" {$project_id_style}>
+				{$label projects_stakeholders project_id}
 			</th>
-			{END event_id_fieldheadercolumn}
+			{END project_id_fieldheadercolumn}
 			{BEGIN stakeholder_id_fieldheadercolumn}
 			<th class="{$stakeholder_id_class}" {$stakeholder_id_style}>
-				{$label events_stakeholders stakeholder_id}
+				{$label projects_stakeholders stakeholder_id}
 			</th>
 			{END stakeholder_id_fieldheadercolumn}
 			{BEGIN endrecordheader_block}
@@ -124,11 +124,11 @@
 	{BEGIN grid_row}
 		<tr class="{$rowclass}" {$rowattrs} {$rowstyle}>
 		{BEGIN grid_record}
-			{BEGIN event_id_fieldcolumn}
-			<td  class="{$event_id_class}" {$event_id_style} {$recordattrs}>
-				{$event_id_value}
+			{BEGIN project_id_fieldcolumn}
+			<td  class="{$project_id_class}" {$project_id_style} {$recordattrs}>
+				{$project_id_value}
 			</td>
-			{END event_id_fieldcolumn}
+			{END project_id_fieldcolumn}
 			{BEGIN stakeholder_id_fieldcolumn}
 			<td  class="{$stakeholder_id_class}" {$stakeholder_id_style} {$recordattrs}>
 				{$stakeholder_id_value}

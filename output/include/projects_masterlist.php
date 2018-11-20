@@ -138,6 +138,19 @@ function DisplayMasterTableInfo_projects($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("project_attachments_class", $class); // add class for field header as field value
+	$xt->assign("project_timestamp_mastervalue", $viewControls->showDBValue("project_timestamp", $data, $keylink));
+	$format = $settings->getViewFormat("project_timestamp");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("project_timestamp")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("project_timestamp_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("projects", 'masterlist');
 	if( $layout )

@@ -576,6 +576,9 @@
 	.bs-gridcell[data-field=project_attachments]:before {
 		content: "{$label projects project_attachments}";
 	}
+	.bs-gridcell[data-field=project_timestamp]:before {
+		content: "{$label projects project_timestamp}";
+	}
 </style>
 <table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
 	<thead>
@@ -595,6 +598,19 @@
 																		{BEGIN projects_dtable_column}
 									<th >&nbsp;</th>
 									{END projects_dtable_column}
+									
+									{BEGIN project_timestamp_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$project_timestamp_class}">
+									{BEGIN project_timestamp_fieldheader}
+																				<span {$project_timestamp_orderlinkattrs}>
+											{$label projects project_timestamp}
+										</span>
+									{END project_timestamp_fieldheader}
+									</th>
+									{END project_timestamp_fieldheadercolumn}
+									
+									
+									
 									
 									{BEGIN project_name_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$project_name_class}">
@@ -732,6 +748,13 @@
 	
 	</td>
 	{END projects_dtable_column}
+
+
+	{BEGIN project_timestamp_fieldcolumn}
+	<td class="bs-gridcell {$project_timestamp_class}" {$project_timestamp_style} data-field=project_timestamp>
+		{$project_timestamp_value}
+	</td>
+{END project_timestamp_fieldcolumn}
 
 
 	{BEGIN project_name_fieldcolumn}

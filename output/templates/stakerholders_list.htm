@@ -690,11 +690,29 @@
 		
 							
 				
-											<a {$dtables_link_attrs}  title="Show details">
-				<span class="badge projects_stakeholders_badge" {$projects_stakeholders_childnumber_attr}>
-					<span class="glyphicon glyphicon-th-list"></span> 
-					<span class="{$projects_stakeholders_cntspan_class}" >{$projects_stakeholders_childnumber}</span>
-				</span></a>
+							
+				
+							
+				
+				<a {$dtables_link_attrs} class="glyphicon glyphicon-th-list" title="Show details"></a>
+								{BEGIN projects_stakeholders_childcount}
+				<a {$projects_stakeholders_link_attrs} class="{$projects_stakeholders_dlink_class}" title="Projects Stakeholders">
+					<span class="details-badge badge projects_stakeholders_badge" {$projects_stakeholders_childnumber_attr}>
+						{$projects_stakeholders_childnumber}
+					</span></a>
+				{END projects_stakeholders_childcount}
+								{BEGIN tasks_stakeholders_childcount}
+				<a {$tasks_stakeholders_link_attrs} class="{$tasks_stakeholders_dlink_class}" title="Tasks Stakeholders">
+					<span class="details-badge badge tasks_stakeholders_badge" {$tasks_stakeholders_childnumber_attr}>
+						{$tasks_stakeholders_childnumber}
+					</span></a>
+				{END tasks_stakeholders_childcount}
+								{BEGIN events_stakeholders_childcount}
+				<a {$events_stakeholders_link_attrs} class="{$events_stakeholders_dlink_class}" title="Events Stakeholders">
+					<span class="details-badge badge events_stakeholders_badge" {$events_stakeholders_childnumber_attr}>
+						{$events_stakeholders_childnumber}
+					</span></a>
+				{END events_stakeholders_childcount}
 		{END dtables_link}
 	
 	

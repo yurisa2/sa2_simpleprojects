@@ -23,9 +23,9 @@ if(mlang_getcurrentlang()=="English")
 	$pageTitlesevents_stakeholders["English"] = array();
 	$fieldLabelsevents_stakeholders["English"]["id_link"] = "Id Link";
 	$fieldToolTipsevents_stakeholders["English"]["id_link"] = "";
-	$fieldLabelsevents_stakeholders["English"]["event_id"] = "Event Id";
+	$fieldLabelsevents_stakeholders["English"]["event_id"] = "Event";
 	$fieldToolTipsevents_stakeholders["English"]["event_id"] = "";
-	$fieldLabelsevents_stakeholders["English"]["stakeholder_id"] = "Stakeholder Id";
+	$fieldLabelsevents_stakeholders["English"]["stakeholder_id"] = "Stakeholder";
 	$fieldToolTipsevents_stakeholders["English"]["stakeholder_id"] = "";
 	if (count($fieldToolTipsevents_stakeholders["English"]))
 		$tdataevents_stakeholders[".isUseToolTips"] = true;
@@ -83,18 +83,12 @@ $tdataevents_stakeholders[".listAjax"] = false;
 
 	$tdataevents_stakeholders[".locking"] = false;
 
-$tdataevents_stakeholders[".edit"] = true;
-$tdataevents_stakeholders[".afterEditAction"] = 1;
-$tdataevents_stakeholders[".closePopupAfterEdit"] = 1;
-$tdataevents_stakeholders[".afterEditActionDetTable"] = "";
 
-$tdataevents_stakeholders[".add"] = true;
-$tdataevents_stakeholders[".afterAddAction"] = 1;
-$tdataevents_stakeholders[".closePopupAfterAdd"] = 1;
-$tdataevents_stakeholders[".afterAddActionDetTable"] = "";
 
 $tdataevents_stakeholders[".list"] = true;
 
+$tdataevents_stakeholders[".inlineEdit"] = true;
+$tdataevents_stakeholders[".inlineAdd"] = true;
 $tdataevents_stakeholders[".view"] = true;
 
 $tdataevents_stakeholders[".import"] = true;
@@ -137,8 +131,7 @@ $tdataevents_stakeholders[".allSearchFields"] = array();
 $tdataevents_stakeholders[".filterFields"] = array();
 $tdataevents_stakeholders[".requiredSearchFields"] = array();
 
-$tdataevents_stakeholders[".allSearchFields"][] = "id_link";
-	$tdataevents_stakeholders[".allSearchFields"][] = "event_id";
+$tdataevents_stakeholders[".allSearchFields"][] = "event_id";
 	$tdataevents_stakeholders[".allSearchFields"][] = "stakeholder_id";
 	
 
@@ -238,7 +231,6 @@ $tableKeysevents_stakeholders[] = "id_link";
 $tdataevents_stakeholders[".Keys"] = $tableKeysevents_stakeholders;
 
 $tdataevents_stakeholders[".listFields"] = array();
-$tdataevents_stakeholders[".listFields"][] = "id_link";
 $tdataevents_stakeholders[".listFields"][] = "event_id";
 $tdataevents_stakeholders[".listFields"][] = "stakeholder_id";
 
@@ -246,13 +238,10 @@ $tdataevents_stakeholders[".hideMobileList"] = array();
 
 
 $tdataevents_stakeholders[".viewFields"] = array();
-$tdataevents_stakeholders[".viewFields"][] = "id_link";
 $tdataevents_stakeholders[".viewFields"][] = "event_id";
 $tdataevents_stakeholders[".viewFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".addFields"] = array();
-$tdataevents_stakeholders[".addFields"][] = "event_id";
-$tdataevents_stakeholders[".addFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".masterListFields"] = array();
 $tdataevents_stakeholders[".masterListFields"][] = "id_link";
@@ -264,25 +253,20 @@ $tdataevents_stakeholders[".inlineAddFields"][] = "event_id";
 $tdataevents_stakeholders[".inlineAddFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".editFields"] = array();
-$tdataevents_stakeholders[".editFields"][] = "event_id";
-$tdataevents_stakeholders[".editFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".inlineEditFields"] = array();
 $tdataevents_stakeholders[".inlineEditFields"][] = "event_id";
 $tdataevents_stakeholders[".inlineEditFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".exportFields"] = array();
-$tdataevents_stakeholders[".exportFields"][] = "id_link";
 $tdataevents_stakeholders[".exportFields"][] = "event_id";
 $tdataevents_stakeholders[".exportFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".importFields"] = array();
-$tdataevents_stakeholders[".importFields"][] = "id_link";
 $tdataevents_stakeholders[".importFields"][] = "event_id";
 $tdataevents_stakeholders[".importFields"][] = "stakeholder_id";
 
 $tdataevents_stakeholders[".printFields"] = array();
-$tdataevents_stakeholders[".printFields"][] = "id_link";
 $tdataevents_stakeholders[".printFields"][] = "event_id";
 $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 
@@ -301,20 +285,15 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 
 	
 	
-		$fdata["bListPage"] = true;
-
 	
 	
 	
 	
-		$fdata["bViewPage"] = true;
-
-		$fdata["bAdvancedSearch"] = true;
-
-		$fdata["bPrinterPage"] = true;
-
-		$fdata["bExportPage"] = true;
-
+	
+	
+	
+	
+	
 		$fdata["strField"] = "id_link";
 
 		$fdata["isSQLExpression"] = true;
@@ -322,8 +301,7 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 
 	
 	
-				$fdata["FieldPermissions"] = true;
-
+			
 				$fdata["UploadFolder"] = "files";
 
 //  Begin View Formats
@@ -400,11 +378,6 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 
 
 
-// the field's search options settings
-	
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty");
-// the end of search options settings
 
 
 
@@ -426,12 +399,10 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 	
 		$fdata["bListPage"] = true;
 
-		$fdata["bAddPage"] = true;
-
+	
 		$fdata["bInlineAdd"] = true;
 
-		$fdata["bEditPage"] = true;
-
+	
 		$fdata["bInlineEdit"] = true;
 
 		$fdata["bViewPage"] = true;
@@ -574,12 +545,10 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 	
 		$fdata["bListPage"] = true;
 
-		$fdata["bAddPage"] = true;
-
+	
 		$fdata["bInlineAdd"] = true;
 
-		$fdata["bEditPage"] = true;
-
+	
 		$fdata["bInlineEdit"] = true;
 
 		$fdata["bViewPage"] = true;
@@ -648,7 +617,8 @@ $tdataevents_stakeholders[".printFields"][] = "stakeholder_id";
 
 	
 	
-	
+		$edata["AllowToAdd"] = true;
+
 	
 
 	
@@ -758,7 +728,7 @@ $masterTablesData["events_stakeholders"] = array();
 	$masterParams["mShortTable"]= "stakerholders";
 	$masterParams["masterKeys"]= array();
 	$masterParams["detailKeys"]= array();
-	$masterParams["dispChildCount"]= "0";
+	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispMasterInfo"] = array();
 				$masterParams["dispMasterInfo"][PAGE_LIST] = true;

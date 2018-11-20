@@ -21,6 +21,8 @@
 <table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
 		<thead>
 		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$event_task_class}">{$label events event_task}</th>
+			<th class="{$event_timestamp_class}">{$label events event_timestamp}</th>
 			<th class="{$event_project_class}">{$label events event_project}</th>
 			<th class="{$event_id_class}">{$label events event_id}</th>
 			<th class="{$event_add_date_class}">{$label events event_add_date}</th>
@@ -32,6 +34,8 @@
 	</thead>
 	<tbody>
 		<tr class="rnr-row style1">
+			<td class="{$event_task_class}">{$event_task_mastervalue}</td>
+			<td class="{$event_timestamp_class}">{$event_timestamp_mastervalue}</td>
 			<td class="{$event_project_class}">{$event_project_mastervalue}</td>
 			<td class="{$event_id_class}">{$event_id_mastervalue}</td>
 			<td class="{$event_add_date_class}">{$event_add_date_mastervalue}</td>

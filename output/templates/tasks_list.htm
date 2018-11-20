@@ -406,6 +406,15 @@
 								</label>
 							</div>
 					{END print_details_tasks_stakeholders}
+					{BEGIN print_details_events}
+						
+							<div class="rnr-printdetialstable">
+								<label for="printDetailsevents{$id}">
+									<input type="checkbox" value="events" id="printDetailsevents{$id}" checked>
+									Events
+								</label>
+							</div>
+					{END print_details_events}
 				</div>
 			</div>
 		{END print_details}
@@ -590,6 +599,15 @@
 	.bs-gridcell[data-field=task_obs]:before {
 		content: "{$label tasks task_obs}";
 	}
+	.bs-gridcell[data-field=task_completed]:before {
+		content: "{$label tasks task_completed}";
+	}
+	.bs-gridcell[data-field=task_done]:before {
+		content: "{$label tasks task_done}";
+	}
+	.bs-gridcell[data-field=task_timestamp]:before {
+		content: "{$label tasks task_timestamp}";
+	}
 </style>
 <table {$grid_hiddenattr} data-pageid="{$pageid}" data-brick="grid" class="table {$grid_classes} bs-flexgrid rnr-b-grid rnr-gridtable" cellpadding="0" >
 	<thead>
@@ -609,6 +627,45 @@
 																		{BEGIN tasks_dtable_column}
 									<th >&nbsp;</th>
 									{END tasks_dtable_column}
+									
+									{BEGIN task_timestamp_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_timestamp_class}">
+									{BEGIN task_timestamp_fieldheader}
+																				<span {$task_timestamp_orderlinkattrs}>
+											{$label tasks task_timestamp}
+										</span>
+									{END task_timestamp_fieldheader}
+									</th>
+									{END task_timestamp_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_done_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_done_class}">
+									{BEGIN task_done_fieldheader}
+																				<span {$task_done_orderlinkattrs}>
+											{$label tasks task_done}
+										</span>
+									{END task_done_fieldheader}
+									</th>
+									{END task_done_fieldheadercolumn}
+									
+									
+									
+									
+									{BEGIN task_completed_fieldheadercolumn}
+									<th class="rnr-gridfieldlabel {$task_completed_class}">
+									{BEGIN task_completed_fieldheader}
+																				<span {$task_completed_orderlinkattrs}>
+											{$label tasks task_completed}
+										</span>
+									{END task_completed_fieldheader}
+									</th>
+									{END task_completed_fieldheadercolumn}
+									
+									
+									
 									
 									{BEGIN task_project_fieldheadercolumn}
 									<th class="rnr-gridfieldlabel {$task_project_class}">
@@ -762,7 +819,7 @@
 		
 							
 				
-					<a {$dtables_link_attrs}  title="Show details">
+								<a {$dtables_link_attrs}  title="Show details">
 				<span class="badge tasks_stakeholders_badge" {$tasks_stakeholders_childnumber_attr}>
 					<span class="glyphicon glyphicon-th-list"></span> 
 					<span class="{$tasks_stakeholders_cntspan_class}" >{$tasks_stakeholders_childnumber}</span>
@@ -772,6 +829,27 @@
 	
 	</td>
 	{END tasks_dtable_column}
+
+
+	{BEGIN task_timestamp_fieldcolumn}
+	<td class="bs-gridcell {$task_timestamp_class}" {$task_timestamp_style} data-field=task_timestamp>
+		{$task_timestamp_value}
+	</td>
+{END task_timestamp_fieldcolumn}
+
+
+	{BEGIN task_done_fieldcolumn}
+	<td class="bs-gridcell {$task_done_class}" {$task_done_style} data-field=task_done>
+		{$task_done_value}
+	</td>
+{END task_done_fieldcolumn}
+
+
+	{BEGIN task_completed_fieldcolumn}
+	<td class="bs-gridcell {$task_completed_class}" {$task_completed_style} data-field=task_completed>
+		{$task_completed_value}
+	</td>
+{END task_completed_fieldcolumn}
 
 
 	{BEGIN task_project_fieldcolumn}

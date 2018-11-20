@@ -147,21 +147,6 @@ if($rowcount)
 		$keylink.="&key1=".runner_htmlspecialchars(rawurlencode(@$data["id_link"]));
 	
 	
-	//	id_link - 
-			$viewContainer->recId = $recordsCounter;
-		    $value = $viewContainer->showDBValue("id_link", $data, $keylink);
-			$row["id_link_value"] = $value;
-			$format = $pSet->getViewFormat("id_link");
-			$class = "rnr-field-text";
-			if($format==FORMAT_FILE) 
-				$class = ' rnr-field-file'; 
-			if($format==FORMAT_AUDIO)
-				$class = ' rnr-field-audio';
-			if($format==FORMAT_CHECKBOX)
-				$class = ' rnr-field-checkbox';
-			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("id_link")))
-				$class = ' rnr-field-number';
-			$row["id_link_class"] = $class;
 	//	event_id - 
 			$viewContainer->recId = $recordsCounter;
 		    $value = $viewContainer->showDBValue("event_id", $data, $keylink);

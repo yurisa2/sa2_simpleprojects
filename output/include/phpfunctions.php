@@ -823,6 +823,18 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="projects" && $field=="project_timestamp")
+	{
+		return now();
+	}
+				if($table=="tasks" && $field=="task_timestamp")
+	{
+		return now();
+	}
+				if($table=="events" && $field=="event_timestamp")
+	{
+		return now();
+	}
 	return "";
 }
 
@@ -834,6 +846,18 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
+				if($table=="projects" && $field=="project_timestamp")
+	{
+		return now();
+	}
+				if($table=="tasks" && $field=="task_timestamp")
+	{
+		return now();
+	}
+				if($table=="events" && $field=="event_timestamp")
+	{
+		return now();
+	}
 	return "";
 }
 

@@ -33,6 +33,15 @@ function DisplayMasterTableInfo_tasks($params)
 		$xt->assign('showKeys', $showKeys);
 	}
 
+	if($detailtable == "events")
+	{
+		$keysAssoc["task_id"] = $keys[1-1];
+				
+				$keyValue = $viewControls->showDBValue("task_id", $keysAssoc);
+		$showKeys.= " ".GetFieldLabel("tasks","task_id").": ".$keyValue;
+		$xt->assign('showKeys', $showKeys);
+	}
+
 	if( !$data || !count($data) )
 		return;
 	
@@ -146,6 +155,45 @@ function DisplayMasterTableInfo_tasks($params)
 		$class = ' rnr-field-number';
 		
 	$xt->assign("task_obs_class", $class); // add class for field header as field value
+	$xt->assign("task_completed_mastervalue", $viewControls->showDBValue("task_completed", $data, $keylink));
+	$format = $settings->getViewFormat("task_completed");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("task_completed")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("task_completed_class", $class); // add class for field header as field value
+	$xt->assign("task_done_mastervalue", $viewControls->showDBValue("task_done", $data, $keylink));
+	$format = $settings->getViewFormat("task_done");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("task_done")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("task_done_class", $class); // add class for field header as field value
+	$xt->assign("task_timestamp_mastervalue", $viewControls->showDBValue("task_timestamp", $data, $keylink));
+	$format = $settings->getViewFormat("task_timestamp");
+	$class = " rnr-field-text";
+	if($format == FORMAT_FILE) 
+		$class = ' rnr-field-file'; 
+	if($format == FORMAT_AUDIO)
+		$class = ' rnr-field-audio';
+	if($format == FORMAT_CHECKBOX)
+		$class = ' rnr-field-checkbox';
+	if($format == FORMAT_NUMBER || IsNumberType($settings->getFieldType("task_timestamp")))
+		$class = ' rnr-field-number';
+		
+	$xt->assign("task_timestamp_class", $class); // add class for field header as field value
 
 	$layout = GetPageLayout("tasks", 'masterlist');
 	if( $layout )

@@ -95,6 +95,15 @@ if($mastertable == "projects")
 	else
 		$where .= $pageObject->getFieldSQLDecrypt("event_project") . "=" . $formattedValue;
 }
+if($mastertable == "tasks")
+{
+	$where = "";
+		$formattedValue = make_db_value("event_task",$_SESSION[$sessionPrefix."_masterkey1"]);
+	if( $formattedValue == "null" )
+		$where .= $pageObject->getFieldSQLDecrypt("event_task") . " is null";
+	else
+		$where .= $pageObject->getFieldSQLDecrypt("event_task") . "=" . $formattedValue;
+}
 
 $str = SecuritySQL("Search", $strTableName);
 if(strlen($str))
@@ -213,6 +222,36 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("event_project")))
 				$class = ' rnr-field-number';
 			$row["event_project_class"] = $class;
+	//	event_task - 
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("event_task", $data, $keylink);
+			$row["event_task_value"] = $value;
+			$format = $pSet->getViewFormat("event_task");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("event_task")))
+				$class = ' rnr-field-number';
+			$row["event_task_class"] = $class;
+	//	event_timestamp - Datetime
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("event_timestamp", $data, $keylink);
+			$row["event_timestamp_value"] = $value;
+			$format = $pSet->getViewFormat("event_timestamp");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("event_timestamp")))
+				$class = ' rnr-field-number';
+			$row["event_timestamp_class"] = $class;
 		$rowinfo[] = $row;
 		if ($b) {
 			$rowinfo2[] = $row;

@@ -258,6 +258,51 @@ if($rowcount)
 			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("task_obs")))
 				$class = ' rnr-field-number';
 			$row["task_obs_class"] = $class;
+	//	task_completed - 
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("task_completed", $data, $keylink);
+			$row["task_completed_value"] = $value;
+			$format = $pSet->getViewFormat("task_completed");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("task_completed")))
+				$class = ' rnr-field-number';
+			$row["task_completed_class"] = $class;
+	//	task_done - Checkbox
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("task_done", $data, $keylink);
+			$row["task_done_value"] = $value;
+			$format = $pSet->getViewFormat("task_done");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("task_done")))
+				$class = ' rnr-field-number';
+			$row["task_done_class"] = $class;
+	//	task_timestamp - Datetime
+			$viewContainer->recId = $recordsCounter;
+		    $value = $viewContainer->showDBValue("task_timestamp", $data, $keylink);
+			$row["task_timestamp_value"] = $value;
+			$format = $pSet->getViewFormat("task_timestamp");
+			$class = "rnr-field-text";
+			if($format==FORMAT_FILE) 
+				$class = ' rnr-field-file'; 
+			if($format==FORMAT_AUDIO)
+				$class = ' rnr-field-audio';
+			if($format==FORMAT_CHECKBOX)
+				$class = ' rnr-field-checkbox';
+			if($format==FORMAT_NUMBER || IsNumberType($pSet->getFieldType("task_timestamp")))
+				$class = ' rnr-field-number';
+			$row["task_timestamp_class"] = $class;
 		$rowinfo[] = $row;
 		if ($b) {
 			$rowinfo2[] = $row;

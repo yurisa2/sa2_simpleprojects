@@ -61,18 +61,6 @@
 
 
 <div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
-	{BEGIN id_link_fieldblock}
-<div class="container">
-	<div class="{$fielddispclass_id_link} bs-viewform-group" data-fieldname="id_link">
-		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_id_link}">
-			{$label events_stakeholders id_link}
-		</label>
-		<div class="col-md-6 bs-horizontal-value" >
-			{$id_link_value}&nbsp;
-		</div>
-	</div>
-</div>
-{END id_link_fieldblock}
 	{BEGIN event_id_fieldblock}
 <div class="container">
 	<div class="{$fielddispclass_event_id} bs-viewform-group" data-fieldname="event_id">
@@ -157,10 +145,7 @@
 	<div class="btn-group dropup" role="group">
 		<button class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="glyphicon glyphicon-menu-hamburger"></span></button>
 		<ul class="dropdown-menu dropdown-left">
-									{BEGIN edit_page_button}
-				<li><a href=# {$edit_page_button_attrs}>Edit</a></li>
-			{END edit_page_button}
-		</ul>
+								</ul>
 	</div>
 </div>
 {END rightviewbuttons}

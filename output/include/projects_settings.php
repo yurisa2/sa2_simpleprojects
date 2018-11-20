@@ -23,18 +23,20 @@ if(mlang_getcurrentlang()=="English")
 	$pageTitlesprojects["English"] = array();
 	$fieldLabelsprojects["English"]["project_id"] = "Project Id";
 	$fieldToolTipsprojects["English"]["project_id"] = "";
-	$fieldLabelsprojects["English"]["project_name"] = "Project Name";
+	$fieldLabelsprojects["English"]["project_name"] = "Name";
 	$fieldToolTipsprojects["English"]["project_name"] = "";
-	$fieldLabelsprojects["English"]["project_owner"] = "Project Owner";
+	$fieldLabelsprojects["English"]["project_owner"] = "Owner (email)";
 	$fieldToolTipsprojects["English"]["project_owner"] = "";
-	$fieldLabelsprojects["English"]["project_obs"] = "Project Obs";
+	$fieldLabelsprojects["English"]["project_obs"] = "Obs";
 	$fieldToolTipsprojects["English"]["project_obs"] = "";
-	$fieldLabelsprojects["English"]["project_start_date"] = "Project Start Date";
+	$fieldLabelsprojects["English"]["project_start_date"] = "Start Date";
 	$fieldToolTipsprojects["English"]["project_start_date"] = "";
-	$fieldLabelsprojects["English"]["project_end_dat"] = "Project End Dat";
+	$fieldLabelsprojects["English"]["project_end_dat"] = "End Dat";
 	$fieldToolTipsprojects["English"]["project_end_dat"] = "";
-	$fieldLabelsprojects["English"]["project_attachments"] = "Project Attachments";
+	$fieldLabelsprojects["English"]["project_attachments"] = "Attachments";
 	$fieldToolTipsprojects["English"]["project_attachments"] = "";
+	$fieldLabelsprojects["English"]["project_timestamp"] = "Project Timestamp";
+	$fieldToolTipsprojects["English"]["project_timestamp"] = "";
 	if (count($fieldToolTipsprojects["English"]))
 		$tdataprojects[".isUseToolTips"] = true;
 }
@@ -43,6 +45,8 @@ if(mlang_getcurrentlang()=="")
 	$fieldLabelsprojects[""] = array();
 	$fieldToolTipsprojects[""] = array();
 	$pageTitlesprojects[""] = array();
+	$fieldLabelsprojects[""]["project_timestamp"] = "Project Timestamp";
+	$fieldToolTipsprojects[""]["project_timestamp"] = "";
 	if (count($fieldToolTipsprojects[""]))
 		$tdataprojects[".isUseToolTips"] = true;
 }
@@ -145,6 +149,7 @@ $tdataprojects[".allSearchFields"][] = "project_name";
 	$tdataprojects[".allSearchFields"][] = "project_start_date";
 	$tdataprojects[".allSearchFields"][] = "project_end_dat";
 	$tdataprojects[".allSearchFields"][] = "project_attachments";
+	$tdataprojects[".allSearchFields"][] = "project_timestamp";
 	
 
 $tdataprojects[".googleLikeFields"] = array();
@@ -155,6 +160,7 @@ $tdataprojects[".googleLikeFields"][] = "project_obs";
 $tdataprojects[".googleLikeFields"][] = "project_start_date";
 $tdataprojects[".googleLikeFields"][] = "project_end_dat";
 $tdataprojects[".googleLikeFields"][] = "project_attachments";
+$tdataprojects[".googleLikeFields"][] = "project_timestamp";
 
 
 $tdataprojects[".advSearchFields"] = array();
@@ -165,6 +171,7 @@ $tdataprojects[".advSearchFields"][] = "project_obs";
 $tdataprojects[".advSearchFields"][] = "project_start_date";
 $tdataprojects[".advSearchFields"][] = "project_end_dat";
 $tdataprojects[".advSearchFields"][] = "project_attachments";
+$tdataprojects[".advSearchFields"][] = "project_timestamp";
 
 $tdataprojects[".tableType"] = "list";
 
@@ -207,7 +214,7 @@ $tdataprojects[".strOrderBy"] = $tstrOrderBy;
 
 $tdataprojects[".orderindexes"] = array();
 
-$tdataprojects[".sqlHead"] = "SELECT project_id,  project_name,  project_owner,  project_obs,  project_start_date,  project_end_dat,  project_attachments";
+$tdataprojects[".sqlHead"] = "SELECT project_id,  	project_name,  	project_owner,  	project_obs,  	project_start_date,  	project_end_dat,  	project_attachments,  	project_timestamp";
 $tdataprojects[".sqlFrom"] = "FROM projects";
 $tdataprojects[".sqlWhereExpr"] = "";
 $tdataprojects[".sqlTail"] = "";
@@ -251,6 +258,7 @@ $tableKeysprojects[] = "project_id";
 $tdataprojects[".Keys"] = $tableKeysprojects;
 
 $tdataprojects[".listFields"] = array();
+$tdataprojects[".listFields"][] = "project_timestamp";
 $tdataprojects[".listFields"][] = "project_name";
 $tdataprojects[".listFields"][] = "project_owner";
 $tdataprojects[".listFields"][] = "project_obs";
@@ -268,6 +276,7 @@ $tdataprojects[".viewFields"][] = "project_obs";
 $tdataprojects[".viewFields"][] = "project_start_date";
 $tdataprojects[".viewFields"][] = "project_end_dat";
 $tdataprojects[".viewFields"][] = "project_attachments";
+$tdataprojects[".viewFields"][] = "project_timestamp";
 
 $tdataprojects[".addFields"] = array();
 $tdataprojects[".addFields"][] = "project_name";
@@ -276,6 +285,7 @@ $tdataprojects[".addFields"][] = "project_obs";
 $tdataprojects[".addFields"][] = "project_start_date";
 $tdataprojects[".addFields"][] = "project_end_dat";
 $tdataprojects[".addFields"][] = "project_attachments";
+$tdataprojects[".addFields"][] = "project_timestamp";
 
 $tdataprojects[".masterListFields"] = array();
 $tdataprojects[".masterListFields"][] = "project_name";
@@ -284,8 +294,10 @@ $tdataprojects[".masterListFields"][] = "project_obs";
 $tdataprojects[".masterListFields"][] = "project_start_date";
 $tdataprojects[".masterListFields"][] = "project_end_dat";
 $tdataprojects[".masterListFields"][] = "project_attachments";
+$tdataprojects[".masterListFields"][] = "project_timestamp";
 
 $tdataprojects[".inlineAddFields"] = array();
+$tdataprojects[".inlineAddFields"][] = "project_timestamp";
 
 $tdataprojects[".editFields"] = array();
 $tdataprojects[".editFields"][] = "project_name";
@@ -294,8 +306,10 @@ $tdataprojects[".editFields"][] = "project_obs";
 $tdataprojects[".editFields"][] = "project_start_date";
 $tdataprojects[".editFields"][] = "project_end_dat";
 $tdataprojects[".editFields"][] = "project_attachments";
+$tdataprojects[".editFields"][] = "project_timestamp";
 
 $tdataprojects[".inlineEditFields"] = array();
+$tdataprojects[".inlineEditFields"][] = "project_timestamp";
 
 $tdataprojects[".exportFields"] = array();
 $tdataprojects[".exportFields"][] = "project_name";
@@ -304,6 +318,7 @@ $tdataprojects[".exportFields"][] = "project_obs";
 $tdataprojects[".exportFields"][] = "project_start_date";
 $tdataprojects[".exportFields"][] = "project_end_dat";
 $tdataprojects[".exportFields"][] = "project_attachments";
+$tdataprojects[".exportFields"][] = "project_timestamp";
 
 $tdataprojects[".importFields"] = array();
 $tdataprojects[".importFields"][] = "project_name";
@@ -312,6 +327,7 @@ $tdataprojects[".importFields"][] = "project_obs";
 $tdataprojects[".importFields"][] = "project_start_date";
 $tdataprojects[".importFields"][] = "project_end_dat";
 $tdataprojects[".importFields"][] = "project_attachments";
+$tdataprojects[".importFields"][] = "project_timestamp";
 
 $tdataprojects[".printFields"] = array();
 $tdataprojects[".printFields"][] = "project_name";
@@ -320,6 +336,7 @@ $tdataprojects[".printFields"][] = "project_obs";
 $tdataprojects[".printFields"][] = "project_start_date";
 $tdataprojects[".printFields"][] = "project_end_dat";
 $tdataprojects[".printFields"][] = "project_attachments";
+$tdataprojects[".printFields"][] = "project_timestamp";
 
 //	project_id
 //	Custom field settings
@@ -1170,6 +1187,129 @@ $tdataprojects[".printFields"][] = "project_attachments";
 
 
 	$tdataprojects["project_attachments"] = $fdata;
+//	project_timestamp
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "project_timestamp";
+	$fdata["GoodName"] = "project_timestamp";
+	$fdata["ownerTable"] = "projects";
+	$fdata["Label"] = GetFieldLabel("projects","project_timestamp");
+	$fdata["FieldType"] = 135;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+		$fdata["bInlineAdd"] = true;
+
+		$fdata["bEditPage"] = true;
+
+		$fdata["bInlineEdit"] = true;
+
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "project_timestamp";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "project_timestamp";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Datetime");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdataprojects["project_timestamp"] = $fdata;
 
 
 $tables_data["projects"]=&$tdataprojects;
@@ -1307,7 +1447,7 @@ function createSqlQuery_projects()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "project_id,  project_name,  project_owner,  project_obs,  project_start_date,  project_end_dat,  project_attachments";
+$proto0["m_strFieldList"] = "project_id,  	project_name,  	project_owner,  	project_obs,  	project_start_date,  	project_end_dat,  	project_attachments,  	project_timestamp";
 $proto0["m_strFrom"] = "FROM projects";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1446,43 +1586,58 @@ $proto18["m_alias"] = "";
 $obj = new SQLFieldListItem($proto18);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto20=array();
-$proto20["m_link"] = "SQLL_MAIN";
-			$proto21=array();
-$proto21["m_strName"] = "projects";
-$proto21["m_srcTableName"] = "projects";
-$proto21["m_columns"] = array();
-$proto21["m_columns"][] = "project_id";
-$proto21["m_columns"][] = "project_name";
-$proto21["m_columns"][] = "project_owner";
-$proto21["m_columns"][] = "project_obs";
-$proto21["m_columns"][] = "project_start_date";
-$proto21["m_columns"][] = "project_end_dat";
-$proto21["m_columns"][] = "project_attachments";
-$obj = new SQLTable($proto21);
+						$proto20=array();
+			$obj = new SQLField(array(
+	"m_strName" => "project_timestamp",
+	"m_strTable" => "projects",
+	"m_srcTableName" => "projects"
+));
 
-$proto20["m_table"] = $obj;
-$proto20["m_sql"] = "projects";
-$proto20["m_alias"] = "";
+$proto20["m_sql"] = "project_timestamp";
 $proto20["m_srcTableName"] = "projects";
-$proto22=array();
-$proto22["m_sql"] = "";
-$proto22["m_uniontype"] = "SQLL_UNKNOWN";
+$proto20["m_expr"]=$obj;
+$proto20["m_alias"] = "";
+$obj = new SQLFieldListItem($proto20);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto22=array();
+$proto22["m_link"] = "SQLL_MAIN";
+			$proto23=array();
+$proto23["m_strName"] = "projects";
+$proto23["m_srcTableName"] = "projects";
+$proto23["m_columns"] = array();
+$proto23["m_columns"][] = "project_id";
+$proto23["m_columns"][] = "project_name";
+$proto23["m_columns"][] = "project_owner";
+$proto23["m_columns"][] = "project_obs";
+$proto23["m_columns"][] = "project_start_date";
+$proto23["m_columns"][] = "project_end_dat";
+$proto23["m_columns"][] = "project_attachments";
+$proto23["m_columns"][] = "project_timestamp";
+$obj = new SQLTable($proto23);
+
+$proto22["m_table"] = $obj;
+$proto22["m_sql"] = "projects";
+$proto22["m_alias"] = "";
+$proto22["m_srcTableName"] = "projects";
+$proto24=array();
+$proto24["m_sql"] = "";
+$proto24["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto22["m_column"]=$obj;
-$proto22["m_contained"] = array();
-$proto22["m_strCase"] = "";
-$proto22["m_havingmode"] = false;
-$proto22["m_inBrackets"] = false;
-$proto22["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto22);
+$proto24["m_column"]=$obj;
+$proto24["m_contained"] = array();
+$proto24["m_strCase"] = "";
+$proto24["m_havingmode"] = false;
+$proto24["m_inBrackets"] = false;
+$proto24["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto24);
 
-$proto20["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto20);
+$proto22["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto22);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
@@ -1498,7 +1653,7 @@ $queryData_projects = createSqlQuery_projects();
 	
 		;
 
-							
+								
 
 $tdataprojects[".sqlquery"] = $queryData_projects;
 

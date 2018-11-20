@@ -9,6 +9,9 @@ $dalTabletasks["task_end_date"] = array("type"=>7,"varname"=>"task_end_date");
 $dalTabletasks["task_modify_date"] = array("type"=>135,"varname"=>"task_modify_date");
 $dalTabletasks["task_project"] = array("type"=>3,"varname"=>"task_project");
 $dalTabletasks["task_obs"] = array("type"=>201,"varname"=>"task_obs");
+$dalTabletasks["task_completed"] = array("type"=>200,"varname"=>"task_completed");
+$dalTabletasks["task_done"] = array("type"=>16,"varname"=>"task_done");
+$dalTabletasks["task_timestamp"] = array("type"=>135,"varname"=>"task_timestamp");
 	$dalTabletasks["task_id"]["key"]=true;
 
 $dal_info["sa2_simple_erv_at_sa2_simple_erv_mysql_dbaas_com_br__tasks"] = &$dalTabletasks;

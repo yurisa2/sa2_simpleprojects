@@ -167,9 +167,6 @@ $layout->container_properties["gridinfo"] = array(  );
 $layout->containers["gridinfo"][] = array("name"=>"details_found",
 	"block"=>"details_found", "substyle"=>1  );
 
-$layout->containers["gridinfo"][] = array("name"=>"printpanel",
-	"block"=>"print_friendly", "substyle"=>1  );
-
 $layout->skins["gridinfo"] = "";
 
 

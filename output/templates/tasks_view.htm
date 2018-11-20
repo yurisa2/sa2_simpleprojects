@@ -61,6 +61,42 @@
 
 
 <div {$viewfields_hiddenattr} data-pageid="{$pageid}" data-brick="viewfields" >
+	{BEGIN task_done_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_task_done} bs-viewform-group" data-fieldname="task_done">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_task_done}">
+			{$label tasks task_done}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$task_done_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END task_done_fieldblock}
+	{BEGIN task_timestamp_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_task_timestamp} bs-viewform-group" data-fieldname="task_timestamp">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_task_timestamp}">
+			{$label tasks task_timestamp}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$task_timestamp_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END task_timestamp_fieldblock}
+	{BEGIN task_completed_fieldblock}
+<div class="container">
+	<div class="{$fielddispclass_task_completed} bs-viewform-group" data-fieldname="task_completed">
+		<label class="bs-view-label col-md-4 text-right" for="{$labelfor_task_completed}">
+			{$label tasks task_completed}
+		</label>
+		<div class="col-md-6 bs-horizontal-value" >
+			{$task_completed_value}&nbsp;
+		</div>
+	</div>
+</div>
+{END task_completed_fieldblock}
 	{BEGIN task_project_fieldblock}
 <div class="container">
 	<div class="{$fielddispclass_task_project} bs-viewform-group" data-fieldname="task_project">

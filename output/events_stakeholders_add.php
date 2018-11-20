@@ -21,69 +21,6 @@ AddPage::handleBrokenRequest();
 
 
 
-$layout = new TLayout("add_bootstrap", "OfficeOffice", "MobileOffice");
-$layout->version = 3;
-	$layout->bootstrapTheme = "yeti";
-$layout->blocks["top"] = array();
-$layout->containers["editpage"] = array();
-$layout->container_properties["editpage"] = array(  );
-$layout->containers["editpage"][] = array("name"=>"wrapper",
-	"block"=>"", "substyle"=>1 , "container"=>"header" );
-$layout->containers["header"] = array();
-$layout->container_properties["header"] = array(  );
-$layout->containers["header"][] = array("name"=>"addheader",
-	"block"=>"addheader", "substyle"=>1  );
-
-$layout->skins["header"] = "";
-
-
-$layout->containers["editpage"][] = array("name"=>"wrapper",
-	"block"=>"", "substyle"=>1 , "container"=>"message" );
-$layout->containers["message"] = array();
-$layout->container_properties["message"] = array(  );
-$layout->containers["message"][] = array("name"=>"message",
-	"block"=>"message_block", "substyle"=>1  );
-
-$layout->skins["message"] = "";
-
-
-$layout->skins["editpage"] = "";
-
-$layout->blocks["top"][] = "editpage";
-$layout->containers["fields"] = array();
-$layout->container_properties["fields"] = array(  );
-$layout->containers["fields"][] = array("name"=>"addfields",
-	"block"=>"", "substyle"=>1  );
-
-$layout->skins["fields"] = "";
-
-$layout->blocks["top"][] = "fields";
-$layout->containers["bottombuttons"] = array();
-$layout->container_properties["bottombuttons"] = array(  );
-$layout->containers["bottombuttons"][] = array("name"=>"wrapper",
-	"block"=>"", "substyle"=>1 , "container"=>"buttons" );
-$layout->containers["buttons"] = array();
-$layout->container_properties["buttons"] = array(  );
-$layout->containers["buttons"][] = array("name"=>"wrapper",
-	"block"=>"", "substyle"=>1 , "container"=>"leftbuttons" );
-$layout->containers["leftbuttons"] = array();
-$layout->container_properties["leftbuttons"] = array(  );
-$layout->containers["leftbuttons"][] = array("name"=>"addbuttons",
-	"block"=>"addbuttons", "substyle"=>1  );
-
-$layout->skins["leftbuttons"] = "";
-
-
-$layout->skins["buttons"] = "";
-
-
-$layout->skins["bottombuttons"] = "";
-
-$layout->blocks["top"][] = "bottombuttons";
-$page_layouts["events_stakeholders_add"] = $layout;
-
-
-
 
 
 

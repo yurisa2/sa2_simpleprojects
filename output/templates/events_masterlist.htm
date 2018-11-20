@@ -36,10 +36,18 @@
 	.bs-gridcell[data-field=event_project]:before {
 		content: "{$label events event_project}";
 	}
+	.bs-gridcell[data-field=event_task]:before {
+		content: "{$label events event_task}";
+	}
+	.bs-gridcell[data-field=event_timestamp]:before {
+		content: "{$label events event_timestamp}";
+	}
 </style>
 <table {$masterlistgrid_hiddenattr} data-pageid="{$pageid}" data-brick="masterlistgrid" class="table rnr-b-mastergridfields rnr-gridtable bs-flexgrid" >
 		<thead>
 		<tr>
+			<th class="{$event_task_class}">{$label events event_task}</th>
+			<th class="{$event_timestamp_class}">{$label events event_timestamp}</th>
 			<th class="{$event_project_class}">{$label events event_project}</th>
 			<th class="{$event_id_class}">{$label events event_id}</th>
 			<th class="{$event_add_date_class}">{$label events event_add_date}</th>
@@ -51,6 +59,8 @@
 	
 	<tbody>
 		<tr>
+			<td class="{$event_task_class} bs-gridcell" data-field=event_task>{$event_task_mastervalue}</td>
+			<td class="{$event_timestamp_class} bs-gridcell" data-field=event_timestamp>{$event_timestamp_mastervalue}</td>
 			<td class="{$event_project_class} bs-gridcell" data-field=event_project>{$event_project_mastervalue}</td>
 			<td class="{$event_id_class} bs-gridcell" data-field=event_id>{$event_id_mastervalue}</td>
 			<td class="{$event_add_date_class} bs-gridcell" data-field=event_add_date>{$event_add_date_mastervalue}</td>

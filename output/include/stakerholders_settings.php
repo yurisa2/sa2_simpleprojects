@@ -21,15 +21,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsstakerholders["English"] = array();
 	$fieldToolTipsstakerholders["English"] = array();
 	$pageTitlesstakerholders["English"] = array();
-	$fieldLabelsstakerholders["English"]["stakeholder_id"] = "Stakeholder Id";
+	$fieldLabelsstakerholders["English"]["stakeholder_id"] = "Stakeholder";
 	$fieldToolTipsstakerholders["English"]["stakeholder_id"] = "";
-	$fieldLabelsstakerholders["English"]["stakeholder_name"] = "Stakeholder Name";
+	$fieldLabelsstakerholders["English"]["stakeholder_name"] = "Name";
 	$fieldToolTipsstakerholders["English"]["stakeholder_name"] = "";
-	$fieldLabelsstakerholders["English"]["stakeholder_email"] = "Stakeholder Email";
+	$fieldLabelsstakerholders["English"]["stakeholder_email"] = "Email";
 	$fieldToolTipsstakerholders["English"]["stakeholder_email"] = "";
-	$fieldLabelsstakerholders["English"]["stakeholder_obs"] = "Stakeholder Obs";
+	$fieldLabelsstakerholders["English"]["stakeholder_obs"] = "Obs";
 	$fieldToolTipsstakerholders["English"]["stakeholder_obs"] = "";
-	$fieldLabelsstakerholders["English"]["stakeholder_attach"] = "Stakeholder Attach";
+	$fieldLabelsstakerholders["English"]["stakeholder_attach"] = "Attachments";
 	$fieldToolTipsstakerholders["English"]["stakeholder_attach"] = "";
 	if (count($fieldToolTipsstakerholders["English"]))
 		$tdatastakerholders[".isUseToolTips"] = true;
@@ -962,7 +962,7 @@ $detailsTablesData["stakerholders"] = array();
 
 /*			$detailsParam["dispChildCount"] = 0;
 	*/
-	$detailsParam["dispChildCount"] = "0";
+	$detailsParam["dispChildCount"] = "1";
 	
 		$detailsParam["hideChild"] = false;
 			$detailsParam["previewOnList"] = "1";
@@ -997,7 +997,7 @@ $detailsTablesData["stakerholders"] = array();
 
 /*			$detailsParam["dispChildCount"] = 0;
 	*/
-	$detailsParam["dispChildCount"] = "0";
+	$detailsParam["dispChildCount"] = "1";
 	
 		$detailsParam["hideChild"] = false;
 			$detailsParam["previewOnList"] = "1";

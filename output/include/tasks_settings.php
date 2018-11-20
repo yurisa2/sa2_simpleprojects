@@ -23,22 +23,28 @@ if(mlang_getcurrentlang()=="English")
 	$pageTitlestasks["English"] = array();
 	$fieldLabelstasks["English"]["task_id"] = "Task Id";
 	$fieldToolTipstasks["English"]["task_id"] = "";
-	$fieldLabelstasks["English"]["task_subject"] = "Task Subject";
+	$fieldLabelstasks["English"]["task_subject"] = "Subject";
 	$fieldToolTipstasks["English"]["task_subject"] = "";
-	$fieldLabelstasks["English"]["task_body"] = "Task Body";
+	$fieldLabelstasks["English"]["task_body"] = "Body";
 	$fieldToolTipstasks["English"]["task_body"] = "";
-	$fieldLabelstasks["English"]["task_attachments"] = "Task Attachments";
+	$fieldLabelstasks["English"]["task_attachments"] = "Attachments";
 	$fieldToolTipstasks["English"]["task_attachments"] = "";
-	$fieldLabelstasks["English"]["task_start_date"] = "Task Start Date";
+	$fieldLabelstasks["English"]["task_start_date"] = "Start Date";
 	$fieldToolTipstasks["English"]["task_start_date"] = "";
-	$fieldLabelstasks["English"]["task_end_date"] = "Task End Date";
+	$fieldLabelstasks["English"]["task_end_date"] = "End Date";
 	$fieldToolTipstasks["English"]["task_end_date"] = "";
-	$fieldLabelstasks["English"]["task_modify_date"] = "Task Modify Date";
+	$fieldLabelstasks["English"]["task_modify_date"] = "Modify Date";
 	$fieldToolTipstasks["English"]["task_modify_date"] = "";
-	$fieldLabelstasks["English"]["task_project"] = "Task Project";
+	$fieldLabelstasks["English"]["task_project"] = "Project";
 	$fieldToolTipstasks["English"]["task_project"] = "";
-	$fieldLabelstasks["English"]["task_obs"] = "Task Obs";
+	$fieldLabelstasks["English"]["task_obs"] = "Obs";
 	$fieldToolTipstasks["English"]["task_obs"] = "";
+	$fieldLabelstasks["English"]["task_completed"] = "Completed";
+	$fieldToolTipstasks["English"]["task_completed"] = "";
+	$fieldLabelstasks["English"]["task_done"] = "Done";
+	$fieldToolTipstasks["English"]["task_done"] = "";
+	$fieldLabelstasks["English"]["task_timestamp"] = "Task Timestamp";
+	$fieldToolTipstasks["English"]["task_timestamp"] = "";
 	if (count($fieldToolTipstasks["English"]))
 		$tdatatasks[".isUseToolTips"] = true;
 }
@@ -51,6 +57,12 @@ if(mlang_getcurrentlang()=="")
 	$fieldToolTipstasks[""]["task_project"] = "";
 	$fieldLabelstasks[""]["task_obs"] = "Task Obs";
 	$fieldToolTipstasks[""]["task_obs"] = "";
+	$fieldLabelstasks[""]["task_completed"] = "Task Completed";
+	$fieldToolTipstasks[""]["task_completed"] = "";
+	$fieldLabelstasks[""]["task_done"] = "Task Done";
+	$fieldToolTipstasks[""]["task_done"] = "";
+	$fieldLabelstasks[""]["task_timestamp"] = "Task Timestamp";
+	$fieldToolTipstasks[""]["task_timestamp"] = "";
 	if (count($fieldToolTipstasks[""]))
 		$tdatatasks[".isUseToolTips"] = true;
 }
@@ -140,14 +152,17 @@ $tdatatasks[".isUseTimeForSearch"] = false;
 
 
 
-$tdatatasks[".badgeColor"] = "8fbc8b";
+$tdatatasks[".badgeColor"] = "8FBC8B";
 
 
 $tdatatasks[".allSearchFields"] = array();
 $tdatatasks[".filterFields"] = array();
 $tdatatasks[".requiredSearchFields"] = array();
 
-$tdatatasks[".allSearchFields"][] = "task_project";
+$tdatatasks[".allSearchFields"][] = "task_done";
+	$tdatatasks[".allSearchFields"][] = "task_completed";
+	$tdatatasks[".allSearchFields"][] = "task_timestamp";
+	$tdatatasks[".allSearchFields"][] = "task_project";
 	$tdatatasks[".allSearchFields"][] = "task_modify_date";
 	$tdatatasks[".allSearchFields"][] = "task_subject";
 	$tdatatasks[".allSearchFields"][] = "task_body";
@@ -167,10 +182,16 @@ $tdatatasks[".googleLikeFields"][] = "task_end_date";
 $tdatatasks[".googleLikeFields"][] = "task_modify_date";
 $tdatatasks[".googleLikeFields"][] = "task_project";
 $tdatatasks[".googleLikeFields"][] = "task_obs";
+$tdatatasks[".googleLikeFields"][] = "task_completed";
+$tdatatasks[".googleLikeFields"][] = "task_done";
+$tdatatasks[".googleLikeFields"][] = "task_timestamp";
 
 
 $tdatatasks[".advSearchFields"] = array();
 $tdatatasks[".advSearchFields"][] = "task_id";
+$tdatatasks[".advSearchFields"][] = "task_done";
+$tdatatasks[".advSearchFields"][] = "task_completed";
+$tdatatasks[".advSearchFields"][] = "task_timestamp";
 $tdatatasks[".advSearchFields"][] = "task_project";
 $tdatatasks[".advSearchFields"][] = "task_modify_date";
 $tdatatasks[".advSearchFields"][] = "task_subject";
@@ -214,14 +235,15 @@ $tdatatasks[".warnLeavingPages"] = true;
 
 
 
-$tstrOrderBy = "";
+$tstrOrderBy = "ORDER BY task_modify_date DESC";
 if(strlen($tstrOrderBy) && strtolower(substr($tstrOrderBy,0,8))!="order by")
 	$tstrOrderBy = "order by ".$tstrOrderBy;
 $tdatatasks[".strOrderBy"] = $tstrOrderBy;
 
 $tdatatasks[".orderindexes"] = array();
+$tdatatasks[".orderindexes"][] = array(7, (0 ? "ASC" : "DESC"), "task_modify_date");
 
-$tdatatasks[".sqlHead"] = "SELECT task_id,  task_subject,  task_body,  task_attachments,  task_start_date,  task_end_date,  task_modify_date,  task_project,  task_obs";
+$tdatatasks[".sqlHead"] = "SELECT task_id,  task_subject,  task_body,  task_attachments,  task_start_date,  task_end_date,  task_modify_date,  task_project,  task_obs,  task_completed,  task_done,  task_timestamp";
 $tdatatasks[".sqlFrom"] = "FROM tasks";
 $tdatatasks[".sqlWhereExpr"] = "";
 $tdatatasks[".sqlTail"] = "";
@@ -265,6 +287,9 @@ $tableKeystasks[] = "task_id";
 $tdatatasks[".Keys"] = $tableKeystasks;
 
 $tdatatasks[".listFields"] = array();
+$tdatatasks[".listFields"][] = "task_timestamp";
+$tdatatasks[".listFields"][] = "task_done";
+$tdatatasks[".listFields"][] = "task_completed";
 $tdatatasks[".listFields"][] = "task_project";
 $tdatatasks[".listFields"][] = "task_modify_date";
 $tdatatasks[".listFields"][] = "task_subject";
@@ -278,6 +303,9 @@ $tdatatasks[".hideMobileList"] = array();
 
 
 $tdatatasks[".viewFields"] = array();
+$tdatatasks[".viewFields"][] = "task_done";
+$tdatatasks[".viewFields"][] = "task_completed";
+$tdatatasks[".viewFields"][] = "task_timestamp";
 $tdatatasks[".viewFields"][] = "task_project";
 $tdatatasks[".viewFields"][] = "task_modify_date";
 $tdatatasks[".viewFields"][] = "task_subject";
@@ -288,6 +316,9 @@ $tdatatasks[".viewFields"][] = "task_end_date";
 $tdatatasks[".viewFields"][] = "task_obs";
 
 $tdatatasks[".addFields"] = array();
+$tdatatasks[".addFields"][] = "task_done";
+$tdatatasks[".addFields"][] = "task_completed";
+$tdatatasks[".addFields"][] = "task_timestamp";
 $tdatatasks[".addFields"][] = "task_project";
 $tdatatasks[".addFields"][] = "task_modify_date";
 $tdatatasks[".addFields"][] = "task_subject";
@@ -298,6 +329,9 @@ $tdatatasks[".addFields"][] = "task_end_date";
 $tdatatasks[".addFields"][] = "task_obs";
 
 $tdatatasks[".masterListFields"] = array();
+$tdatatasks[".masterListFields"][] = "task_done";
+$tdatatasks[".masterListFields"][] = "task_completed";
+$tdatatasks[".masterListFields"][] = "task_timestamp";
 $tdatatasks[".masterListFields"][] = "task_project";
 $tdatatasks[".masterListFields"][] = "task_modify_date";
 $tdatatasks[".masterListFields"][] = "task_subject";
@@ -308,8 +342,12 @@ $tdatatasks[".masterListFields"][] = "task_end_date";
 $tdatatasks[".masterListFields"][] = "task_obs";
 
 $tdatatasks[".inlineAddFields"] = array();
+$tdatatasks[".inlineAddFields"][] = "task_timestamp";
 
 $tdatatasks[".editFields"] = array();
+$tdatatasks[".editFields"][] = "task_done";
+$tdatatasks[".editFields"][] = "task_completed";
+$tdatatasks[".editFields"][] = "task_timestamp";
 $tdatatasks[".editFields"][] = "task_project";
 $tdatatasks[".editFields"][] = "task_modify_date";
 $tdatatasks[".editFields"][] = "task_subject";
@@ -320,8 +358,12 @@ $tdatatasks[".editFields"][] = "task_end_date";
 $tdatatasks[".editFields"][] = "task_obs";
 
 $tdatatasks[".inlineEditFields"] = array();
+$tdatatasks[".inlineEditFields"][] = "task_timestamp";
 
 $tdatatasks[".exportFields"] = array();
+$tdatatasks[".exportFields"][] = "task_done";
+$tdatatasks[".exportFields"][] = "task_completed";
+$tdatatasks[".exportFields"][] = "task_timestamp";
 $tdatatasks[".exportFields"][] = "task_project";
 $tdatatasks[".exportFields"][] = "task_modify_date";
 $tdatatasks[".exportFields"][] = "task_subject";
@@ -340,8 +382,14 @@ $tdatatasks[".importFields"][] = "task_end_date";
 $tdatatasks[".importFields"][] = "task_modify_date";
 $tdatatasks[".importFields"][] = "task_project";
 $tdatatasks[".importFields"][] = "task_obs";
+$tdatatasks[".importFields"][] = "task_completed";
+$tdatatasks[".importFields"][] = "task_done";
+$tdatatasks[".importFields"][] = "task_timestamp";
 
 $tdatatasks[".printFields"] = array();
+$tdatatasks[".printFields"][] = "task_done";
+$tdatatasks[".printFields"][] = "task_completed";
+$tdatatasks[".printFields"][] = "task_timestamp";
 $tdatatasks[".printFields"][] = "task_project";
 $tdatatasks[".printFields"][] = "task_modify_date";
 $tdatatasks[".printFields"][] = "task_subject";
@@ -1466,6 +1514,371 @@ $tdatatasks[".printFields"][] = "task_obs";
 
 
 	$tdatatasks["task_obs"] = $fdata;
+//	task_completed
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 10;
+	$fdata["strName"] = "task_completed";
+	$fdata["GoodName"] = "task_completed";
+	$fdata["ownerTable"] = "tasks";
+	$fdata["Label"] = GetFieldLabel("tasks","task_completed");
+	$fdata["FieldType"] = 200;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+	
+		$fdata["bEditPage"] = true;
+
+	
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "task_completed";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "task_completed";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdatatasks["task_completed"] = $fdata;
+//	task_done
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "task_done";
+	$fdata["GoodName"] = "task_done";
+	$fdata["ownerTable"] = "tasks";
+	$fdata["Label"] = GetFieldLabel("tasks","task_done");
+	$fdata["FieldType"] = 16;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+	
+		$fdata["bEditPage"] = true;
+
+	
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "task_done";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "task_done";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Checkbox");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Checkbox");
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdatatasks["task_done"] = $fdata;
+//	task_timestamp
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "task_timestamp";
+	$fdata["GoodName"] = "task_timestamp";
+	$fdata["ownerTable"] = "tasks";
+	$fdata["Label"] = GetFieldLabel("tasks","task_timestamp");
+	$fdata["FieldType"] = 135;
+
+	
+	
+	
+	
+		$fdata["bListPage"] = true;
+
+		$fdata["bAddPage"] = true;
+
+		$fdata["bInlineAdd"] = true;
+
+		$fdata["bEditPage"] = true;
+
+		$fdata["bInlineEdit"] = true;
+
+		$fdata["bViewPage"] = true;
+
+		$fdata["bAdvancedSearch"] = true;
+
+		$fdata["bPrinterPage"] = true;
+
+		$fdata["bExportPage"] = true;
+
+		$fdata["strField"] = "task_timestamp";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "task_timestamp";
+
+	
+	
+				$fdata["FieldPermissions"] = true;
+
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Datetime");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		$vdata["NeedEncode"] = true;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+	
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", "Empty");
+// the end of search options settings
+
+
+
+
+	$tdatatasks["task_timestamp"] = $fdata;
 
 
 $tables_data["tasks"]=&$tdatatasks;
@@ -1511,6 +1924,41 @@ $detailsTablesData["tasks"] = array();
 				$detailsTablesData["tasks"][$dIndex]["detailKeys"] = array();
 
 	$detailsTablesData["tasks"][$dIndex]["detailKeys"][]="task_id";
+//	events
+	
+	
+
+		$dIndex = 1;
+	$detailsParam = array();
+	$detailsParam["dDataSourceTable"]="events";
+		$detailsParam["dOriginalTable"] = "events";
+		$detailsParam["proceedLink"] = true;
+				$detailsParam["dType"]=PAGE_LIST;
+	$detailsParam["dShortTable"] = "events";
+	$detailsParam["dCaptionTable"] = GetTableCaption("events");
+	$detailsParam["masterKeys"] =array();
+	$detailsParam["detailKeys"] =array();
+
+/*			$detailsParam["dispChildCount"] = 0;
+	*/
+	$detailsParam["dispChildCount"] = "0";
+	
+		$detailsParam["hideChild"] = false;
+			$detailsParam["previewOnList"] = "1";
+	$detailsParam["previewOnAdd"] = 0;
+	$detailsParam["previewOnEdit"] = 0;
+	$detailsParam["previewOnView"] = 0;
+		
+	$detailsTablesData["tasks"][$dIndex] = $detailsParam;
+
+	
+		$detailsTablesData["tasks"][$dIndex]["masterKeys"] = array();
+
+	$detailsTablesData["tasks"][$dIndex]["masterKeys"][]="task_id";
+
+				$detailsTablesData["tasks"][$dIndex]["detailKeys"] = array();
+
+	$detailsTablesData["tasks"][$dIndex]["detailKeys"][]="event_task";
 
 // tables which are master tables for current table (detail)
 $masterTablesData["tasks"] = array();
@@ -1560,10 +2008,10 @@ function createSqlQuery_tasks()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "task_id,  task_subject,  task_body,  task_attachments,  task_start_date,  task_end_date,  task_modify_date,  task_project,  task_obs";
+$proto0["m_strFieldList"] = "task_id,  task_subject,  task_body,  task_attachments,  task_start_date,  task_end_date,  task_modify_date,  task_project,  task_obs,  task_completed,  task_done,  task_timestamp";
 $proto0["m_strFrom"] = "FROM tasks";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "";
+$proto0["m_strOrderBy"] = "ORDER BY task_modify_date DESC";
 $proto0["m_strTail"] = "";
 	
 		;
@@ -1727,49 +2175,107 @@ $proto22["m_alias"] = "";
 $obj = new SQLFieldListItem($proto22);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto24=array();
-$proto24["m_link"] = "SQLL_MAIN";
-			$proto25=array();
-$proto25["m_strName"] = "tasks";
-$proto25["m_srcTableName"] = "tasks";
-$proto25["m_columns"] = array();
-$proto25["m_columns"][] = "task_id";
-$proto25["m_columns"][] = "task_subject";
-$proto25["m_columns"][] = "task_body";
-$proto25["m_columns"][] = "task_attachments";
-$proto25["m_columns"][] = "task_start_date";
-$proto25["m_columns"][] = "task_end_date";
-$proto25["m_columns"][] = "task_modify_date";
-$proto25["m_columns"][] = "task_project";
-$proto25["m_columns"][] = "task_obs";
-$obj = new SQLTable($proto25);
+						$proto24=array();
+			$obj = new SQLField(array(
+	"m_strName" => "task_completed",
+	"m_strTable" => "tasks",
+	"m_srcTableName" => "tasks"
+));
 
-$proto24["m_table"] = $obj;
-$proto24["m_sql"] = "tasks";
-$proto24["m_alias"] = "";
+$proto24["m_sql"] = "task_completed";
 $proto24["m_srcTableName"] = "tasks";
-$proto26=array();
-$proto26["m_sql"] = "";
-$proto26["m_uniontype"] = "SQLL_UNKNOWN";
+$proto24["m_expr"]=$obj;
+$proto24["m_alias"] = "";
+$obj = new SQLFieldListItem($proto24);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto26=array();
+			$obj = new SQLField(array(
+	"m_strName" => "task_done",
+	"m_strTable" => "tasks",
+	"m_srcTableName" => "tasks"
+));
+
+$proto26["m_sql"] = "task_done";
+$proto26["m_srcTableName"] = "tasks";
+$proto26["m_expr"]=$obj;
+$proto26["m_alias"] = "";
+$obj = new SQLFieldListItem($proto26);
+
+$proto0["m_fieldlist"][]=$obj;
+						$proto28=array();
+			$obj = new SQLField(array(
+	"m_strName" => "task_timestamp",
+	"m_strTable" => "tasks",
+	"m_srcTableName" => "tasks"
+));
+
+$proto28["m_sql"] = "task_timestamp";
+$proto28["m_srcTableName"] = "tasks";
+$proto28["m_expr"]=$obj;
+$proto28["m_alias"] = "";
+$obj = new SQLFieldListItem($proto28);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto30=array();
+$proto30["m_link"] = "SQLL_MAIN";
+			$proto31=array();
+$proto31["m_strName"] = "tasks";
+$proto31["m_srcTableName"] = "tasks";
+$proto31["m_columns"] = array();
+$proto31["m_columns"][] = "task_id";
+$proto31["m_columns"][] = "task_subject";
+$proto31["m_columns"][] = "task_body";
+$proto31["m_columns"][] = "task_attachments";
+$proto31["m_columns"][] = "task_start_date";
+$proto31["m_columns"][] = "task_end_date";
+$proto31["m_columns"][] = "task_modify_date";
+$proto31["m_columns"][] = "task_project";
+$proto31["m_columns"][] = "task_obs";
+$proto31["m_columns"][] = "task_completed";
+$proto31["m_columns"][] = "task_done";
+$proto31["m_columns"][] = "task_timestamp";
+$obj = new SQLTable($proto31);
+
+$proto30["m_table"] = $obj;
+$proto30["m_sql"] = "tasks";
+$proto30["m_alias"] = "";
+$proto30["m_srcTableName"] = "tasks";
+$proto32=array();
+$proto32["m_sql"] = "";
+$proto32["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto26["m_column"]=$obj;
-$proto26["m_contained"] = array();
-$proto26["m_strCase"] = "";
-$proto26["m_havingmode"] = false;
-$proto26["m_inBrackets"] = false;
-$proto26["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto26);
+$proto32["m_column"]=$obj;
+$proto32["m_contained"] = array();
+$proto32["m_strCase"] = "";
+$proto32["m_havingmode"] = false;
+$proto32["m_inBrackets"] = false;
+$proto32["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto32);
 
-$proto24["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto24);
+$proto30["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto30);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
+												$proto34=array();
+						$obj = new SQLField(array(
+	"m_strName" => "task_modify_date",
+	"m_strTable" => "tasks",
+	"m_srcTableName" => "tasks"
+));
+
+$proto34["m_column"]=$obj;
+$proto34["m_bAsc"] = 0;
+$proto34["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto34);
+
+$proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="tasks";		
 $obj = new SQLQuery($proto0);
 
@@ -1781,7 +2287,7 @@ $queryData_tasks = createSqlQuery_tasks();
 	
 		;
 
-									
+												
 
 $tdatatasks[".sqlquery"] = $queryData_tasks;
 

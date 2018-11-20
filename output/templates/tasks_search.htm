@@ -97,6 +97,81 @@
 		</div>
 	</div>
 {END task_id_fieldblock}
+	{BEGIN task_done_fieldblock}		
+	<div class="container {$fielddispclass_task_done}" data-fieldname="task_done">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_done}">
+						{$label tasks task_done}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_done_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_done}
+			</div>
+			<div class="col-md-4" >
+				{$task_done_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_done_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_done_fieldblock}
+	{BEGIN task_completed_fieldblock}		
+	<div class="container {$fielddispclass_task_completed}" data-fieldname="task_completed">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_completed}">
+						{$label tasks task_completed}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_completed_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_completed}
+			</div>
+			<div class="col-md-4" >
+				{$task_completed_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_completed_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_completed_fieldblock}
+	{BEGIN task_timestamp_fieldblock}		
+	<div class="container {$fielddispclass_task_timestamp}" data-fieldname="task_timestamp">
+		<div class="form-group">
+			<div class="col-md-2">
+				<div class="row">
+					<label class="col-md-9 control-label" for="{$labelfor_task_timestamp}">
+						{$label tasks task_timestamp}
+					</label>
+					<div class="col-md-3 checkbox rnr-bc">
+						<span><input type="checkbox" {$task_timestamp_notbox}></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2" >
+				{$searchtype_task_timestamp}
+			</div>
+			<div class="col-md-4" >
+				{$task_timestamp_editcontrol}
+			</div>
+			<div class="col-md-4" >
+				{$task_timestamp_editcontrol1}
+			</div>
+		</div>
+	</div>
+{END task_timestamp_fieldblock}
 	{BEGIN task_project_fieldblock}		
 	<div class="container {$fielddispclass_task_project}" data-fieldname="task_project">
 		<div class="form-group">
