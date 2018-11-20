@@ -1,6 +1,6 @@
 <?php
 
-function send_update_email_task($task,$url)
+function send_update_email_task($updates)
 {
 
 $retorno ='
@@ -135,7 +135,7 @@ valign="top" align="left">
      <p style="margin: 0px; font-family: Arial, sans-serif; line-height: 19px;
      color: #444444; font-size: 13px;">
 
-     Uma tarefa teve andamento no Administrador de projetos, clique para detalhes:
+     Um ou mais ites teve andamento no Administrador de projetos, clique para detalhes:
      </p>
      <br>
      <a href="'.$url.'">
@@ -145,13 +145,13 @@ valign="top" align="left">
      color: #444444; font-size: 13px; font-weight: normal;
      padding: 9px; border: 1px solid #e3e3e3; background-color: #f5f5f5;"
      valign="top" align="left">'."<br>".
-     $task["task_subject"]."<br>".
-     $task["task_body"]."<br>".
-     $task["task_attachments"]."<br>".
-     $task["task_start_date"]."<br>".
-     $task["task_end_date"]."<br>".
-     $task["task_completed"]."<br>".
-     $task["task_timestamp"]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
+     $updates[""]."<br>".
 
      '</a></td></tr></tbody></table>
      <br>
