@@ -1840,7 +1840,7 @@ FROM projects</m_strSQL>
 							<m_nSelectSize>1</m_nSelectSize>
 							<m_nCols>200</m_nCols>
 							<m_nRows>100</m_nRows>
-							<m_strDefaultValue></m_strDefaultValue>
+							<m_strDefaultValue>now()</m_strDefaultValue>
 							<m_strAutoUpdateValue>now()</m_strAutoUpdateValue>
 							<m_bAutoUpdate>0</m_bAutoUpdate>
 							<m_strValidateAs></m_strValidateAs>
@@ -2369,7 +2369,7 @@ FROM projects</m_strSQL>
 			</m_arrGroupsPerPage>
 			<m_bHighlightSearchResults>1</m_bHighlightSearchResults>
 			<m_bFlexibleSearch>1</m_bFlexibleSearch>
-			<m_nPartialBuildState>1</m_nPartialBuildState>
+			<m_nPartialBuildState>0</m_nPartialBuildState>
 			<m_bSaveSearches>0</m_bSaveSearches>
 			<m_bWarnLeavingPages>1</m_bWarnLeavingPages>
 			<m_pDashboard>
@@ -5778,7 +5778,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>5</m_nListPageOrder>
+					<m_nListPageOrder>6</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>3</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>3</m_nPrinterPageOrder>
 					<m_nExportPageOrder>3</m_nExportPageOrder>
@@ -5997,7 +5997,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>6</m_nListPageOrder>
+					<m_nListPageOrder>7</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>4</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>4</m_nPrinterPageOrder>
 					<m_nExportPageOrder>4</m_nExportPageOrder>
@@ -6216,7 +6216,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>7</m_nListPageOrder>
+					<m_nListPageOrder>8</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>5</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>5</m_nPrinterPageOrder>
 					<m_nExportPageOrder>5</m_nExportPageOrder>
@@ -6435,7 +6435,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>8</m_nListPageOrder>
+					<m_nListPageOrder>9</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>6</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>6</m_nPrinterPageOrder>
 					<m_nExportPageOrder>6</m_nExportPageOrder>
@@ -6654,7 +6654,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>9</m_nListPageOrder>
+					<m_nListPageOrder>10</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>7</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>7</m_nPrinterPageOrder>
 					<m_nExportPageOrder>7</m_nExportPageOrder>
@@ -6873,7 +6873,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>4</m_nListPageOrder>
+					<m_nListPageOrder>5</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>2</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>2</m_nPrinterPageOrder>
 					<m_nExportPageOrder>2</m_nExportPageOrder>
@@ -7092,7 +7092,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>3</m_nListPageOrder>
+					<m_nListPageOrder>4</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>1</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>1</m_nPrinterPageOrder>
 					<m_nExportPageOrder>1</m_nExportPageOrder>
@@ -7311,7 +7311,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>10</m_nListPageOrder>
+					<m_nListPageOrder>11</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>8</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>8</m_nPrinterPageOrder>
 					<m_nExportPageOrder>8</m_nExportPageOrder>
@@ -7530,7 +7530,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>2</m_nListPageOrder>
+					<m_nListPageOrder>3</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>0</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>0</m_nPrinterPageOrder>
 					<m_nExportPageOrder>0</m_nExportPageOrder>
@@ -7749,7 +7749,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>1</m_nListPageOrder>
+					<m_nListPageOrder>2</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>0</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>0</m_nPrinterPageOrder>
 					<m_nExportPageOrder>0</m_nExportPageOrder>
@@ -7968,7 +7968,7 @@ task_timestamp</m_sqlHead>
 					<m_nAltEditPageOrder>0</m_nAltEditPageOrder>
 					<m_nAltViewPageOrder>0</m_nAltViewPageOrder>
 					<m_nAltRegisterPageOrder>0</m_nAltRegisterPageOrder>
-					<m_nListPageOrder>0</m_nListPageOrder>
+					<m_nListPageOrder>1</m_nListPageOrder>
 					<m_nAdvSearchPageOrder>0</m_nAdvSearchPageOrder>
 					<m_nPrinterPageOrder>0</m_nPrinterPageOrder>
 					<m_nExportPageOrder>0</m_nExportPageOrder>
@@ -7979,7 +7979,7 @@ task_timestamp</m_sqlHead>
 					<m_bAutoInc>0</m_bAutoInc>
 					<m_strOraSequenceName></m_strOraSequenceName>
 					<m_bReportPage>1</m_bReportPage>
-					<m_nReportPageOrder>0</m_nReportPageOrder>
+					<m_nReportPageOrder>12</m_nReportPageOrder>
 					<m_bMin>0</m_bMin>
 					<m_bMax>0</m_bMax>
 					<m_bSum>0</m_bSum>
@@ -8043,7 +8043,7 @@ task_timestamp</m_sqlHead>
 							<m_nSelectSize>1</m_nSelectSize>
 							<m_nCols>200</m_nCols>
 							<m_nRows>100</m_nRows>
-							<m_strDefaultValue></m_strDefaultValue>
+							<m_strDefaultValue>now()</m_strDefaultValue>
 							<m_strAutoUpdateValue>now()</m_strAutoUpdateValue>
 							<m_bAutoUpdate>0</m_bAutoUpdate>
 							<m_strValidateAs></m_strValidateAs>
@@ -8150,8 +8150,8 @@ task_timestamp</m_sqlHead>
 					<m_zones />
 					<m_searchOptions />
 					<m_bAllSearchOptionsSelected>0</m_bAllSearchOptionsSelected>
-					<m_nMasterReportOrder>0</m_nMasterReportOrder>
-					<m_nMasterReportPrintOrder>0</m_nMasterReportPrintOrder>
+					<m_nMasterReportOrder>12</m_nMasterReportOrder>
+					<m_nMasterReportPrintOrder>12</m_nMasterReportPrintOrder>
 					<m_nMasterChartOrder>0</m_nMasterChartOrder>
 					<m_bMasterChartPage>0</m_bMasterChartPage>
 					<m_bMasterReportPage>1</m_bMasterReportPage>
@@ -8759,10 +8759,10 @@ task_timestamp</m_strFieldList>
 		<v>
 			<m_arrEventHandlers />
 			<DiagramCoordinates>
-				<x1>36</x1>
-				<x2>218</x2>
-				<y1>236</y1>
-				<y2>333</y2>
+				<x1>1011</x1>
+				<x2>1193</x2>
+				<y1>351</y1>
+				<y2>448</y2>
 			</DiagramCoordinates>
 			<m_arrOrderIndexes />
 			<m_strSQL>SELECT
@@ -8953,7 +8953,7 @@ FROM tasks_stakeholders </m_strSQL>
 			<m_arrDeletedMasterTables />
 			<m_nLinksOnList>0</m_nLinksOnList>
 			<m_nMultipleDetailsPreview>0</m_nMultipleDetailsPreview>
-			<m_strChildColor>db7093</m_strChildColor>
+			<m_strChildColor>DB7093</m_strChildColor>
 			<m_controlLinks />
 			<m_deletedLinks />
 			<m_arrReportGroupFields />
@@ -10041,7 +10041,7 @@ FROM events</m_strSQL>
 			<m_arrDeletedMasterTables />
 			<m_nLinksOnList>0</m_nLinksOnList>
 			<m_nMultipleDetailsPreview>0</m_nMultipleDetailsPreview>
-			<m_strChildColor>daa520</m_strChildColor>
+			<m_strChildColor>DAA520</m_strChildColor>
 			<m_controlLinks />
 			<m_deletedLinks />
 			<m_arrReportGroupFields />
@@ -11696,7 +11696,7 @@ FROM events</m_strSQL>
 							<m_nSelectSize>1</m_nSelectSize>
 							<m_nCols>200</m_nCols>
 							<m_nRows>100</m_nRows>
-							<m_strDefaultValue></m_strDefaultValue>
+							<m_strDefaultValue>now()</m_strDefaultValue>
 							<m_strAutoUpdateValue>now()</m_strAutoUpdateValue>
 							<m_bAutoUpdate>0</m_bAutoUpdate>
 							<m_strValidateAs></m_strValidateAs>
@@ -12005,7 +12005,7 @@ FROM events</m_strSQL>
 			</m_arrGroupsPerPage>
 			<m_bHighlightSearchResults>1</m_bHighlightSearchResults>
 			<m_bFlexibleSearch>1</m_bFlexibleSearch>
-			<m_nPartialBuildState>1</m_nPartialBuildState>
+			<m_nPartialBuildState>0</m_nPartialBuildState>
 			<m_bSaveSearches>0</m_bSaveSearches>
 			<m_bWarnLeavingPages>1</m_bWarnLeavingPages>
 			<m_pDashboard>
@@ -21281,6 +21281,19 @@ FROM events_stakeholders </m_sql>
 						<oraSequence></oraSequence>
 						<enumValues />
 					</dbfield>
+					<dbfield>
+						<name>event_timestamp</name>
+						<type>135</type>
+						<typeName>timestamp</typeName>
+						<size>0</size>
+						<scale>0</scale>
+						<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+						<nullable>1</nullable>
+						<autoInc>0</autoInc>
+						<charset></charset>
+						<oraSequence></oraSequence>
+						<enumValues />
+					</dbfield>
 				</dbfields>
 				<dbkeys>
 					<dbkey>event_id</dbkey>
@@ -21429,6 +21442,19 @@ FROM events_stakeholders </m_sql>
 						<size>255</size>
 						<scale>0</scale>
 						<defaultValue></defaultValue>
+						<nullable>1</nullable>
+						<autoInc>0</autoInc>
+						<charset></charset>
+						<oraSequence></oraSequence>
+						<enumValues />
+					</dbfield>
+					<dbfield>
+						<name>project_timestamp</name>
+						<type>135</type>
+						<typeName>timestamp</typeName>
+						<size>0</size>
+						<scale>0</scale>
+						<defaultValue>CURRENT_TIMESTAMP</defaultValue>
 						<nullable>1</nullable>
 						<autoInc>0</autoInc>
 						<charset></charset>
@@ -21712,6 +21738,19 @@ FROM events_stakeholders </m_sql>
 						<size>4</size>
 						<scale>0</scale>
 						<defaultValue>0</defaultValue>
+						<nullable>1</nullable>
+						<autoInc>0</autoInc>
+						<charset></charset>
+						<oraSequence></oraSequence>
+						<enumValues />
+					</dbfield>
+					<dbfield>
+						<name>task_timestamp</name>
+						<type>135</type>
+						<typeName>timestamp</typeName>
+						<size>0</size>
+						<scale>0</scale>
+						<defaultValue>CURRENT_TIMESTAMP</defaultValue>
 						<nullable>1</nullable>
 						<autoInc>0</autoInc>
 						<charset></charset>
@@ -23642,8 +23681,8 @@ FROM events_stakeholders </m_sql>
 		<m_bUseBuiltInMailer>0</m_bUseBuiltInMailer>
 	</Registration>
 	<BuildInfo>
-		<m_nBuildTimeLow>-1261365568</m_nBuildTimeLow>
-		<m_nBuildTimeHigh>30703832</m_nBuildTimeHigh>
+		<m_nBuildTimeLow>-2079512864</m_nBuildTimeLow>
+		<m_nBuildTimeHigh>30703833</m_nBuildTimeHigh>
 		<nonProcessFiles />
 		<m_bCompressJs>1</m_bCompressJs>
 		<builtFiles>
@@ -27107,7 +27146,7 @@ FROM events_stakeholders </m_sql>
 	<m_bWebReports>0</m_bWebReports>
 	<m_strWRConnectionID></m_strWRConnectionID>
 	<m_strWRAdminPassword>webreports</m_strWRAdminPassword>
-	<m_projectBuildNumber>27</m_projectBuildNumber>
+	<m_projectBuildNumber>30</m_projectBuildNumber>
 	<m_FTPlocation />
 	<m_FrontPagelocation />
 	<FTPFiles />
@@ -27121,7 +27160,7 @@ FROM events_stakeholders </m_sql>
 	<m_nDefaultLastYearFactor>10</m_nDefaultLastYearFactor>
 	<m_bBuildMobile>0</m_bBuildMobile>
 	<m_bDisplayDesktop>0</m_bDisplayDesktop>
-	<m_projectCRC>1051475639</m_projectCRC>
+	<m_projectCRC>-1975285155</m_projectCRC>
 	<viewPluginsWithJS />
 	<m_projectGUID>{64FFBE60-C56A-4f53-85EF-829D7A32391C}</m_projectGUID>
 	<m_EventsCSProjectGUID>{64FFBE60-C56A-4f53-85EF-829D7A32391D}</m_EventsCSProjectGUID>
@@ -27177,7 +27216,7 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>projects</table>
-					<iconName>glyphicon-earphone</iconName>
+					<iconName>glyphicon-list-alt</iconName>
 					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
@@ -27200,7 +27239,7 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>tasks</table>
-					<iconName>glyphicon-briefcase</iconName>
+					<iconName>glyphicon-ok</iconName>
 					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
@@ -27223,13 +27262,13 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>events</table>
-					<iconName></iconName>
-					<iconType>0</iconType>
+					<iconName>glyphicon-bookmark</iconName>
+					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
 					<pageType>List</pageType>
 					<openType>None</openType>
-					<color>daa520</color>
+					<color>DAA520</color>
 				</MenuNode>
 				<MenuNode>
 					<name>
@@ -27269,7 +27308,7 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>stakerholders</table>
-					<iconName>glyphicon-fire</iconName>
+					<iconName>glyphicon-user</iconName>
 					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
@@ -27292,7 +27331,7 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>projects_stakeholders</table>
-					<iconName>glyphicon-earphone</iconName>
+					<iconName>glyphicon-headphones</iconName>
 					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
@@ -27321,7 +27360,7 @@ FROM events_stakeholders </m_sql>
 					<linkType>Internal</linkType>
 					<pageType>List</pageType>
 					<openType>None</openType>
-					<color>db7093</color>
+					<color>DB7093</color>
 				</MenuNode>
 				<MenuNode>
 					<name>
@@ -27338,8 +27377,8 @@ FROM events_stakeholders </m_sql>
 					<href>mypage.htm</href>
 					<params></params>
 					<table>events_stakeholders</table>
-					<iconName></iconName>
-					<iconType>0</iconType>
+					<iconName>glyphicon-headphones</iconName>
+					<iconType>2</iconType>
 					<type>Leaf</type>
 					<linkType>Internal</linkType>
 					<pageType>List</pageType>
